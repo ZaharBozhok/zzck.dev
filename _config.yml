@@ -13,18 +13,19 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your title
-email: your-email@example.com
-name: Your name
+title: zzck.dev
+email: zaharbozhok@gmail.com
+name: Zack
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here.
-keywords: [Your keywords]
-baseurl: "/zzck.dev" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-domain: "example.com" # the domain name for your site, e.g. example.com
+    Zack's mostly tech blog
+keywords: [C++ cpp programming multithreading]
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://zzck.dev" # the base hostname & protocol for your site, e.g. http://example.com
+domain: "zzck.dev" # the domain name for your site, e.g. example.com
 language: en
 # Supported languages list:
-# en: English
+en: English
+ru: Русский (Russian)
 # de: Deutsche (German)
 # es: Español (Spanish)
 # fr: Français (French)
@@ -38,8 +39,8 @@ analytics:   # the Google Analytics property ID, e.g. UA-XXXXX-Y
 paginate: 25
 paginate_path: "/page:num/"
 
-comments: false  # enable comments
-disqus:          # disqus account
+comments: true  # enable comments
+disqus: true         # disqus account
 
 mathjax: true # Mathematics
 mermaid: true # Diagrams

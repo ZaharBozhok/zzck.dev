@@ -9,10 +9,22 @@
 .header-info-name {
   font-size: 2em;
   font-weight: bold;
+  border: 2px solid black;
+}
+
+.header-info-name-link {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: black;
+}
+
+.header-info-name :hover {
+  color: white;
+  background-color: black;
 }
 
 .header-info-desc {
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .header-main-nav {
