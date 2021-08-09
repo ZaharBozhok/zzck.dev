@@ -35,7 +35,7 @@ struct B {
 <br>
 
 Difference between these structures is in data alignment which depends mostly on your compiler configuration. <br><br>
-[Example](https://github.com/ZaharBozhok/cpp_learning/blob/master/src/ClassPaddingAndSize.cpp) how to conveniently check similar structs for education purpose<br>
+[Example](https://github.com/ZaharBozhok/cpp_learning/blob/master/src/ClassPaddingAndSize.cpp) (and [header](https://github.com/ZaharBozhok/cpp_learning/blob/master/src/utils.h)) how to conveniently check similar structs for education purpose<br>
 (Example uses tuples to make code smaller)
 <br><br>
 
