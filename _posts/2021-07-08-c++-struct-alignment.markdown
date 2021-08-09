@@ -35,7 +35,7 @@ struct B {
 <br>
 
 Difference between these structures is in data alignment which depends mostly on your compiler configuration. <br><br>
-[Example](https://github.com/ZaharBozhok/cpp_learning/blob/master/src/ClassPaddingAndSize.cpp) how to conviniently check similar structs for education purpose<br>
+[Example](https://github.com/ZaharBozhok/cpp_learning/blob/master/src/ClassPaddingAndSize.cpp) how to conveniently check similar structs for education purpose<br>
 (Example uses tuples to make code smaller)
 <br><br>
 
@@ -82,7 +82,7 @@ Despite that structures have exactly the same amount and types of fields the siz
 Short answer is because CPUs are word oriented (not byte oriented).<br>
 <details>
   <summary>Long answer</summary>
-  On the 64-bit CPU sizeof(word) will be 8 bytes and for 32-bit is 4 bytes accordingly, so accessing aligned data is simply saying more optizmied (more on this here https://developer.ibm.com/technologies/systems/articles/pa-dalign/).
+  On the 64-bit CPU sizeof(word) will be 8 bytes and for 32-bit is 4 bytes accordingly, so accessing aligned data is simply saying more optimized (more on this here https://developer.ibm.com/technologies/systems/articles/pa-dalign/).
   Data in structures is aligned to the largest field in structure, and should be also aligned when used in array. Alignment in array is explained further.<br>
 </details>
 <br>
@@ -109,7 +109,7 @@ So in this particular case 3 objects of `struct B` fits to 48 bytes, while only 
 
 As a rule of thumb place fields in decreasing order to git rid of extra padding.<br>
 
-You can force your compiler not to align data, but then the processor will have to perform more instructions to access not aligned fileds (by combaning first part from first word and second part from the second word).<br><br>
+You can force your compiler not to align data, but then the processor will have to perform more instructions to access not aligned fields (by combining first part from first word and second part from the second word).<br><br>
 **P.S.** If you want to get an alignment of your structure here is an example:
 ```c++
     class Test
