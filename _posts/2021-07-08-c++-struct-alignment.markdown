@@ -103,7 +103,23 @@ So in this particular case 3 objects of `struct B` fits to 48 bytes, while only 
 
 As a rule of thumb place fields in decreasing order to git rid of extra padding.<br>
 
-You can force your compiler not to align data, but then the processor will have to perform more instructions to access not aligned fileds (by combaning first part from first word and second part from the second word).     
+You can force your compiler not to align data, but then the processor will have to perform more instructions to access not aligned fileds (by combaning first part from first word and second part from the second word).<br><br>
+**P.S.** If you want to get an alignment of your structure here is an example:
+```c++
+    class Test
+    {
+        int a;
+        char b;
+    };
+    /* C++11 way */
+    std::cout << "Alignment of [T = Test] : " << std::alignment_of<Test>::value << '\n';
+    /* C++17 way */
+    std::cout << "Alignment of [T = Test] : " << std::alignment_of_v<Test> << '\n';
+```
+
+**TODO:**
+- Perform perf tests on accessing aligned/unaligned data
+- Describe how to force specific data alignment
 
 **References:**
 - [CPU and Data alignment][ref1] 
