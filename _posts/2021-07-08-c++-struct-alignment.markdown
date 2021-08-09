@@ -121,12 +121,23 @@ You can force your compiler not to align data, but then the processor will have 
     std::cout << "Alignment of [T = Test] : " << std::alignment_of<Test>::value << '\n';
     /* C++17 way */
     std::cout << "Alignment of [T = Test] : " << std::alignment_of_v<Test> << '\n';
+    /* alignof way, but can't be used in templates */
+    std::cout << "Alignment of [T = Test] : " << alignof(test) << '\n';
+
 ```
 <br>
 
 #### TODO
 - Perform perf tests on accessing aligned/unaligned data
-- Describe how to force specific data alignment
+- Checkout [alignas](https://en.cppreference.com/w/cpp/language/alignas)
+- Checkout [std::aligned_storage](https://en.cppreference.com/w/cpp/types/aligned_storage)
+- Checkout [std::aligned_alloc](https://en.cppreference.com/w/cpp/memory/c/aligned_alloc)
+- Checkout [std::aligned_union](https://en.cppreference.com/w/cpp/types/aligned_union)
+- Checkout [std::max_align_t](https://en.cppreference.com/w/cpp/types/max_align_t)
+- Checkout [compiler specific align operations](https://stackoverflow.com/questions/14332633/attribute-packed-v-s-gcc-attribute-alignedx)
+- Checkout [assume_aligned](https://en.cppreference.com/w/cpp/memory/assume_aligned)
+- Checkout [std::align](https://en.cppreference.com/w/cpp/memory/align)
+- Checkout [std::launder](https://habr.com/ru/post/540954/)
 <br><br>
 
 #### References
@@ -136,6 +147,7 @@ You can force your compiler not to align data, but then the processor will have 
 - [Расставим точки над структурами С/С++][ref4]
 - [Alignment exception][ref5]
 - [IBM Article about padding and alignment][ref6]
+- [alignof vs alignment_of_v][ref7]
 
 [jekyll-paper-docs]: https://github.com/ghosind/Jekyll-Paper/wiki
 [jekyll-docs]: https://jekyllrb.com/docs/home
@@ -148,3 +160,4 @@ You can force your compiler not to align data, but then the processor will have 
 [ref4]: https://habr.com/ru/post/142662/
 [ref5]: https://stackoverflow.com/questions/59076652/why-is-an-alignment-exception-thrown-when-accessing-an-unaligned-uint16-array
 [ref6]: https://developer.ibm.com/technologies/systems/articles/pa-dalign/
+[ref7]: https://stackoverflow.com/questions/36981968/stdalignment-of-versus-alignof
