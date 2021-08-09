@@ -12,3 +12,4 @@ This blog is created in order to structure my learnings , and maybe help others 
 #### My contacts
 - [Linkedin](https://www.linkedin.com/in/zakhar-bozhok-b7901911a/)
 - [GitHub](https://github.com/ZaharBozhok)
+- [Telegram channel](https://t.me/zzckdev)

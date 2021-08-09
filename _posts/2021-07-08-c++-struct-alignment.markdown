@@ -2,7 +2,7 @@
 layout: post
 title:  "Data alignment in C/C++"
 date:   2021-08-08
-last_modified_at: 2021-08-08
+last_modified_at: 2021-08-10
 categories: [C++]
 tags: [C++,Data alignment]
 ---
@@ -39,7 +39,7 @@ Difference between these structures is in data alignment which depends mostly on
 (Example uses tuples to make code smaller)
 <br><br>
 
-Consider following code (it uses function from link above):<br>
+Consider following code (it uses function from the link above):<br>
 ```c++
 printTupleInfo(std::tuple<uint8_t, uint64_t, uint32_t>());
 printTupleInfo(std::tuple<uint64_t, uint32_t, uint8_t>());
@@ -82,8 +82,9 @@ Despite that structures have exactly the same amount and types of fields the siz
 Short answer is because CPUs are word oriented (not byte oriented).<br>
 <details>
   <summary>Long answer</summary>
-  On the 64-bit CPU sizeof(word) will be 8 bytes and for 32-bit is 4 bytes accordingly, so accessing aligned data is simply saying more optimized (more on this here https://developer.ibm.com/technologies/systems/articles/pa-dalign/).
-  Data in structures is aligned to the largest field in structure, and should be also aligned when used in array. Alignment in array is explained further.<br>
+
+  On the 64-bit CPU sizeof(word) will be 8 bytes and for 32-bit is 4 bytes accordingly, so accessing aligned data is simply saying more optimized (more on this here https://developer.ibm.com/technologies/systems/articles/pa-dalign/).<br>
+  Data in structures is aligned to the data's size <br>(data_address % sizeof(data) == 0)<br> and depending on the order there can be different amount of pads. For example `char` should be aligned to 1, `wchar` should be aligned to 2, `float` should aligned to 4 and `long long` to 8. Alignment in array is explained further.<br>
 </details>
 <br>
 
@@ -107,7 +108,7 @@ This is the same object, but due to alignment it will weight less than `struct A
 <br>
 So in this particular case 3 objects of `struct B` fits to 48 bytes, while only 2 objects of `struct A` fits to the same 48 bytes. Quite good optimization for a large amount of objects.<br>
 
-As a rule of thumb place fields in decreasing order to git rid of extra padding.<br>
+As a rule of thumb place fields in decreasing order to get rid of extra padding.<br>
 
 You can force your compiler not to align data, but then the processor will have to perform more instructions to access not aligned fields (by combining first part from first word and second part from the second word).<br><br>
 **P.S.** If you want to get an alignment of your structure here is an example:
