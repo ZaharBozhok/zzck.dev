@@ -4,7 +4,7 @@ title:  "Data alignment in C/C++"
 date:   2021-08-08
 last_modified_at: 2021-08-08
 categories: [C++]
-tags: [C++, Data alignment]
+tags: [C++,Data alignment]
 ---
 
 <details>
@@ -32,16 +32,20 @@ struct B {
     uint8_t data8;
 };
 ```
+<br>
 
 Difference between these structures is in data alignment which depends mostly on your compiler configuration. <br><br>
 [Example](https://github.com/ZaharBozhok/cpp_learning/blob/master/src/ClassPaddingAndSize.cpp) how to conviniently check similar structs for education purpose<br>
 (Example uses tuples to make code smaller)
+<br><br>
 
-Consider following code (it uses function from link above):
+Consider following code (it uses function from link above):<br>
 ```c++
 printTupleInfo(std::tuple<uint8_t, uint64_t, uint32_t>());
 printTupleInfo(std::tuple<uint64_t, uint32_t, uint8_t>());
 ```
+<br>
+
 The output of the code above:
 ```c++
 [T = std::__1::tuple<unsigned char, unsigned long long, unsigned int>]
@@ -70,10 +74,11 @@ The output of the code above:
       sizeof = 1
       value = 0
 ```
+<br>
 
-Despite that structures have exactly the same amount and types of fields the sizes of the structs are different.<br><br>
+Despite that structures have exactly the same amount and types of fields the sizes of the structs are different.<br><br><br>
 
-**What's going on?**<br>
+**What's going on?**<br><br>
 Short answer is because CPUs are word oriented (not byte oriented).<br>
 <details>
   <summary>Long answer</summary>
@@ -84,21 +89,22 @@ Short answer is because CPUs are word oriented (not byte oriented).<br>
 
 <center><b>Alignment of a `struct A` object</b></center>
 ![Layout of a struct A object](/assets/images/2021-07-08-c++-struct-alignment/struct_A.png)
-Hence `long long` should be aligned to a multiple of 8 we get a 7 byte pad before it. Second pad is inserted in order not to loose alignment when used in array. For example the `long long` field should be aligned to a multiple of 8 and without second pad second element in array won't have a `long long` field aligned to a multiple of 8.
 <br>
+Hence `long long` should be aligned to a multiple of 8 we get a 7 byte pad before it. Second pad is inserted in order not to loose alignment when used in array. For example the `long long` field should be aligned to a multiple of 8 and without second pad second element in array won't have a `long long` field aligned to a multiple of 8.
+<br><br>
 
 <center><b>Alignment of an array of `struct A` objects</b></center>
 ![Layout of an array of struct A objects](/assets/images/2021-07-08-c++-struct-alignment/struct_A_arr.png)
-
+<br>
 Thanks to padding `long long` haven't lost its alignment.<br><br><br>
 
 <center><b>Alignment of a `struct B` object</b></center>
 ![Layout of a struct A object](/assets/images/2021-07-08-c++-struct-alignment/struct_B.png)
 This is the same object, but due to alignment it will weight less than `struct A` object. So different fields order will result to different memory object representation. This can lead to unobvious errors. For example to be as fast as possible you send a struct as a piece of memory over the network (ignore Endian problems 😄) and after a while occasionally (or intentionally) you change the order of fields and get corrupted values because now mapping is broken.
-
+<br><br>
 <center><b>Alignment of an array of `struct B` objects</b></center>
 ![Layout of an array of struct A objects](/assets/images/2021-07-08-c++-struct-alignment/struct_B_arr.png)
-
+<br>
 So in this particular case 3 objects of `struct B` fits to 48 bytes, while only 2 objects of `struct A` fits to the same 48 bytes. Quite good optimization for a large amount of objects.<br>
 
 As a rule of thumb place fields in decreasing order to git rid of extra padding.<br>
@@ -116,12 +122,14 @@ You can force your compiler not to align data, but then the processor will have 
     /* C++17 way */
     std::cout << "Alignment of [T = Test] : " << std::alignment_of_v<Test> << '\n';
 ```
+<br>
 
-**TODO:**
+#### TODO
 - Perform perf tests on accessing aligned/unaligned data
 - Describe how to force specific data alignment
+<br><br>
 
-**References:**
+#### References
 - [CPU and Data alignment][ref1] 
 - [Structure Member Alignment, Padding and Data packing][ref2]
 - [Struct padding in c][ref3]
