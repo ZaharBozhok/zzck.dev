@@ -5,7 +5,7 @@
 <nav class="header-nav">
   <ul class="header-main-nav">
   {% for item in site.data.menus %}
-    <li class="header-main-nav-item"><a href="{% if item.absoluteUrl != true %}{{ site.baseurl }}/{% endif %}{{ item.url }}">{% if item.default %}{{ site.data.lang[site.language][item.default] }}{% else %}{{ item.title }}{% endif %}</a></li>
+    <li class="header-main-nav-item"><a class="custom-link" href="{% if item.absoluteUrl != true %}{{ site.baseurl }}/{% endif %}{{ item.url }}">{% if item.default %}{{ site.data.lang[site.language][item.default] }}{% else %}{{ item.title }}{% endif %}</a></li>
   {% endfor %}
   </ul>
 </nav>
