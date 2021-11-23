@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi, my name is **Zakhar** (or simply **Zack**)!<br><br>
+Hi, my name is **Zakhar**!<br><br>
 #### About me
 I'm interested in software development, listening/playing music (especially metal and other subgenres), playing squash, a bit of economics and learning really new things.<br><br>
 #### Purpouse of this blog
