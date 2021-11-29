@@ -40,64 +40,65 @@ C++ questions
 30. What is iterator invalidation when working with std::vector?
 31. How to eliminate reallocation in vector (reserve)? 2
 32. Which associative containers do you know in STL?
-33. Difference between std::map and std::unordered_map (and use cases for them) ? 2
-34. What should be implemented in your class to be used as a key of std::map / std::unordered_map (big O of insert, search, ...)? 2
-35. Which multithreading functional have you used?
-36. What is a deadlock? 3
-37. How could deadlocks be resolved (wait with timeout, reorder)?
-38. Describe the difference between thread and process. 2
-39. What types of IPC do you know? 3
+33. Difference between std::map and std::unordered_map (and use cases for them) ? 3
+34. Complexity of inserting into a std::map / std::unordered_map?
+35. What should be implemented in your class to be used as a key of std::map / std::unordered_map (big O of insert, search, ...)? 2
+36. Which multithreading functional have you used?
+37. What is a deadlock? 3
+38. How could deadlocks be resolved (wait with timeout, reorder)?
+39. Describe the difference between thread and process. 2
+40. What types of IPC do you know? 3
 41. Shallow copy vs deep copy.
 42. How collisions are resolved in std::unordered_map?
 43. How the the binary search algorithm work?
-44. What the conditions the data structure must satisfy so the binary search can be applied efficiently?
-45. What is rehash and when it happen?
-46. How is memory handled between multiple processes?
-47. What happens if multiple threads try to read or access memory from the same memory from heap (what can happen)?
-48. How do you synchronize 2 threads?
-49. Difference between a mutex and a binary semaphore? 2
-50. Why can't we interchange everything to atomic variables (what is the main drawback when using atomics)? -> flushing cache to memory is slow
-51. What is a common way to deadlock 2 threads?
-52. If we want to synchronize several processes on same machine, how can we do that?
-53. Can we synchronize several processes on 2 different machines, how can we do that?
-54. Have you ever used REST API?
-55. Difference between REST API and regular http(s) service?
-56. What are the principles that makes the service RESTful?
-57. Have you ever used gRPC?
-58. Have you ever used defined proto files?
-59. Have you ever used RabbitMQ?
-60. SOLID?
-61. Describe Observer pattern
-62. MVC pattern
-63. MVVM pattern
-64. What is data binding (resuming MVVM)?
-65. Abstract factory design pattern?
-66. What kind of synchronization mechanisms do you know? Which one STL implements? 2
-67. How many c++ standards do you know? 2
-68. When we should use smart pointers?
-69. Do smart pointers guarantee no memory leaks?
-70. What is move semantics in c++? 3
-71. What specific methods should be defined to use move semantics?
-72. Difference between rvalue and lvalue? 2
-73. Where local variables are stored?
-74. Where static variables are stored?
-75. What is container class?
-76. std::set vs std::vector?
-77. std::set vs std::map?
-78. What is a time complexity and memory complexity of the algorithm?
-79. Which is bettern O(N) or O(1)?
-80. Can a destructor be overloaded?
-81. What can be overloaded?
-82. Can operators be overloaded? 
-83. Do you have any experience with Kubernetes and docker?
-84. Did you create an image in Docker?
-85. Do you have an experience using Python?
-86. Experience an CI/CD?
-87. Give 5 examples of UB in C++?
-88. 1 Unreferencing pointer to dead object
-89. 2 Is arithmetics overflow in C++ is UB? (yes)
-90. 3 Stack overflow is UB
-91. 4
+45. What the conditions the data structure must satisfy so the binary search can be applied efficiently?
+46. What is rehash and when it happen?
+47. How is memory handled between multiple processes?
+48. What happens if multiple threads try to read or access memory from the same memory from heap (what can happen)?
+49. How do you synchronize 2 threads?
+50. Difference between a mutex and a binary semaphore? 2
+51. Why can't we use atomics everywhere?  (what is the main drawback when using atomics)? -> flushing cache to memory is slow
+52. What is a common way to deadlock 2 threads?
+53. If we want to synchronize several processes on same machine, how can we do that?
+54. Can we synchronize several processes on 2 different machines, how can we do that?
+55. Have you ever used REST API?
+56. Difference between REST API and regular http(s) service?
+57. What are the principles that makes the service RESTful?
+58. Have you ever used gRPC?
+59. Have you ever used defined proto files?
+60. Have you ever used RabbitMQ?
+61. SOLID?
+62. Describe Observer pattern
+63. MVC pattern
+64. MVVM pattern
+65. What is data binding (resuming MVVM)?
+66. Abstract factory design pattern?
+67. What kind of synchronization mechanisms do you know? Which one STL implements? 2
+68. How many c++ standards do you know? 2
+69. When we should use smart pointers?
+70. Do smart pointers guarantee no memory leaks?
+71. What is move semantics in c++? 3
+72. What specific methods should be defined to use move semantics?
+73. Difference between rvalue and lvalue? 2
+74. Where local variables are stored?
+75. Where static variables are stored?
+76. What is container class?
+77. std::set vs std::vector?
+78. std::set vs std::map?
+79. What is a time complexity and memory complexity of the algorithm?
+80. Which is bettern O(N) or O(1)?
+81. Can a destructor be overloaded?
+82. What can be overloaded?
+83. Can operators be overloaded? 
+84. Do you have any experience with Kubernetes and docker?
+85. Did you create an image in Docker?
+86. Do you have an experience using Python?
+87. Experience an CI/CD?
+88. Give 5 examples of UB in C++?
+89. 1 Unreferencing pointer to dead object
+90. 2 Is arithmetics overflow in C++ is UB? (yes)
+91. 3 Stack overflow is UB
+92. 4
 ```
 std::vector<int> xs = {1, 2, 3};
 auto& x = xs[0];
@@ -640,3 +641,9 @@ General questions
 6. Tell about the hardest task/issue/case you had tackle? How did you tackle it?
 7. Have you done architecture-related work, tell about last ones.
 8. Do you have experience in mentoring?
+
+Soft questions
+1. Tell about your ambitions / goals. What do you want to achieve?
+2. Why did you decide to quit your current job?
+3. What motivates you to work?
+4. Tell about your salary expectations (be ready to answer and to bargain).
