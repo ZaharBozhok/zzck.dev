@@ -8,7 +8,7 @@ tags: [C++,Interviewing,Puzzles,Questions]
 ---
 
 C++ questions
-1. What is OOP (Encapsulation, Inheritance, Abstraction, Polymorphism)? 4
+1. What is OOP (Encapsulation, Inheritance, Abstraction, Polymorphism)?
 2. What is the difference between 'class' and 'struct'?
 3. How do access modifiers change during inheritance?
 4. What is an abstract class in C++?
