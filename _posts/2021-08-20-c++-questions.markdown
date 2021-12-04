@@ -8,49 +8,50 @@ tags: [C++,Interviewing,Puzzles,Questions]
 ---
 
 C++ questions
-1. What is OOP (Encapsulation, Inheritance, Abstraction, Polymorphism)? 2
+1. What is OOP (Encapsulation, Inheritance, Abstraction, Polymorphism)? 4
 2. What is the difference between 'class' and 'struct'?
 3. How do access modifiers change during inheritance?
 4. What is an abstract class in C++?
 5. Can we create an instance of an abstract class?
 6. How do virtual functions work? 2
-7. Is it possible to have virtual constructor (why would yes or not)?
-8. Why do we need virtual destructors? 3
-9. Describe the purpose of the `explicit` keyword.
-10. What is stack in program and how it is used?
-11. What is heap in program and how it is used?
-12. When to allocate memory on heap or on stack (pros and cons)?
-13. Does heap occupies one block in real memory?
-14. Describe the purpose of the `reqister` keyword?
-15. How to eliminate problems with management recourses allocated on heap (for example on stack it is managed automatically)?
-16. What is RAII (Resource allocation is acquisition)? 3
-17. What is smart pointer (how many do you know)? 3
-18. Describe the work of the unique_ptr, shared_ptr, weak_ptr.
-19. How does thread safety is implemented in shared_ptr?
-20. Why do shared_ptr and weak_ptr used together (which problems are resolved)?
-21. ?Which pattern usually have the problem in the question above (observer)?
-22. How can be transferred the ownership of the unique_ptr?
-23. Can we copy unique_ptr?
-24. How can we forbid object copying?
-25. Advantage of using std::make_shared?
-26. Describe the purpose of std::enable_shared_from_this (and maybe how it's implemented)?
-27. How many STL containers did you work with (name them)? 3
-28. std::vector vs std::list?
-29. std::array vs std::vector?
-30. What is iterator invalidation when working with std::vector?
-31. How to eliminate reallocation in vector (reserve)? 2
-32. Which associative containers do you know in STL?
-33. Difference between std::map and std::unordered_map (and use cases for them) ? 3
-34. Complexity of inserting into a std::map / std::unordered_map?
-35. What should be implemented in your class to be used as a key of std::map / std::unordered_map (big O of insert, search, ...)? 2
-36. Which multithreading functional have you used?
-37. What is a deadlock? 3
-38. How could deadlocks be resolved (wait with timeout, reorder)?
-39. Describe the difference between thread and process. 2
-40. What types of IPC do you know? 3
-41. Shallow copy vs deep copy.
-42. How collisions are resolved in std::unordered_map?
-43. How the the binary search algorithm work?
+7. When virtual function table is created? 3
+8. Is it possible to have virtual constructor (why would yes or not)? 2
+9. Why do we need virtual destructors? 4
+10. Describe the purpose of the `explicit` keyword.
+11. What is stack in program and how it is used?
+12. What is heap in program and how it is used?
+13. When to allocate memory on heap or on stack (pros and cons)?
+14. Does heap occupies one block in real memory?
+15. Describe the purpose of the `reqister` keyword?
+16. How to eliminate problems with management recourses allocated on heap (for example on stack it is managed automatically)?
+17. What is RAII (Resource allocation is acquisition)? 5
+18. What is smart pointer (how many do you know)? 5
+19. Describe the work of the unique_ptr, shared_ptr, weak_ptr.
+20. How does thread safety is implemented in shared_ptr? 2
+21. Why do shared_ptr and weak_ptr used together (which problems are resolved)?
+22. ?Which pattern usually have the problem in the question above (observer)?
+23. How can be transfer the ownership of the unique_ptr? 2
+24. Can we copy unique_ptr?
+25. How can we forbid object copying? 2
+26. Advantage of using std::make_shared? 2
+27. Describe the purpose of std::enable_shared_from_this (and maybe how it's implemented)?
+28. How many STL containers did you work with (name them)? 3
+29. std::vector vs std::list?
+30. std::array vs std::vector?
+31. What is iterator invalidation when working with std::vector?
+32. How to eliminate reallocation in vector (reserve)? 2
+33. Which associative containers do you know in STL?
+34. Difference between std::map and std::unordered_map (and use cases for them) ? 3
+35. Complexity of inserting into a std::map / std::unordered_map?
+36. What should be implemented in your class to be used as a key of std::map / std::unordered_map (big O of insert, search, ...)? 2
+37. Which multithreading functional have you used?
+38. What is a deadlock? 3
+39. How could deadlocks be resolved (wait with timeout, reorder)?
+40. Describe the difference between thread and process. 3
+41. What types of IPC do you know? 5
+42. Shallow copy vs deep copy.
+43. How collisions are resolved in std::unordered_map?
+44. How the the binary search algorithm work?
 45. What the conditions the data structure must satisfy so the binary search can be applied efficiently?
 46. What is rehash and when it happen?
 47. How is memory handled between multiple processes?
@@ -67,17 +68,17 @@ C++ questions
 58. Have you ever used gRPC?
 59. Have you ever used defined proto files?
 60. Have you ever used RabbitMQ?
-61. SOLID?
+61. SOLID? 3
 62. Describe Observer pattern
 63. MVC pattern
 64. MVVM pattern
 65. What is data binding (resuming MVVM)?
 66. Abstract factory design pattern?
-67. What kind of synchronization mechanisms do you know? Which one STL implements? 2
+67. What kind of synchronization mechanisms do you know? Which one STL implements? 3
 68. How many c++ standards do you know? 2
 69. When we should use smart pointers?
 70. Do smart pointers guarantee no memory leaks?
-71. What is move semantics in c++? 3
+71. What is move semantics in c++? 4
 72. What specific methods should be defined to use move semantics?
 73. Difference between rvalue and lvalue? 2
 74. Where local variables are stored?
@@ -107,12 +108,12 @@ std::cout << x ; // UB!
 ```
 92. 5 Usage of not inited var is UB
 93. Why int is 32 bit both on 32 bit arch and 64 bit arch? (tricky question, just for fun)
-94. What is conditional variable, describe its problems?
+94. What is conditional variable, describe its problems? 2
 95. How one should write programs in order to escape deadlocks?
 96. How exchange data between two processes?
 97. Can we allocate 8 GB of ram (alloc(8GB)) ?
 98. How to specify that template parameter should be a descendant of some other class?
-99.  What does the const member function qualifier do?
+99.  What does the const member function qualifier do? 2
 100. Can virtual function be inlined?
 101. Can virtual functions be used in template classes?
 102. Can virtual functions be used in structures?
@@ -128,7 +129,7 @@ std::cout << x ; // UB!
 112. Can pure virtual function have a body? Can we call this function? 
 113. What types of `new` do you know?
 114. What is exception safety, which do you know? 2
-115. Types of STL iterators?
+115. Types of STL iterators? 3
 116. What is internal implementation of the std::deque, std::stack, std::map, std::unordered_map? Which types of iterators are used? Provide O(n) notation for insertion, search and deletion. 
 117. enum vs enum class?
 118. Describe rules of the member function generation in classes in C++?
@@ -141,9 +142,9 @@ std::cout << x ; // UB!
 125. Why do we need std::weak_ptr? How to create one? How it is implemented? How to use?
 126. Is std::shared_ptr threadsafe? 2
 127. What is std::future, std::promise? Is it possible to have std::promise<void>?
-128. std::thread vs std::async?
+128. std::thread vs std::async? 2
 129. Types of memory models in c++?
-130. Why do we need `volatile` keywords? What is stands for?
+130. Why do we need `volatile` keywords? What is stands for? 2
 131. Why do we need std::lock? How can STL provide absence of deadlocks?
 132. What are memory barriers? Why do we need them? How can we use them in C++?
 133. What is the universal reference? 
@@ -168,10 +169,10 @@ std::cout << x ; // UB!
 152. What is TLS?
 153. Which pattern can help you to avoid leaks? (wrapper)
 154. How does RAII is implemented in c++?
-155. Which design patterns do you know (GoF)? 2
+155. Which design patterns do you know (GoF)? 4
 156. How to synchronize different processes? Interprocess communication.
-157. What types of network protocols do you know? Difference between them? OSI model?
-158. TCP vs UDP, HTTPS?
+157. What types of network protocols do you know? Difference between them? OSI model? 3
+158. TCP vs UDP, HTTPS? 2
 159. Do you write Unit tests?
 160. What is std::vector, pros and cons?
 161. What features in QT do you know (most used)?
@@ -181,6 +182,76 @@ std::cout << x ; // UB!
 165. What is inherited constructors?
 166. What is delegating constructors?
 167. What is a lambda ?
+168. What is rule of 5 (or previously rule of 3)?
+169. Which properties child process inherits from parent process?
+170. What's wrong with Singleton?
+171. Singleton in multithread environment?
+172. What is cache coherence problem?
+173. Why do we need to join threads?
+174. Can we join detached thread?
+175. Describe the behavior of the conditional variable and the mutex associated with it. Spurious wake up?
+176. Mutex on Windows vs mutex on Linux?
+177. What it critical section?
+178. What is std::async, std::future?
+179. How to call C code from C++ and how to call C++ code from C?
+180. How many stages of building an executable do you know?
+181. What is ABI?
+182. What is call convention?
+183. What can we do in C++ but cannot in C?
+184. What is function overloading in C++? How it works? 
+185. Keyword `static` in C++ vs `static` in C?
+186. `static` keyword and multithreading in C++11?
+187. Lifetime of `static` variables in functions and class member functions?
+188. Keyword `extern` in C?
+189. What is compilation?
+190. What is preprocessing?
+191. What is translation unit?
+192. What is linking?
+193. What types of libraries do you know (static/dynamic), Linux vs Windows?
+194. What is ASLR?
+195. Compare interpreted and compiled languages. AOT compilation vs JIT compilation
+196. Where comes `this` pointer in class member function from?
+197. What does mean `const` after member function declaration? Like `void Test::foo() const;`
+198. Const pointer to object vs pointer to const object vs const pointer to const object?
+199. Where is the virtual function table stored? 2
+200. What is `pure virtual method call` error? How can we face it?
+201. What is inheritance? Virtual inheritance? Diamond problem? How many instances of parent classes are stored in child? 
+202. What kind of casts in c++ do you know? 2
+203. What is RTTI? Why do we need it? What will happen if we disable it?
+204. What is the relationship between MAC address and IP?
+205. How does ARP work?
+206. HTTP GET vs POST?
+207. What is toolchain? What types of compilers do you know? Have you experienced with crosscompilation?
+208. What parts does the running program consist of? memory, program sections?
+209. What is member alignment in structures? What is cache alignment?
+210. What is SIMD / SSE?
+211. What is prefetching into the cache?
+212. Which c++ standards do you know? Top features from c++11?
+213. What is perfect forwarding?
+214. What is data race?
+215. What is pimpl, fast pimpl?
+216. What is metaprogramming?
+217. Service-oriented vs data-oriented architectures?
+218. Class vs Struct
+219. Change of access modifiers after inheritance
+220. Can we create an object of an abstract class?
+221. Heap vs stack, usage? When to prefer stack/heap? 2
+222. How does the heap work? Is it the solid block of memory? (Virtual memory manager)
+223. Keyword `register`?
+224. Can pure virtual function have default implementation?
+225. Public vs Protected inheritance?
+226. Which STl classes implement RAII?
+227. `mutable` keyword? 2
+228. malloc vs new?
+229. What is functor vs lambda?
+230. Full vs partial template initialization?
+231. What user defined class should have when passing it to STL containers?
+232. Time/memory complexity of insertion/search into List/Vector/Map/UnorderedMap?
+233. What is std::jthread (C++20)?
+234. Thread vs process?
+235. Which STL containers do you know?
+236. std::vector resize vs reserve?
+
 
 C++ Practical questions
 1. What will be printed and why?
@@ -502,7 +573,7 @@ try {
     std::cout << "all";
 }
 ```
-35. What is the purpose of the explicit keyword in constructors?
+35. What is the purpose of the explicit keyword in constructors? 3
 36. What does mean `friend` keyword, can you give examples of usage?
 37. With regard to enumeration types, which one of the following statements is true?
 - When enumerator is used, its value is implicitly converted to an integer when needed.
@@ -610,14 +681,150 @@ void main(void){
    /* new copy of a (but type is B)*/
 }
 ```
+46. What's wrong with this code? Any enhancements?
+```c++
+#include <string>
+class Points;
+void Mover(const bool& state);
+Button(const size_t& height, const std::wstring text);
+Button(const Point& point, const std::wstring text);
+Frame(const size_t& width, const size_t& height);
+const size_t& Width() const;
+const size_t& Heigh() const;
 
-Practical Linux questions (this questions could sound strange without context):
+```
+47. What's wrong with this code?
+```c++
+void foo() {
+   std::vector<std::string> names{"first", "second"};
+   // ...
+   for (auto name : names) {
+      std::cout << names << std::endl;
+   }
+}
+```
+48. What's the difference?
+```c++
+void foo(const std::vector<int>& values) {
+   std::vector<int>::const_iterator it = values.begin();
+   while (it != values.end()) {
+      // it++; vs
+      ++it;
+   }
+}
+```
+49. What happens here?
+```c++
+class BaseEx {/* ... */};
+class SpecialEx : public BaseEx {/* ... */};
+int main() {
+   try {
+      bool condition;
+      /* ... */
+      if (condition) {
+         throw BaseEx();
+      } else {
+         throw SpecialEx();
+      } 
+   }
+   catch(const BaseEx& e) {
+      /* ... */
+   }
+   catch(const SpecialEx& e) {
+      /* ... */
+   }
+}
+```
+50. What happens here?
+```c++
+struct Test {
+   void foo() {
+      std::cout << "foo" << std::endl;
+   }
+   virtual void bar() const {
+      std::cout << "bar" << std::endl;
+   }
+};
+int main() {
+   Test* test = new Test;
+   delete test;
+   /* ... */
+   test->foo();
+   test->bar();
+   return 0;
+}
+```
+51. Write an assignment operator and move-constructor
+```c++
+struct resource {
+   int d;
+};
+class wrapper {
+   resource *p;
+public:
+   wrapper() : p(new resource) {}
+   ~wrapper() {delete p;}
+};
+```
+52. What's wrong with this macro?
+```c++
+#define MULT_BY_KILOBYTE(N) 1024*N
+```
+53. What's wrong with this code?
+```c++
+void removeEach3(const vector<int>& v){
+   for (vector<int>::iterator i = v.begin(), e = v.end(); i!=e; i++) {
+      if (*i == 3) {
+         v.erase(i);
+      }
+   }
+}
+```
+54. Difference between initializations
+```c++
+   std::vector<int> vec1(5,1);
+   std::vector<int> vec2{5};
+   std::vector<int> vec3 = {5};
+```
+
+Linux questions (this questions could sound strange without context):
 1. How to get list of opened sockets in linux
 2. Tell about possible situations where you need a list of opened sockets.
+3. Where `ps` takes info about processes.
+4. What is file descriptor?
+5. select vs poll vs epoll?
+6. What kind of operations are executed during socket initialization on client/server?
+7. What does `accept` function do? Is it blocking? Can we decide whether to be blocking or not?
+8. What does `awk` command do?
+9. What CLI tools do you use every day?
+10. Which networking tools do you know? iperf? tcpdump?
+
+General networking
+1. What is proxy server?
+2. What is VPN?
+3. What is firewall?
+4. Encrypting algorithms in networking?
+5. What is HMAC? MD5, CRC, SHA?
+6. What is AAA (Authentication, Authorization, Accounting)?
+7. What is multifactor authentication?
+8. Cerberus, SAML?
+
 
 Algorithmic questions
 1. Given an array of N number where max number value is M where M >> N, write a function that takes the array and its size and evaluates it there are any repeating numbers in the array?
 2. Consider a linked list, describe an algorithm to check if it has loops?
+3. Given std::vector<int> vec{12, 11, 12, 10, 11, 12, 15, 16, 14, 12, 13, 1, 15, 18, 25, 24, 23, 22, 21, 20, 21, 10, 12};. Where index is a day and value is the price of stock. Write an algorithm which finds how much days the price was declining and prints the number of days, day when it started declining and when ended. If price has no change (for example 4 4 4) it isn't declining.
+4. You have a linked list `head ---> a->b->c->d->e->f->g`. Reverse it `head ---> g->f->e->d->c->b->a`
+```c++
+struct Node {
+   int date;
+   Node* next;
+};
+Node* Reverse(Node* head) {
+   /*...*/
+}
+```
+5. Write an algo which checks whether the string is palindrome?
 
 Open questions
 1. We have an IP camera which streams 1MB in size frames, and we have to sync frames to local storage (HDD/SSD/...), why do we need multithreading here?
@@ -631,6 +838,15 @@ Open questions
 9. Main concepts of OOP and how it is implemented in c++. 
 10. Imagine a situation where we have a remote API server and client says that he can't perform a request to this API server. When I perform request it works. Potential steps to help client.
 11. Do you have experience with NAT, which types of NAT you know?
+12. What is CMake, do you use it?
+
+Database questions
+1. Do you have any experience with databases?
+2. What is index in database, which types do you know?
+3. You want to clear the table. Difference between `delete` and `truncate`?
+4. Can we delete a row if it's referenced by other row by index (question about cascade delete)?
+5. What is transaction?
+6. What is isolation level?
 
 General questions
 1. Which product is perfect for you and why? Choice between lots of technologies to play with or a product where everything is stable?
@@ -641,9 +857,17 @@ General questions
 6. Tell about the hardest task/issue/case you had tackle? How did you tackle it?
 7. Have you done architecture-related work, tell about last ones.
 8. Do you have experience in mentoring?
+9. What kind of versioning tools do you use?
+10. Which instruments for debug do you know?
 
 Soft questions
 1. Tell about your ambitions / goals. What do you want to achieve?
 2. Why did you decide to quit your current job?
 3. What motivates you to work?
 4. Tell about your salary expectations (be ready to answer and to bargain).
+5. Scrum, Agile, Waterfall?
+6. Tell about the most difficult task that you faced? How did you tackled it?
+7. Why are you still writing using C++? Because you can easily get more money using JS?:)
+
+Random questions
+1. There is only one water lily in the lake. Everyday the number of lilys doubles. On the day 48 the lake was full. Which day there lake was half fulled?
