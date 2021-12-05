@@ -13,6 +13,6 @@ tags: [C++,Interviewing,Puzzles,Questions]
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
 <div id="navbar"/>
-<div id="questions"/>
+<div id="questions" style="margin-top:20px"/>
 
 <script src="/assets/script/questions.js"/>
