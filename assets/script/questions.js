@@ -1,4 +1,5 @@
 async function main() {
+    const questionsDiv = document.getElementById("questions");
     const response = await fetch("/assets/data/c++-questions/questions.json")
     const questions = (await response.json())["questions"];
     
@@ -11,6 +12,13 @@ async function main() {
             })
         }
     })
+
+    let navbar = document.createElement('div');
+    navbar.id = "mynavbar";
+    uniqueTags.forEach(tag => {
+        navbar.innerHTML+=`<span class='question-tag question-tag-nav'>${tag}</span>`
+    })
+    questionsDiv.append(navbar)
     
     let max = 1;
     let min = 1;
@@ -28,7 +36,6 @@ async function main() {
     console.log(uniqueTags);
     console.log(questions);
 
-    const questionsDiv = document.getElementById("questions");
     questions.forEach(question => {
         let questionBlock = document.createElement("div");
         questionBlock.classList.add('question-block');

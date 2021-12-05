@@ -15,4 +15,21 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     margin-right: 5px;
+    transition: 200ms;
+}
+.question-tag:hover {
+    color: white;
+    background-color: black;
+    border-color: black;
+    transition: 200ms;
+}
+
+#mynavbar {
+    padding: 20px;
+}
+
+.question-tag-nav {
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
