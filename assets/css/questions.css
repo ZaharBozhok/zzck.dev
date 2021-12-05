@@ -1,0 +1,18 @@
+.question-block {
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.question-tag {
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 11pt;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-right: 5px;
+}
