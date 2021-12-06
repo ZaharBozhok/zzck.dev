@@ -1789,44 +1789,87 @@
             ]
         },
         {
-            "question": "How many standard iostream objects do you know?"
+            "question": "How many standard iostream objects do you know?",
+            "tags": [
+                "cpp",
+                "OS"
+            ]
         },
         {
             "question": "What is the result of the following program?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "void%20func%28%29%20%7B%0A%20%20%20%20int%20a%20%3D%20std%3A%3Arand%28%29%20%25%203%3B%0A%20%20%20%20if%28%20a%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20throw%20%22str%22%3B%0A%20%20%20%20if%28%20a%20%3D%3D%201%29%0A%20%20%20%20%20%20%20%20throw%2010%3B%0A%20%20%20%20if%28%20a%20%3D%3D%202%29%0A%20%20%20%20%20%20%20%20throw%200.5%3B%0A%7D%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20func%28%29%3B%0A%20%20%20%20%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20%20%20%20%20return%201%3B%0A%20%20%20%20%7D%20catch%20%28int%20i%29%20%7B%0A%20%20%20%20%20%20%20%20return%202%3B%0A%20%20%20%20%7D%20catch%20%28const%20char%2A%20cp%29%20%7B%0A%20%20%20%20%20%20%20%20return%203%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%7D"
         },
         {
             "question": "Does any commented line has an error?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "template%3Cclass%20T%3E%20void%20foo%28T%20op1%2C%20T%20op2%29%20%7B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22op1%20%3D%20%22%20%3C%3C%20op1%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22op2%20%3D%20%22%20%3C%3C%20op2%20%3C%3C%20std%3A%3Aendl%3B%0A%7D%0A%0Atemplate%3Cclass%20T%3E%0Astruct%20sum%20%7B%0A%20%20%20%20static%20void%20foo%20%28T%20op1%2C%20T%20op2%29%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22sum%20%3D%20%22%20%3C%3C%20op2%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%20%7D%0A%7D%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20foo%281%2C%203%29%3B%20%20%20%20%20%20%20%20%20%20//%20Line%201%0A%20%20%20%20foo%3Cint%3E%281%2C%20%273%27%29%3B%20%20%20//%20Line%202%0A%20%20%20%20sum%3A%3Afoo%281%2C%202%29%3B%20%20%20%20%20//%20Line%203%0A%20%20%20%20return%200%3B%0A%7D"
         },
         {
-            "question": "What is the primary purpose of header questions?"
+            "question": "What is the primary purpose of header files?",
+            "tags": [
+                "cpp"
+            ]
         },
         {
-            "question": "In C++ there are lots of algo functions that accept function objects as a parameter, how are they called and how can one create example of function object?"
+            "question": "In C++ there are lots of algo functions that accept function objects as a parameter, how are they called and how can one create an example of function object?",
+            "tags": [
+                "cpp"
+            ]
         },
         {
-            "question": "Where to initialize a non-static class member reference?"
+            "question": "Where to initialize a non-static class member reference?",
+            "tags": [
+                "cpp"
+            ]
         },
         {
-            "question": "What header stands for standard C++ I/O to write to a file?"
+            "question": "What header stands for standard C++ I/O to write to a file?",
+            "tags": [
+                "cpp"
+            ] 
         },
         {
             "question": "What will be the output of the following program?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "void%20func%28%29%20throw%28float%29%20%7B%0A%20%20%20throw%2010.0f%3B%0A%7D%0Aint%20main%28%29%20%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%271%27%3B%0A%20%20%20%20%20%20%20%20func%28%29%3B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%272%27%3B%0A%20%20%20%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%273%27%3B%0A%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%7D"
         },
         {
             "question": "What will be the output of the following code?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "try%20%7B%0A%20%20%20%20throw%20std%3A%3Astring%28%224%22%29%3B%0A%7D%20catch%20%28std%3A%3Astring%20%26s%29%20%7B%0A%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20s%3B%0A%20%20%20%20%20%20%20%20throw%202%3B%0A%20%20%20%20%7D%20catch%20%28int%20i%29%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20i%3B%0A%20%20%20%20%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20%20%20%20%20throw%3B%0A%20%20%20%20%7D%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22s%22%20%2B%20s%3B%0A%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22all%22%3B%0A%7D"
         },
         {
-            "question": "What is the purpose of the explicit keyword in constructors? 3"
+            "question": "What is the purpose of the explicit keyword in constructors?",
+            "tags": [
+                "cpp"
+            ],
+            "timesAsked": 3
         },
         {
-            "question": "What does mean `friend` keyword, can you give examples of usage?"
+            "question": "What does mean `friend` keyword, can you give examples of usage?",
+            "tags": [
+                "cpp"
+            ]
         },
         {
             "quiz": "With regard to enumeration types, which one of the following statements is true?",
+            "tags": [
+                "cpp",
+                "quiz"
+            ],
             "answers": [
                 "When enumerator is used, its value is implicitly converted to an integer when needed.",
                 "An integer can implicitly be converted to an enumeration type.",
@@ -1837,249 +1880,582 @@
         },
         {
             "question": "Will this code compile?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "extern%20void%20print%28int%20%2Aia%2C%20int%20sz%29%3B%0Avoid%20print%28int%20%2Aarray%2C%20int%20size%29%3B"
         },
         {
             "question": "What's wrong with this code?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "namespace%20%7B%20static%20int%20n%3B%20%7D%0Anamespace%20A%20%7B%0A%20%20%20%20namespace%20%7B%20static%20int%20n%3B%20%7D%0A%7D%0A%0Ausing%20namespace%20A%3B%0Aint%20main%28%29%20%7B%0A%20%20%20%20n%20%3D%205%3B%0A%20%20%20%20return%200%3B%0A%7D"
         },
         {
             "question": "What's wrong with this code?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "void%20log%28std%3A%3Astring%20message%29%3B%0A%0Aclass%20Account%0A%7B%0Apublic%3A%0A%20%20%20Account%28int%20id%29%3B%0A%20%20%20virtual%20%7EAccount%28%29%3B%0A%20%20%20virtual%20std%3A%3Astring%20get_name%28%29%20%3D%200%3B%0A%20%20%20int%20get_id%28%29%3B%0A%7D%3B%0A%0AAccount%3A%3A%7EAccount%28%29%0A%7B%0A%20%20%20log%28%22Destroying%3A%20%22%20%2B%20get_name%28%29%29%3B%0A%7D"
         },
         {
             "question": "How many characters are there in this string and why?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "char%20abc%5B%5D%20%3D%20%22%22%3B"
         },
         {
             "question": "What member function should be defined to make this code work?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "template%3Cclass%20T%2C%20class%20X%3E%20class%20Obj%20%7B%0A%20%20%20%20T%20my_t%3B%0A%20%20%20%20X%20my_x%3B%0Apublic%3A%0A%20%20%20%20Obj%28T%20t%2C%20X%20x%29%3A%20my_t%28t%29%2C%20my_x%28x%29%7B%7D%0A%20%20%20%20/%2A%20put%20a%20function%20here%20%2A/%0A%7D%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20int%20iT%3B%0A%20%20%20%20Obj%3Cint%2C%20float%3E%200%2815%2C%2010.375%29%3B%0A%0A%20%20%20%20iT%20%3D%20O%3B%0A%20%20%20%20return%200%3B%0A%7D"
         },
         {
             "question": "How to free allocated memory by this code?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "int%2A%20pi%20%3D%20new%20int%5B10%5D%3B"
         },
         {
             "question": "What's wrong with this code?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "template%20%3Ctypename%20T%3E%0Aclass%20Foo%0A%7B%0A%20%20%20T%20tVar%3B%0Apublic%3A%0A%20%20%20Foo%28T%20t%29%20%3A%20tVar%28t%29%20%7B%20%7D%0A%7D%3B%0A%0Aclass%20FooDerived%20%3A%20public%20Foo%3Cstd%3A%3Astring%3E%20%7B%20%7D%3B%0A%0AFooDerived%20fd%3B"
         },
         {
             "question": "Write a copy constructor, and how to clone ",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "class%20A%20%7B%0Apublic%3A%0A%20%20%20A%28%29%20%3A%20a%28new%20int%281%29%29%20%7B%7D%0A%20%20%20%7EA%28%29%20%7B%20delete%20a%3B%20%7D%0Aprotected%3A%0A%20%20%20int%2A%20a%3B%0A%7D%3B%0A%0Aclass%20B%20%3A%20public%20A%20%7B%0Apublic%3A%0A%20%20%20B%28%29%20%3A%20A%28%29%2C%20b%28new%20int%282%29%29%20%7B%7D%0A%20%20%20%7EB%28%29%20%7B%20delete%20b%3B%20%7D%0Aprotected%3A%0A%20%20%20int%2A%20b%3B%0A%7D%3B%0A%0Avoid%20main%28void%29%7B%0A%20%20%20A%2A%20a%20%3D%20new%20B%28%29%3B%0A%20%20%20/%2A%20new%20copy%20of%20a%20%28but%20type%20is%20B%29%2A/%0A%7D"
         },
         {
             "question": "What's wrong with this code? Any enhancements?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "%23include%20%3Cstring%3E%0Aclass%20Points%3B%0Avoid%20Mover%28const%20bool%26%20state%29%3B%0AButton%28const%20size_t%26%20height%2C%20const%20std%3A%3Awstring%20text%29%3B%0AButton%28const%20Point%26%20point%2C%20const%20std%3A%3Awstring%20text%29%3B%0AFrame%28const%20size_t%26%20width%2C%20const%20size_t%26%20height%29%3B%0Aconst%20size_t%26%20Width%28%29%20const%3B%0Aconst%20size_t%26%20Heigh%28%29%20const%3B"
         },
         {
             "question": "What's wrong with this code?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "void%20foo%28%29%20%7B%0A%20%20%20std%3A%3Avector%3Cstd%3A%3Astring%3E%20names%7B%22first%22%2C%20%22second%22%7D%3B%0A%20%20%20//%20...%0A%20%20%20for%20%28auto%20name%20%3A%20names%29%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20names%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%7D"
         },
         {
             "question": "What's the difference?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "void%20foo%28const%20std%3A%3Avector%3Cint%3E%26%20values%29%20%7B%0A%20%20%20std%3A%3Avector%3Cint%3E%3A%3Aconst_iterator%20it%20%3D%20values.begin%28%29%3B%0A%20%20%20while%20%28it%20%21%3D%20values.end%28%29%29%20%7B%0A%20%20%20%20%20%20//%20it%2B%2B%3B%20vs%0A%20%20%20%20%20%20%2B%2Bit%3B%0A%20%20%20%7D%0A%7D"
         },
         {
             "question": "What happens here?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "class%20BaseEx%20%7B/%2A%20...%20%2A/%7D%3B%0Aclass%20SpecialEx%20%3A%20public%20BaseEx%20%7B/%2A%20...%20%2A/%7D%3B%0Aint%20main%28%29%20%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20bool%20condition%3B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%20%20%20if%20%28condition%29%20%7B%0A%20%20%20%20%20%20%20%20%20throw%20BaseEx%28%29%3B%0A%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20throw%20SpecialEx%28%29%3B%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%7D%0A%20%20%20catch%28const%20BaseEx%26%20e%29%20%7B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%7D%0A%20%20%20catch%28const%20SpecialEx%26%20e%29%20%7B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%7D%0A%7D"
         },
         {
             "question": "What happens here?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "struct%20Test%20%7B%0A%20%20%20void%20foo%28%29%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22foo%22%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%20%20%20virtual%20void%20bar%28%29%20const%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22bar%22%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%7D%3B%0Aint%20main%28%29%20%7B%0A%20%20%20Test%2A%20test%20%3D%20new%20Test%3B%0A%20%20%20delete%20test%3B%0A%20%20%20/%2A%20...%20%2A/%0A%20%20%20test-%3Efoo%28%29%3B%0A%20%20%20test-%3Ebar%28%29%3B%0A%20%20%20return%200%3B%0A%7D"
         },
         {
             "question": "Write an assignment operator and move-constructor",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "struct%20resource%20%7B%0A%20%20%20int%20d%3B%0A%7D%3B%0Aclass%20wrapper%20%7B%0A%20%20%20resource%20%2Ap%3B%0Apublic%3A%0A%20%20%20wrapper%28%29%20%3A%20p%28new%20resource%29%20%7B%7D%0A%20%20%20%7Ewrapper%28%29%20%7Bdelete%20p%3B%7D%0A%7D%3B"
         },
         {
             "question": "What's wrong with this macro?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "%23define%20MULT_BY_KILOBYTE%28N%29%201024%2AN"
         },
         {
             "question": "What's wrong with this code?",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "void%20removeEach3%28const%20vector%3Cint%3E%26%20v%29%7B%0A%20%20%20for%20%28vector%3Cint%3E%3A%3Aiterator%20i%20%3D%20v.begin%28%29%2C%20e%20%3D%20v.end%28%29%3B%20i%21%3De%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20if%20%28%2Ai%20%3D%3D%203%29%20%7B%0A%20%20%20%20%20%20%20%20%20v.erase%28i%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D"
         },
         {
             "question": "Difference between initializations",
+            "tags": [
+                "cpp",
+                "contains code"
+            ],
             "code": "std%3A%3Avector%3Cint%3E%20vec1%285%2C1%29%3B%0A%20%20%20std%3A%3Avector%3Cint%3E%20vec2%7B5%7D%3B%0A%20%20%20std%3A%3Avector%3Cint%3E%20vec3%20%3D%20%7B5%7D%3B"
         },
         {
-            "question": "How to get list of opened sockets in linux?"
+            "question": "How to get list of opened sockets in linux?",
+            "tags": [
+                "OS",
+                "tools",
+                "linux"
+            ]
         },
         {
-            "question": "Tell about possible situations where you need a list of opened sockets."
+            "question": "Tell about possible situations where you need a list of opened sockets.",
+            "tags": [
+                "OS",
+                "tools",
+                "linux"
+            ]
         },
         {
-            "question": "Where ps does take info about processes?"
+            "question": "Where ps does take info about processes?",
+            "tags": [
+                "OS",
+                "tools",
+                "linux"
+            ]
         },
         {
-            "question": "What is file descriptor?"
+            "question": "What is file descriptor?",
+            "tags": [
+                "OS",
+                "linux"
+            ]
         },
         {
-            "question": "What is the difference between select vs poll vs epoll?"
+            "question": "What is the difference between `select` vs `poll` vs `epoll`?",
+            "tags": [
+                "OS",
+                "linux"
+            ]
         },
         {
-            "question": "What kind of operations are executed during socket initialization on client/server?"
+            "question": "What kind of operations are executed during socket initialization on client/server?",
+            "tags": [
+                "OS",
+                "linux"
+            ]
         },
         {
-            "question": "What does accept function do? Is it blocking? Can we decide whether to be blocking or not?"
+            "question": "What does accept function do? Is it blocking? Can we decide whether to be blocking or not?",
+            "tags": [
+                "OS",
+                "linux"
+            ]
         },
         {
-            "question": "What does `awk` command do?"
+            "question": "What does `awk` command do?",
+            "tags": [
+                "tools",
+                "linux"
+            ]
         },
         {
-            "question": "What CLI tools do you use every day?"
+            "question": "What CLI tools do you use every day?",
+            "tags": [
+                "tools",
+                "linux"
+            ]
         },
         {
-            "question": "Which networking tools do you know? iperf? tcpdump?"
+            "question": "Which networking tools do you know? iperf? tcpdump?",
+            "tags": [
+                "tools",
+                "linux",
+                "networking"
+            ]
         },
         {
-            "question": "What is proxy server?"
+            "question": "What is proxy server?",
+            "tags": [
+                "networking",
+                "tools",
+                "technologies"
+            ]
         },
         {
-            "question": "What is VPN?"
+            "question": "What is VPN?",
+            "tags": [
+                "technologies",
+                "networking"
+            ]
         },
         {
-            "question": "What is firewall?"
+            "question": "What is firewall?",
+            "tags": [
+                "technologies",
+                "networking"
+            ]
         },
         {
-            "question": "Encrypting algorithms in networking?"
+            "question": "Encrypting algorithms in networking?",
+            "tags": [
+                "technologies",
+                "networking",
+                "security"
+            ]
         },
         {
-            "question": "What is HMAC? MD5, CRC, SHA?"
+            "question": "What is HMAC? MD5, CRC, SHA?",
+            "tags": [
+                "technologies",
+                "networking",
+                "security"
+            ]
         },
         {
-            "question": "What is AAA (Authentication, Authorization, Accounting)?"
+            "question": "What is AAA (Authentication, Authorization, Accounting)?",
+            "tags": [
+                "technologies",
+                "networking",
+                "security",
+                "design/architecture"
+            ]
         },
         {
-            "question": "What is multifactor authentication?"
+            "question": "What is multifactor authentication?",
+            "tags": [
+                "technologies",
+                "networking",
+                "security"
+            ]
         },
         {
-            "question": "Cerberus, SAML?"
+            "question": "Cerberus, SAML?",
+            "tags": [
+                "technologies",
+                "networking",
+                "security"
+            ]
         },
         {
-            "question": "Given an array of N number where max number value is M where M » N, write a function that takes the array and its size and evaluates it there are any repeating numbers in the array?"
+            "question": "Given an array of N number where max number value is M where M » N, write a function that takes the array and its size and evaluates it there are any repeating numbers in the array?",
+            "tags": [
+                "algorithmic",
+                "data structures"
+            ]
         },
         {
-            "question": "Consider a linked list, describe an algorithm to check if it has loops?"
+            "question": "Consider a linked list, describe an algorithm to check if it has loops?",
+            "tags": [
+                "algorithmic",
+                "data structures"
+            ]
         },
         {
-            "question": "Given std::vector vec{12, 11, 12, 10, 11, 12, 15, 16, 14, 12, 13, 1, 15, 18, 25, 24, 23, 22, 21, 20, 21, 10, 12};. Where index is a day and value is the price of stock. Write an algorithm which finds how much days the price was declining and prints the number of days, day when it started declining and when ended. If price has no change (for example 4 4 4) it isn't declining."
+            "question": "Given std::vector vec{12, 11, 12, 10, 11, 12, 15, 16, 14, 12, 13, 1, 15, 18, 25, 24, 23, 22, 21, 20, 21, 10, 12};. Where index is a day and value is the price of stock. Write an algorithm which finds how much days the price was declining and prints the number of days, day when it started declining and when ended. If price has no change (for example 4 4 4) it isn't declining.",
+            "tags": [
+                "algorithmic",
+                "data structures"
+            ]
         },
         {
             "question": "You have a linked list `head ---> a->b->c->d->e->f->g`. Reverse it `head ---> g->f->e->d->c->b->a`",
+            "tags": [
+                "algorithmic",
+                "data structures"
+            ],
             "code": "struct%20Node%20%7B%0Aint%20date%3B%0ANode%2A%20next%3B%0A%7D%3B%0ANode%2A%20Reverse%28Node%2A%20head%29%20%7B%0A%2F%2A...%2A%2F%0A%7D"
         },
         {
-            "question": "Write an algo which checks whether the string is palindrome?"
+            "question": "Write an algo which checks whether the string is palindrome?",
+            "tags": [
+                "algorithmic"
+            ]
         },
         {
-            "question": "We have an IP camera which streams 1MB in size frames, and we have to sync frames to local storage (HDD/SSD/…), why do we need multithreading here?"
+            "question": "We have an IP camera which streams 1MB in size frames, and we have to sync frames to local storage (HDD/SSD/…), why do we need multithreading here?",
+            "tags": [
+                "design/architecture",
+                "concurrency",
+                "open question",
+                "OS",
+                "general",
+                "technologies",
+                "web",
+                "networking"
+            ]
         },
         {
-            "question": "We have information about company employees (id, +some info), we need to frequently search, sometimes delete/add. Which container to use?"
+            "question": "We have information about company employees (id, +some info), we need to frequently search, sometimes delete/add. Which container to use?",
+            "tags": [
+                "algorithmic",
+                "data structures"
+            ]
         },
         {
-            "question": "Imagine following code: a=1, b=2and then call sum and pass it a and b. Somewhere in the memory we allocated a and b, in asm we see jump and when the body of function is executed, how does the function know where to take these a and b? (hint: call convention)"
+            "question": "Imagine following code: a=1, b=2 and then call sum and pass it a and b. Somewhere in the memory we allocated a and b, in asm we see jump and when the body of function is executed, how does the function know where to take these a and b?",
+            "tags": [
+                "OS",
+                "cpp",
+                "asm"
+            ],
+            "hint":"CallConvention"
         },
         {
-            "question": "Given a computer with 4 GB of RAM, then we start Photoshop and after some time we that it took 8 GB of RAM, how is that possible?"
+            "question": "Given a computer with 4 GB of RAM, then we start Photoshop and after some time we that it took 8 GB of RAM, how is that possible?",
+            "tags": [
+                "general",
+                "OS"
+            ]
         },
         {
-            "question": "Imagine you start designing new design/architecture of classes, how do you do it?"
+            "question": "Imagine you start designing new design/architecture of classes, how do you do it?",
+            "tags": [
+                "general",
+                "design/architecture"
+            ]
         },
         {
-            "question": "Give several examples of Patterns of OOP?"
+            "question": "Give several examples of Patterns of OOP?",
+            "tags": [
+                "general",
+                "design/architecture"
+            ]
         },
         {
-            "question": "We have a singleton class and we wan’t to forbid possible ways to create a second instance but allow inheritance, how to do it?"
+            "question": "We have a singleton class and we wan’t to forbid possible ways to create a second instance but allow inheritance, how to do it?",
+            "tags": [
+                "cpp",
+                "design/architecture"
+            ]
         },
         {
-            "question": "We have a string object and want to pass it deep to function, and in current context we don’t need it. What should we do?"
+            "question": "We have a string object and want to pass it deep to function, and in current context we don’t need it. What should we do?",
+            "tags": [
+                "cpp"
+            ]
         },
         {
-            "question": "Main concepts of OOP and how it is implemented in c++."
+            "question": "Main concepts of OOP and how it is implemented in c++.",
+            "tags": [
+                "cpp",
+                "design/architecture"
+            ]
         },
         {
-            "question": "Imagine a situation where we have a remote API server and client says that he can’t perform a request to this API server. When I perform request it works. Potential steps to help client."
+            "question": "Imagine a situation where we have a remote API server and client says that he can’t perform a request to this API server. When I perform request it works. Potential steps to help client.",
+            "tags": [
+                "general",
+                "OS",
+                "web",
+                "debugging",
+                "problem solving"
+            ]
         },
         {
-            "question": "Do you have experience with NAT, which types of NAT you know?"
+            "question": "Do you have experience with NAT, which types of NAT you know?",
+            "tags": [
+                "general",
+                "networking"
+            ]
         },
         {
-            "question": "What is CMake, do you use it?"
+            "question": "What is CMake, do you use it?",
+            "tags": [
+                "cpp",
+                "tools"
+            ]
         },
         {
-            "question": "Do you have any experience with databases?"
+            "question": "Do you have any experience with databases?",
+            "tags": [
+                "open question",
+                "DB"
+            ]
         },
         {
-            "question": "What is index in database, which types do you know?"
+            "question": "What is index in database, which types do you know?",
+            "tags": [
+                "general",
+                "DB"
+            ]
         },
         {
-            "question": "You want to clear the table. Difference between delete and truncate?"
+            "question": "You want to clear the table. Difference between delete and truncate?",
+            "tags": [
+                "general",
+                "DB"
+            ]
         },
         {
-            "question": "Can we delete a row if it’s referenced by other row by index (question about cascade delete)?"
+            "question": "Can we delete a row if it’s referenced by other row by index (question about cascade delete)?",
+            "tags": [
+                "general",
+                "DB"
+            ]
         },
         {
-            "question": "What is transaction?"
+            "question": "What is transaction?",
+            "tags": [
+                "general",
+                "DB"
+            ]
         },
         {
-            "question": "What is isolation level?"
+            "question": "What is isolation level?",
+            "tags": [
+                "general",
+                "DB"
+            ]
         },
         {
-            "question": "Which product is perfect for you and why? Choice between lots of technologies to play with or a product where everything is stable?"
+            "question": "Which product is perfect for you and why? Choice between lots of technologies to play with or a product where everything is stable?",
+            "tags": [
+                "open question",
+                "softskills"
+            ]
         },
         {
-            "question": "You’ve found new library which you want to integrate into the project. How would you argument the need of the library, how would you prove the potential value from the integration?"
+            "question": "You’ve found new library which you want to integrate into the project. How would you argument the need of the library, how would you prove the potential value from the integration?",
+            "tags": [
+                "general",
+                "softskills",
+                "technologies"
+            ]
         },
         {
-            "question": "Do you have cases while library integration process you understand that it doesn’t suit your needs fully? How did you workaround it?"
+            "question": "Do you have cases while library integration process you understand that it doesn’t suit your needs fully? How did you workaround it?",
+            "tags": [
+                "general",
+                "problem solving",
+                "softskills"
+            ]
         },
         {
-            "question": "Which types of libraries you can’t integrate into the procreate solution?"
+            "question": "Which types of libraries you can’t integrate into the propriate solution?",
+            "tags": [
+                "general",
+                "softskills"
+            ]
         },
         {
-            "question": "How deeply did you work with Linux/Windows/MacOS/…?"
+            "question": "How deeply did you work with Linux/Windows/MacOS/…?",
+            "tags": [
+                "general",
+                "OS",
+                "open question"
+            ]
         },
         {
-            "question": "Tell about the hardest task/issue/case you had tackle? How did you tackle it?"
+            "question": "Tell about the hardest task/issue/case you had tackle? How did you tackle it?",
+            "tags": [
+                "general",
+                "softskills",
+                "open question"
+            ]
         },
         {
-            "question": "Have you done architecture-related work, tell about last ones."
+            "question": "Have you done architecture-related work, tell about last ones.",
+            "tags": [
+                "general",
+                "design/architecture",
+                "open question"
+            ]
         },
         {
-            "question": "Do you have experience in mentoring?"
+            "question": "Do you have experience in mentoring?",
+            "tags": [
+                "general",
+                "softskills"
+            ]
         },
         {
-            "question": "What kind of versioning tools do you use?"
+            "question": "What kind of versioning tools do you use?",
+            "tags": [
+                "general",
+                "tools",
+                "technologies"
+            ]
         },
         {
-            "question": "Which instruments for debug do you know?"
+            "question": "Which instruments for debug do you know?",
+            "tags": [
+                "general",
+                "debugging",
+                "open question"
+            ]
         },
         {
-            "question": "Tell about your ambitions / goals. What do you want to achieve?"
+            "question": "Tell about your ambitions / goals. What do you want to achieve?",
+            "tags": [
+                "general",
+                "softskills"
+            ]
         },
         {
-            "question": "Why did you decide to quit your current job?"
+            "question": "Why did you decide to quit your current job?",
+            "tags": [
+                "general",
+                "softskills"
+            ]
         },
         {
-            "question": "What motivates you to work?"
+            "question": "What motivates you to work?",
+            "tags": [
+                "general",
+                "softskills"
+            ]
         },
         {
-            "question": "Tell about your salary expectations (be ready to answer and to bargain)."
+            "question": "Tell about your salary expectations (be ready to answer and to bargain).",
+            "tags": [
+                "general",
+                "softskills"
+            ],
+            "hint":"BeReadyToAnswerAndToBargain"
         },
         {
-            "question": "Scrum, Agile, Waterfall?"
+            "question": "Scrum, Agile, Waterfall?",
+            "tags": [
+                "general",
+                "softskills"
+            ]
         },
         {
-            "question": "Tell about the most difficult task that you faced? How did you tackled it?"
+            "question": "Tell about the most difficult task that you faced? How did you tackled it?",
+            "tags": [
+                "general",
+                "softskills"
+            ]
         },
         {
-            "question": "Why are you still writing using C++? Because you can easily get more money using JS?:)"
+            "question": "Why are you still writing using C++? You can easily get more money using JS.:)",
+            "tags": [
+                "softskills",
+                "funny/trick"
+            ]
         },
         {
-            "question": "There is only one water lily in the lake. Everyday the number of lilys doubles. On the day 48 the lake was full. Which day there lake was half fulled?"
+            "question": "There is only one water lily in the lake. Everyday the number of lilys doubles. On the day 48 the lake was full. Which day there lake was half fulled?",
+            "tags": [
+                "general",
+                "algorithmic",
+                "funny/trick"
+            ]
         }
     ]
 }
