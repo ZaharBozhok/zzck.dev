@@ -21,6 +21,10 @@
     cursor: pointer;
     user-select: none;
 }
+.question-tag-selected {
+    color: white;
+    background-color: black;
+}
 
 .question-tag:hover {
     color: white;
@@ -102,4 +106,7 @@
     justify-content: left;  
 }
 .fire {
+    margin-left: -20px;
+    margin-right: 1px;
+    font-style: normal;
 }
