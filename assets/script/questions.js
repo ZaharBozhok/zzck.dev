@@ -1,14 +1,16 @@
 async function main() {
     const questionsDiv = document.getElementById("questions");
     const response = await fetch("/assets/data/c++-questions/questions.json")
-    const questions = (await response.json())["questions"];
-    
+    const respJson = await response.json();
+    const questions = respJson["questions"];
+    const allTags = respJson["tags"];
+    console.log(allTags)
+
     let uniqueTags = new Set();
     questions.forEach(questionBlock => {
-        if ("tags" in questionBlock)
-        {
+        if ("tags" in questionBlock) {
             questionBlock["tags"].forEach(tag => {
-                uniqueTags.add(tag)                
+                uniqueTags.add(tag)
             })
         }
     })
@@ -16,15 +18,17 @@ async function main() {
     let navbar = document.createElement('div');
     navbar.id = "mynavbar";
     uniqueTags.forEach(tag => {
-        navbar.innerHTML+=`<span class='question-tag question-tag-nav'>${tag}</span>`
+        if (tag in allTags)
+            navbar.innerHTML += `<span class='question-tag question-tag-nav'>${allTags[tag]['emoji']}${tag}</span>`
+        else
+            navbar.innerHTML += `<span class='question-tag question-tag-nav'>${tag}</span>`
     })
     questionsDiv.append(navbar)
-    
+
     let max = 1;
     let min = 1;
     questions.forEach(questionBlock => {
-        if ("timesAsked" in questionBlock)
-        {
+        if ("timesAsked" in questionBlock) {
             const timesAsked = questionBlock["timesAsked"]
             if (max < timesAsked) max = timesAsked
         }
@@ -41,12 +45,11 @@ async function main() {
         questionBlock.classList.add('question-block');
         if ("timesAsked" in question) {
             const timesAsked = question["timesAsked"];
-            if (timesAsked >= (max * 0.3))
-            {
+            if (timesAsked >= (max * 0.3)) {
                 questionBlock.innerHTML += `<p>🔥${question["question"]}</p>`
             }
         }
-        else{
+        else {
             questionBlock.innerHTML += `<p>${question["question"]}</p>`
         }
         if ("tags" in question) {

@@ -1,4 +1,90 @@
 {
+    "tags": {
+        "general": {
+            "emoji": "👐"
+        },
+        "c++": {
+            "emoji": "💙"
+        },
+        "concurrency": {
+            "emoji": "💣"
+        },
+        "data structures": {
+            "emoji": "🔬"
+        },
+        "algorithmic": {
+            "emoji": "🥷"
+        },
+        "open question": {
+            "emoji": "🤔"
+        },
+        "OS": {
+            "emoji": "🚬"
+        },
+        "design/architecture": {
+            "emoji": "🏛"
+        },
+        "technologies": {
+            "emoji": "🧑‍💻"
+        },
+        "best practice": {
+            "emoji": "🧹"
+        },
+        "nerdy": {
+            "emoji": "😐"
+        },
+        "optimizations": {
+            "emoji": "🏎"
+        },
+        "hardware": {
+            "emoji": "⚙️"
+        },
+        "networking": {
+            "emoji": "📡"
+        },
+        "c": {
+            "emoji": "🔫"
+        },
+        "interop": {
+            "emoji": "🤝"
+        },
+        "security": {
+            "emoji": "🔒"
+        },
+        "web": {
+            "emoji": "🌐"
+        },
+        "contains code": {
+            "emoji": "🏋️"
+        },
+        "quiz": {
+            "emoji": "🧐"
+        },
+        "tools": {
+            "emoji": "🛠"
+        },
+        "linux": {
+            "emoji": "🐧"
+        },
+        "asm": {
+            "emoji": "🔪"
+        },
+        "debugging": {
+            "emoji": "🪳"
+        },
+        "problem solving": {
+            "emoji": "💭"
+        },
+        "DB": {
+            "emoji": "🗄"
+        },
+        "softskills": {
+            "emoji": "🙊"
+        },
+        "funny/trick": {
+            "emoji": "👻"
+        }
+    },
     "questions": [
         {
             "question": "What is OOP (Encapsulation, Inheritance, Abstraction, Polymorphism)?",
@@ -9,81 +95,81 @@
         {
             "question": "What is the difference between ‘class’ and ‘struct’?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "How do access modifiers change during inheritance?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is an abstract class in C++?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Can we create an instance of an abstract class?",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ]
         },
         {
             "question": "How do virtual functions work?",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "When virtual function table is created? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 3
         },
         {
             "question": "Is it possible to have virtual constructor (why would yes or not)? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "Why do we need virtual destructors? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 4
         },
         {
             "question": "Describe the purpose of the explicit keyword.",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is stack in program and how it is used?",
             "tags": [
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is heap in program and how it is used?",
             "tags": [
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "When to allocate memory on heap or on stack (pros and cons)?",
             "tags": [
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -95,20 +181,20 @@
         {
             "question": "Describe the purpose of the `reqister` keyword?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "How to tackle resource management problems with allocated memory on heap (for example on stack it is managed automatically)?",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ]
         },
         {
             "question": "What is RAII (Resource allocation is acquisition)? ",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ],
             "timesAsked": 5
@@ -116,20 +202,20 @@
         {
             "question": "What is smart pointer (how many types do you know)? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 5
         },
         {
             "question": "Explain how unique_ptr, shared_ptr, weak_ptr work.",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "How does thread safety implemented in shared_ptr? ",
             "tags": [
-                "cpp",
+                "c++",
                 "concurrency"
             ],
             "timesAsked": 2
@@ -137,53 +223,53 @@
         {
             "question": "Why do shared_ptr and weak_ptr used together (which problems are resolved)?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "How can be transfer the ownership of the unique_ptr? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "Can we copy unique_ptr?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "How can we forbid object copying? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "Advantage of using std::make_shared? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "Explain the purpose of std::enable_shared_from_this (and maybe how it’s implemented)?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "How many STL containers did you work with (name them)? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 3
         },
         {
             "question": "std::vector vs std::list?",
             "tags": [
-                "cpp",
+                "c++",
                 "general",
                 "data structures"
             ]
@@ -191,7 +277,7 @@
         {
             "question": "std::array vs std::vector?",
             "tags": [
-                "cpp",
+                "c++",
                 "general",
                 "data structures"
             ]
@@ -199,26 +285,26 @@
         {
             "question": "What is iterator invalidation when working with std::vector?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "How to eliminate reallocation in vector (reserve)? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "How many associative containers do you know in STL?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Difference between std::map and std::unordered_map (and use cases for them) ? ",
             "tags": [
-                "cpp",
+                "c++",
                 "general",
                 "data structures"
             ],
@@ -227,7 +313,7 @@
         {
             "question": "Complexity of inserting into a std::map / std::unordered_map?",
             "tags": [
-                "cpp",
+                "c++",
                 "general",
                 "data structures",
                 "algorithmic"
@@ -236,7 +322,7 @@
         {
             "question": "What should be implemented in your class to be used as a key of std::map / std::unordered_map (big O of insert, search, …)? ",
             "tags": [
-                "cpp",
+                "c++",
                 "general",
                 "data structures",
                 "algorithmic"
@@ -277,7 +363,7 @@
         {
             "question": "What types of IPC do you know? ",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ],
             "timesAsked": 5
@@ -285,7 +371,7 @@
         {
             "question": "Shallow copy vs deep copy.",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ]
         },
@@ -324,7 +410,7 @@
         {
             "question": "How is memory handled between multiple processes?",
             "tags": [
-                "cpp",
+                "c++",
                 "general",
                 "OS"
             ]
@@ -339,7 +425,7 @@
         {
             "question": "How would you synchronize 2 threads?",
             "tags": [
-                "cpp",
+                "c++",
                 "general",
                 "concurrency"
             ]
@@ -466,14 +552,14 @@
             "tags": [
                 "general",
                 "concurrency",
-                "cpp"
+                "c++"
             ],
             "timesAsked": 3
         },
         {
             "question": "How many c++ standards do you know? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
@@ -482,7 +568,7 @@
             "tags": [
                 "general",
                 "design/architecture",
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -490,46 +576,46 @@
             "tags": [
                 "general",
                 "design/architecture",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is move semantics in c++? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 4
         },
         {
             "question": "What specific methods should be defined to use move semantics?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Difference between rvalue and lvalue? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "Where local variables are stored?",
             "tags": [
-                "cpp",
+                "c++",
                 "OS"
             ]
         },
         {
             "question": "Where static variables are stored?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is container class?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -563,19 +649,19 @@
         {
             "question": "Can a destructor be overloaded?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What can be overloaded?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Can operators be overloaded?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -613,7 +699,7 @@
         {
             "question": "Give 5 examples of UB in C++?",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "hint": "1%20Unreferencing%20pointer%20to%20dead%20object%0A2%20Is%20arithmetics%20overflow%20in%20C%2B%2B%20is%20UB%3F%20%28yes%29%0A3%20Stack%20overflow%20is%20UB%0A4%0Astd%3A%3Avector%3Cint%3E%20xs%20%3D%20%7B1%2C%202%2C%203%7D%3B%0Aauto%26%20x%20%3D%20xs%5B0%5D%3B%0Axs.push_back%284%29%3B%0Astd%3A%3Acout%20%3C%3C%20x%20%3B%20%2F%2F%20UB%21%0A5%20Usage%20of%20not%20inited%20var%20is%20UB"
         },
@@ -621,7 +707,7 @@
             "question": "Why int is 32 bit both on 32 bit arch and 64 bit arch? (tricky question, just for fun)",
             "tags": [
                 "general",
-                "cpp",
+                "c++",
                 "OS",
                 "nerdy"
             ]
@@ -651,32 +737,31 @@
         {
             "question": "How to specify that template parameter should be a descendant of some other class?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Can virtual function be inlined?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Can virtual functions be used in template classes?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Can virtual functions be used in structures?",
             "tags": [
-                "cpp"
+                "c++"
             ]
-            
         },
         {
             "question": "Which STL function can be used to check whether several sets have intersection?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -690,50 +775,50 @@
             "question": "Equality vs Equivalence? Where it used in STL?",
             "tags": [
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "In some functions it is not recommended to throw exceptions. What are these functions? Why it is not recommended?",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 3
         },
         {
             "question": "Explain the usage of the `typename` keyword.",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Where should one use `noexcept`? Why? `noexcept` as a part of the function signature?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Can `this` be equal to `nullptr`? When and why that possible?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Can a reference be `nullptr`? Why?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Can pure virtual function have an implementation? Can we call this function?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What types of `new` do you know?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -741,70 +826,70 @@
             "tags": [
                 "general",
                 "data structures",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Explain the difference between `enum` and `enum class`?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Describe rules of the member function generation in classes in C++?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is reference collapsing? Where it is used?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is RVO optimization?",
             "tags": [
-                "cpp",
+                "c++",
                 "optimizations"
             ]
         },
         {
             "question": "Explain the difference between `std::auto_ptr` and `std::unique_ptr`?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Explain the difference between deleters of `std::unieque_ptr` and `std::shared_ptr`?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "How can be implemented reference counting in `std::shared_ptr`?",
             "tags": [
-                "cpp",
+                "c++",
                 "concurrency"
             ]
         },
         {
             "question": "Why do we need `std::make_shared`?",
             "tags": [
-                "cpp",
+                "c++",
                 "optimizations"
             ]
         },
         {
             "question": "Why do we need `std::weak_ptr`? How to create one? How it is implemented? How to use?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is `std::future`, `std::promise`? Is it possible to have `std::promise`?",
             "tags": [
-                "cpp",
+                "c++",
                 "concurrency"
             ]
         },
@@ -812,20 +897,20 @@
             "question": "Types of memory models in c++?",
             "tags": [
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Why do we need `std::lock`? How can STL help to avoid deadlocks?",
             "tags": [
-                "cpp",
+                "c++",
                 "concurrency"
             ]
         },
         {
             "question": "What are memory barriers? Why do we need them? How can we use them in C++?",
             "tags": [
-                "cpp",
+                "c++",
                 "concurrency",
                 "hardware"
             ]
@@ -833,19 +918,19 @@
         {
             "question": "What is the universal reference?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is SFINAE? Where is used in STL?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What kind of call conventions do you know? Difference between them?",
             "tags": [
-                "cpp",
+                "c++",
                 "optimizations",
                 "OS"
             ]
@@ -861,32 +946,32 @@
             "question": "What is metaprogramming?",
             "tags": [
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "How does `throw` work internally? What kind of code is generated in `throw` and `catch` places?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is CRT?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Explain initialization and deletion of global, static, threadlocal objects",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "How do mutex, fast mutex, and other primitives work internally?",
             "tags": [
                 "general",
-                "cpp",
+                "c++",
                 "OS",
                 "concurrency"
             ]
@@ -901,44 +986,44 @@
         {
             "question": "What types of polymorphism in C++ do you know?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Do all member functions can be virtual?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Which types of leaks do you know (memory leak / …?) ?",
             "tags": [
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Can we call virtual functions of other class from destructor?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What will happen if code throws an exception inside the destructor?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Which member functions will compiler generate by default?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Do all objects could be moved? Can we move an object with `std::atomic` inside?",
             "tags": [
-                "cpp",
+                "c++",
                 "concurrency"
             ]
         },
@@ -947,14 +1032,14 @@
             "tags": [
                 "general",
                 "concurrency",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is TLS?",
             "tags": [
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -967,7 +1052,7 @@
         {
             "question": "How does RAII is implemented in c++?",
             "tags": [
-                "cpp",
+                "c++",
                 "design/architecture"
             ]
         },
@@ -1004,7 +1089,7 @@
             "question": "What is `std::vector`, pros and cons?",
             "tags": [
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -1017,45 +1102,45 @@
         {
             "question": "Explain the difference between `static_cast` and `dynamic_cast`, which performance is better, why?",
             "tags": [
-                "cpp",
+                "c++",
                 "optimizations"
             ]
         },
         {
             "question": "Explain the Order of calls of constructors and destructors calls while using inheritance.",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is diamond problem? What problems can occur while using inheritance?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is inherited constructors?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is delegating constructors?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is a lambda ?",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ]
         },
         {
             "question": "What is rule of 5 (or previously rule of 3)?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -1067,14 +1152,14 @@
         {
             "question": "What’s wrong with Singleton?",
             "tags": [
-                "cpp",
+                "c++",
                 "design/architecture"
             ]
         },
         {
             "question": "Singleton in multithread environment?",
             "tags": [
-                "cpp",
+                "c++",
                 "design/architecture"
             ]
         },
@@ -1090,7 +1175,7 @@
         {
             "question": "Why do we need to join threads?",
             "tags": [
-                "cpp",
+                "c++",
                 "OS",
                 "concurrency"
             ]
@@ -1098,7 +1183,7 @@
         {
             "question": "Can we join detached thread?",
             "tags": [
-                "cpp",
+                "c++",
                 "OS",
                 "concurrency"
             ]
@@ -1106,7 +1191,7 @@
         {
             "question": "Describe the behavior of the conditional variable and the `mutex` associated with it. Spurious wake up?",
             "tags": [
-                "cpp",
+                "c++",
                 "concurrency",
                 "OS"
             ]
@@ -1127,14 +1212,14 @@
         {
             "question": "What is `std::async`, `std::future`?",
             "tags": [
-                "cpp",
+                "c++",
                 "concurrency"
             ]
         },
         {
             "question": "How to call C code from C++ and how to call C++ code from C?",
             "tags": [
-                "cpp",
+                "c++",
                 "c",
                 "interop"
             ]
@@ -1148,14 +1233,14 @@
         {
             "question": "What is ABI?",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ]
         },
         {
             "question": "What is call convention?",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ]
         },
@@ -1163,20 +1248,20 @@
             "question": "What can we do in C++ but cannot in C?",
             "tags": [
                 "general",
-                "cpp",
+                "c++",
                 "c"
             ]
         },
         {
             "question": "What is function overloading in C++? How it works?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Keyword `static` in C++ vs `static` in C?",
             "tags": [
-                "cpp",
+                "c++",
                 "c"
             ]
         },
@@ -1184,13 +1269,13 @@
             "question": "`static` keyword and multithreading in C++11?",
             "tags": [
                 "concurrency",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Lifetime of static variables in functions and class member functions?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -1209,20 +1294,20 @@
             "question": "What is preprocessing?",
             "tags": [
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is translation unit?",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ]
         },
         {
             "question": "What is linking?",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ]
         },
@@ -1251,38 +1336,38 @@
         {
             "question": "Where comes `this` pointer in class member function from?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What does mean `const` after member function declaration? Like `void Test::foo() const;`",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Const pointer to object vs pointer to const object vs const pointer to const object?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is pure virtual method call error? How can we face it?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is inheritance? Virtual inheritance? Diamond problem? How many instances of parent classes are stored in child?",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ]
         },
         {
             "question": "What is RTTI? Why do we need it? What will happen if we disable it?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -1308,13 +1393,13 @@
         {
             "question": "What is toolchain? What types of compilers do you know? Have you experienced with crosscompilation?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What parts does the running program consist of? memory, program sections?",
             "tags": [
-                "cpp",
+                "c++",
                 "OS",
                 "general"
             ]
@@ -1322,7 +1407,7 @@
         {
             "question": "What is member alignment in structures? What is cache alignment?",
             "tags": [
-                "cpp",
+                "c++",
                 "optimizations",
                 "general"
             ]
@@ -1342,19 +1427,19 @@
                 "concurrency",
                 "optimizations",
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Which c++ standards do you know? Top features from c++11?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is perfect forwarding?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -1367,7 +1452,7 @@
         {
             "question": "What is pimpl, fast pimpl?",
             "tags": [
-                "cpp",
+                "c++",
                 "design/architecture"
             ]
         },
@@ -1381,20 +1466,20 @@
         {
             "question": "Class vs Struct",
             "tags": [
-                "cpp",
+                "c++",
                 "c"
             ]
         },
         {
             "question": "Change of access modifiers after inheritance",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Can we create an object of an abstract class?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -1402,62 +1487,62 @@
             "tags": [
                 "OS",
                 "general",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Keyword `register`?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Can pure virtual function have default implementation?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Public vs Protected inheritance?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Which STl classes implement RAII?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "`mutable` keyword?",
             "tags": [
-                "cpp"
+                "c++"
             ],
-            "timesAsked":2
+            "timesAsked": 2
         },
         {
             "question": "`malloc` vs `new`?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is functor vs lambda?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Full vs partial template initialization?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What user defined class should have when passing it to STL containers?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
@@ -1465,13 +1550,13 @@
             "tags": [
                 "algorithmic",
                 "data structures",
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is std::jthread (C++20)?",
             "tags": [
-                "cpp",
+                "c++",
                 "concurrency"
             ]
         },
@@ -1485,19 +1570,19 @@
         {
             "question": "What STL containers do you know?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "`std::vector::resize` vs `std::vector::reserve`?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is conditional variable, describe its problems? ",
             "tags": [
-                "cpp",
+                "c++",
                 "OS",
                 "concurrency"
             ],
@@ -1506,14 +1591,14 @@
         {
             "question": "What does the const member function qualifier do? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "What is stack unwinding? ",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ],
             "timesAsked": 2
@@ -1521,7 +1606,7 @@
         {
             "question": "What is exception safety, which do you know? ",
             "tags": [
-                "cpp",
+                "c++",
                 "general"
             ],
             "timesAsked": 2
@@ -1529,14 +1614,14 @@
         {
             "question": "Types of STL iterators? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 3
         },
         {
             "question": "Is std::shared_ptr threadsafe? ",
             "tags": [
-                "cpp",
+                "c++",
                 "concurrency"
             ],
             "timesAsked": 2
@@ -1545,14 +1630,14 @@
             "question": "std::thread vs std::async? ",
             "tags": [
                 "concurrency",
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "Why do we need `volatile` keyword? What is stands for? ",
             "tags": [
-                "cpp",
+                "c++",
                 "optimizations",
                 "hardware"
             ],
@@ -1561,7 +1646,7 @@
         {
             "question": "`std::move` vs `std::forward`? And why do we need them? ",
             "tags": [
-                "cpp",
+                "c++",
                 "optimizations"
             ],
             "timesAsked": 2
@@ -1569,7 +1654,7 @@
         {
             "question": "Which design patterns do you know (GoF)? ",
             "tags": [
-                "cpp",
+                "c++",
                 "design/architecture"
             ],
             "timesAsked": 4
@@ -1577,21 +1662,21 @@
         {
             "question": "Where is the virtual function table stored? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "What kind of casts in c++ do you know? ",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "Heap vs stack, usage? When to prefer stack/heap? ",
             "tags": [
-                "cpp",
+                "c++",
                 "OS",
                 "optimizations"
             ],
@@ -1600,7 +1685,7 @@
         {
             "question": "What will be printed and why?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "std%3A%3Acout%20%3C%3C%201u%20-%202%3B"
@@ -1608,7 +1693,7 @@
         {
             "question": "What is the error in the code below?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "my_struct_t%20%2Abar%3B%0A/%2A%20...%20do%20stuff%2C%20including%20setting%20bar%20to%20point%20to%20a%20defined%20my_struct_t%20object%20...%20%2A/%0Amemset%28bar%2C%200%2C%20sizeof%28bar%29%29%3B"
@@ -1616,7 +1701,7 @@
         {
             "question": "What is the problem in the code below? What would be an alternate way of implementing this that would avoid the problem?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "size_t%20sz%20%3D%20buf-%3Esize%28%29%3B%0Awhile%20%28%20--sz%20%3E%3D%200%29%0A%7B%0A%20%20%20/%2A%20do%20something%20%2A/%0A%7D"
@@ -1624,7 +1709,7 @@
         {
             "question": "Consider the two code snippets below for printing a vector. Is there any advantage of one vs. the other? Explain. (Hint: in any compiler will optimize it out)",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "//%20Option%201%0Avector%20vec%3B%0A/%2A%20...%20%2A/%0Afor%20%28auto%20itr%20%3D%20vec.begin%28%29%3B%20itr%20%21%3D%20vec.end%28%29%3B%20itr%2B%2B%29%20%7B%0A%20%20%20itr-%3Eprint%28%29%3B%0A%7D",
@@ -1633,13 +1718,13 @@
         {
             "question": "Is it possible to have a recursive inline function?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What is the output of the following code? ",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "%23include%20%3Ciostream%3E%0A%0Aclass%20A%20%7B%0A%20%20%20public%3A%0A%20%20%20A%28%29%7B%7D%0A%20%20%20~A%28%29%7B%0A%20%20%20%20%20%20throw%2042%3B%0A%20%20%20%7D%0A%7D%3B%0A%0Aint%20main%28%29%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20A%20a%3B%0A%20%20%20%20%20%20throw%2032%3B%0A%20%20%20%7D%20catch%28int%20a%29%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20a%3B%0A%20%20%20%7D%0A%20%20%20return%200%3B%0A%7D"
@@ -1647,7 +1732,7 @@
         {
             "question": "What will be printed? Explain.",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "%23include%20%3Ciostream%3E%0Aclass%20Base%20%7B%0A%20%20%20virtual%20void%20method%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22from%20Base%22%20%3C%3C%20std%3A%3Aendl%3B%7D%0Apublic%3A%0A%20%20%20virtual%20%7EBase%28%29%20%7Bmethod%28%29%3B%7D%0A%20%20%20void%20baseMethod%28%29%20%7Bmethod%28%29%3B%7D%0A%7D%3B%0A%0Aclass%20A%20%3A%20public%20Base%20%7B%0A%20%20%20void%20method%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22from%20A%22%20%3C%3Cstd%3A%3Aendl%3B%7D%0Apublic%3A%0A%20%20%20%7EA%28%29%20%7Bmethod%28%29%3B%7D%0A%7D%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20Base%20%2Abase%20%3D%20new%20A%3B%0A%20%20%20base-%3EbaseMethod%28%29%3B%0A%20%20%20delete%20base%3B%0A%20%20%20return%200%3B%0A%7D"
@@ -1655,7 +1740,7 @@
         {
             "question": "How many iterations will this loop execute?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "unsigned%20char%20half_limit%20%20%3D%20150%3B%0Afor%28unsigned%20char%20i%20%3D%200%3B%20i%20%3C%20%282%20%2A%20half_limit%29%3B%20%2B%2Bi%29%20%7B%0A%20%20%20//%20do%20sth%0A%7D"
@@ -1663,7 +1748,7 @@
         {
             "question": "How to invoke the destructor for pStr?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "MyString%20%2ApStr%20%3D%20new%20MyString%28%22Hello%20world%21%22%29%3B"
@@ -1671,7 +1756,7 @@
         {
             "question": "How many objects of A does the D class have",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "class%20A%20%7B%7D%3B%0Aclass%20B%20%3A%20virtual%20public%20A%20%7B%7D%3B%0Aclass%20C%20%3A%20virtual%20public%20A%20%7B%7D%3B%0Aclass%20D%20%3A%20public%20B%2C%20public%20C%2C%20virtual%20public%20A%20%7B%7D%3B"
@@ -1679,7 +1764,7 @@
         {
             "question": "Which of the following types are valid ex [std::logic_error, std::range_error, std::invalid_argument, std::bad_alloc, std::exception]?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "void%20foo%28%29%20throw%28std%3A%3Aruntime_error%29%20%7B%0A%20%20%20if%20%28/%2A...%2A/%29%20throw%20%28ex%29%3B%0A%7D"
@@ -1690,7 +1775,7 @@
         {
             "question": "What will be the output of the following code?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "struct%20Test%20%7B%0A%20%20%20%20Test%28%29%20%20%20%20%20%20%20%7B%20std%3A%3Acout%20%3C%3C%20%22d%22%3B%20%7D%0A%20%20%20%20Test%28int%20i%29%20%20%7B%20std%3A%3Acout%20%3C%3C%20%22i%22%3B%20%7D%0A%20%20%20%20Test%28char%20c%29%20%7B%20std%3A%3Acout%20%3C%3C%20%22c%22%3B%20%7D%0A%20%20%20%20Test%28long%20l%29%20%7B%20std%3A%3Acout%20%3C%3C%20%22l%22%3B%20%7D%0A%20%20%20%20Test%28float%20f%29%7B%20std%3A%3Acout%20%3C%3C%20%22f%22%3B%20%7D%0A%7D%3B%0A%0Aint%20main%28%29%0A%7B%0A%20%20%20%20Test%20t1%28%27c%27%29%3B%0A%20%20%20%20Test%20t2%28%27c%27%20%2B%203%29%3B%0A%20%20%20%20Test%20t3%2845%29%3B%0A%20%20%20%20Test%20t4%280xFF%29%3B%0A%20%20%20%20Test%20t5%280x1234L%29%3B%0A%20%20%20%20Test%20t6%289999.9f%29%3B%0A%20%20%20%20return%200%3B%0A%7D"
@@ -1698,7 +1783,7 @@
         {
             "question": "Write a method signature which will override given virtual function / or tell will Derived work? ",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "struct%20Test%20%7B%0A%20%20%20int%20virtual%20doMagic%28%29%20throw%28uint8_t%2C%20uint64_t%2C%20uint32_t%29%3B%0A%7D%3B%0Astruct%20Derived%20%7B%0A%20%20%20int%20virtual%20doMagic%28%29%20throw%28uint64_t%2C%20uint8_t%2C%20uint32_t%29%3B%0A%7D%3B"
@@ -1706,14 +1791,14 @@
         {
             "question": "Consider following struct `struct Test {int a,b,c;};`. Can Test be inherited? Can subclasses of Test access its member variables? Is it okay to declare as `struct` or should be declared as `class`? Objects of Test cannot be created because it lacks a ctor? Are member variables are accessible from outside of the class (for example by dot operator)?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ]
         },
         {
             "question": "What will be the output of the code below?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "int%20f%28%29%20%7B%0A%20%20%20int%20i%20%3D%2012%3B%0A%20%20%20int%20%26r%20%3D%20i%3B%0A%20%20%20r%20%2B%3D%20r/4%3B%0A%20%20%20int%20%2Ap%20%3D%20%26r%3B%0A%20%20%20%2Ap%20%3D%20r%3B%0A%20%20%20return%20i%3B%0A%7D"
@@ -1721,7 +1806,7 @@
         {
             "question": "Which declarations are valid?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "int%20%2At%20%3D%20new%20int%5B15%5D%3B%0Aint%20t%5B15%5D%3B%0Aint%20t%5B15%5D%20%3D%20new%20int%2A%3B%0Aint%20%2At%5B15%5D%3B%0Aint%20%2A%2At%20%3D%20new%20int%2A%5B15%5D%3B"
@@ -1729,7 +1814,7 @@
         {
             "question": "What will be the output of the following code?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "struct%20Foo%20%7B%0A%20%20%20Foo%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22Foo%22%3B%7D%0A%7D%3B%0A%0Astruct%20Bar%20%7B%0A%20%20%20Bar%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22Bar%22%3B%7D%0A%7D%3B%0A%0Astruct%20FooToo%20%3A%20virtual%20Foo%20%7B%0A%20%20%20FooToo%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22FooToo%22%3B%7D%0A%7D%3B%0A%0Astruct%20FooTooBar%20%3A%20virtual%20FooToo%2C%20virtual%20Bar%20%7B%0A%20%20%20FooTooBar%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22FooTooBar%22%3B%7D%0A%7D%3B"
@@ -1737,7 +1822,7 @@
         {
             "question": "What's wrong with the sample below?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "struct%20Test%20%7B%0A%20%20%20int%20x%3B%0A%20%20%20static%20void%20func%28int%20v%29%3B%0A%7D%3B%0A%0Avoid%20Test%3A%3Afunc%28int%20v%29%20%7Bx%20%3D%20v%3B%7D"
@@ -1745,7 +1830,7 @@
         {
             "question": "Which ones are correct and what do the mean?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "void%20%28Test%2A%3A%3Afunc%29%28int%26%29%3B%0Avoid%20%28Test%3A%3A%2Afunc%29%28int%26%29%3B%0Avoid%20%28Test%3A%3Afunc%29%28int%26%29%3B%0Avoid%20%28%2ATest%3A%3Afunc%29%28int%26%29%3B%0Avoid%20%28Test%3A%3Afunc%2A%29%28int%26%29%3B"
@@ -1753,7 +1838,7 @@
         {
             "question": "What's wrong with the code below?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "template%3Cclass%20T1%3B%20class%20T2%3B%20class%20T3%3E%0Aint%20Function%28T1%20t1%2C%20T2%20t2%2C%20T3%29%20%7B%0A%20%20%20return%20t1%20%2A%20t2%20/%20t3%3B%0A%7D"
@@ -1761,7 +1846,7 @@
         {
             "question": "Explain what these methods do?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "std%3A%3Avector%3Cstd%3A%3Astring%3E%20vec%3B%0Astd%3A%3Afill%28vec.begin%28%29%2C%20vec.end%28%29%2C%20%22hello%22%29%3B%0Astd%3A%3Afill_n%28std%3A%3Aback_inserter%28vs%29%2C%205%2C%20%22hello%22%29%3B%0Astd%3A%3Agenerate%28vec.begin%28%29%2C%20vec.end%28%29%2C%20%5B%5D%20%7B%20return%20%22hello%22%3B%20%7D%29%3B%0Avs%20%3D%20std%3A%3Avector%3Cstd%3A%3Astring%3E%28%22hello%22%29%3B"
@@ -1769,7 +1854,7 @@
         {
             "question": "Explain the code below",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "extern%20void%0AFunc%28double%2C%20char%29%20throw%28const%20char%2A%2C%20RangeErr%29"
@@ -1777,7 +1862,7 @@
         {
             "question": "How to make this code more efficient?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "struct%20Test%20%7B%0A%20%20%20char%20data%5B10000%5D%3B%0A%20%20%20Test%28%29%3B%0A%20%20%20%7ETest%28%29%3B%0A%7D%3B%0A%0Astruct%20Another%20%7B%0A%20%20%20Another%28%29%20%7B%20a%20%3D%200%3B%7D%0A%20%20%20void%20FillData%28Test%20t%29%3B%0Aprivate%3A%0A%20%20%20int%20a%20%3D%200%3B%0A%7D%3B"
@@ -1785,20 +1870,20 @@
         {
             "question": "How to get number of characters in std::string (using which function)? ",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "How many standard iostream objects do you know?",
             "tags": [
-                "cpp",
+                "c++",
                 "OS"
             ]
         },
         {
             "question": "What is the result of the following program?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "void%20func%28%29%20%7B%0A%20%20%20%20int%20a%20%3D%20std%3A%3Arand%28%29%20%25%203%3B%0A%20%20%20%20if%28%20a%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20throw%20%22str%22%3B%0A%20%20%20%20if%28%20a%20%3D%3D%201%29%0A%20%20%20%20%20%20%20%20throw%2010%3B%0A%20%20%20%20if%28%20a%20%3D%3D%202%29%0A%20%20%20%20%20%20%20%20throw%200.5%3B%0A%7D%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20func%28%29%3B%0A%20%20%20%20%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20%20%20%20%20return%201%3B%0A%20%20%20%20%7D%20catch%20%28int%20i%29%20%7B%0A%20%20%20%20%20%20%20%20return%202%3B%0A%20%20%20%20%7D%20catch%20%28const%20char%2A%20cp%29%20%7B%0A%20%20%20%20%20%20%20%20return%203%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%7D"
@@ -1806,7 +1891,7 @@
         {
             "question": "Does any commented line has an error?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "template%3Cclass%20T%3E%20void%20foo%28T%20op1%2C%20T%20op2%29%20%7B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22op1%20%3D%20%22%20%3C%3C%20op1%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22op2%20%3D%20%22%20%3C%3C%20op2%20%3C%3C%20std%3A%3Aendl%3B%0A%7D%0A%0Atemplate%3Cclass%20T%3E%0Astruct%20sum%20%7B%0A%20%20%20%20static%20void%20foo%20%28T%20op1%2C%20T%20op2%29%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22sum%20%3D%20%22%20%3C%3C%20op2%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%20%7D%0A%7D%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20foo%281%2C%203%29%3B%20%20%20%20%20%20%20%20%20%20//%20Line%201%0A%20%20%20%20foo%3Cint%3E%281%2C%20%273%27%29%3B%20%20%20//%20Line%202%0A%20%20%20%20sum%3A%3Afoo%281%2C%202%29%3B%20%20%20%20%20//%20Line%203%0A%20%20%20%20return%200%3B%0A%7D"
@@ -1814,31 +1899,31 @@
         {
             "question": "What is the primary purpose of header files?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "In C++ there are lots of algo functions that accept function objects as a parameter, how are they called and how can one create an example of function object?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Where to initialize a non-static class member reference?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "What header stands for standard C++ I/O to write to a file?",
             "tags": [
-                "cpp"
-            ] 
+                "c++"
+            ]
         },
         {
             "question": "What will be the output of the following program?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "void%20func%28%29%20throw%28float%29%20%7B%0A%20%20%20throw%2010.0f%3B%0A%7D%0Aint%20main%28%29%20%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%271%27%3B%0A%20%20%20%20%20%20%20%20func%28%29%3B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%272%27%3B%0A%20%20%20%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%273%27%3B%0A%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%7D"
@@ -1846,7 +1931,7 @@
         {
             "question": "What will be the output of the following code?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "try%20%7B%0A%20%20%20%20throw%20std%3A%3Astring%28%224%22%29%3B%0A%7D%20catch%20%28std%3A%3Astring%20%26s%29%20%7B%0A%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20s%3B%0A%20%20%20%20%20%20%20%20throw%202%3B%0A%20%20%20%20%7D%20catch%20%28int%20i%29%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20i%3B%0A%20%20%20%20%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20%20%20%20%20throw%3B%0A%20%20%20%20%7D%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22s%22%20%2B%20s%3B%0A%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22all%22%3B%0A%7D"
@@ -1854,20 +1939,20 @@
         {
             "question": "What is the purpose of the explicit keyword in constructors?",
             "tags": [
-                "cpp"
+                "c++"
             ],
             "timesAsked": 3
         },
         {
             "question": "What does mean `friend` keyword, can you give examples of usage?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "quiz": "With regard to enumeration types, which one of the following statements is true?",
             "tags": [
-                "cpp",
+                "c++",
                 "quiz"
             ],
             "answers": [
@@ -1881,7 +1966,7 @@
         {
             "question": "Will this code compile?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "extern%20void%20print%28int%20%2Aia%2C%20int%20sz%29%3B%0Avoid%20print%28int%20%2Aarray%2C%20int%20size%29%3B"
@@ -1889,7 +1974,7 @@
         {
             "question": "What's wrong with this code?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "namespace%20%7B%20static%20int%20n%3B%20%7D%0Anamespace%20A%20%7B%0A%20%20%20%20namespace%20%7B%20static%20int%20n%3B%20%7D%0A%7D%0A%0Ausing%20namespace%20A%3B%0Aint%20main%28%29%20%7B%0A%20%20%20%20n%20%3D%205%3B%0A%20%20%20%20return%200%3B%0A%7D"
@@ -1897,7 +1982,7 @@
         {
             "question": "What's wrong with this code?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "void%20log%28std%3A%3Astring%20message%29%3B%0A%0Aclass%20Account%0A%7B%0Apublic%3A%0A%20%20%20Account%28int%20id%29%3B%0A%20%20%20virtual%20%7EAccount%28%29%3B%0A%20%20%20virtual%20std%3A%3Astring%20get_name%28%29%20%3D%200%3B%0A%20%20%20int%20get_id%28%29%3B%0A%7D%3B%0A%0AAccount%3A%3A%7EAccount%28%29%0A%7B%0A%20%20%20log%28%22Destroying%3A%20%22%20%2B%20get_name%28%29%29%3B%0A%7D"
@@ -1905,7 +1990,7 @@
         {
             "question": "How many characters are there in this string and why?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "char%20abc%5B%5D%20%3D%20%22%22%3B"
@@ -1913,7 +1998,7 @@
         {
             "question": "What member function should be defined to make this code work?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "template%3Cclass%20T%2C%20class%20X%3E%20class%20Obj%20%7B%0A%20%20%20%20T%20my_t%3B%0A%20%20%20%20X%20my_x%3B%0Apublic%3A%0A%20%20%20%20Obj%28T%20t%2C%20X%20x%29%3A%20my_t%28t%29%2C%20my_x%28x%29%7B%7D%0A%20%20%20%20/%2A%20put%20a%20function%20here%20%2A/%0A%7D%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20int%20iT%3B%0A%20%20%20%20Obj%3Cint%2C%20float%3E%200%2815%2C%2010.375%29%3B%0A%0A%20%20%20%20iT%20%3D%20O%3B%0A%20%20%20%20return%200%3B%0A%7D"
@@ -1921,7 +2006,7 @@
         {
             "question": "How to free allocated memory by this code?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "int%2A%20pi%20%3D%20new%20int%5B10%5D%3B"
@@ -1929,7 +2014,7 @@
         {
             "question": "What's wrong with this code?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "template%20%3Ctypename%20T%3E%0Aclass%20Foo%0A%7B%0A%20%20%20T%20tVar%3B%0Apublic%3A%0A%20%20%20Foo%28T%20t%29%20%3A%20tVar%28t%29%20%7B%20%7D%0A%7D%3B%0A%0Aclass%20FooDerived%20%3A%20public%20Foo%3Cstd%3A%3Astring%3E%20%7B%20%7D%3B%0A%0AFooDerived%20fd%3B"
@@ -1937,7 +2022,7 @@
         {
             "question": "Write a copy constructor, and how to clone ",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "class%20A%20%7B%0Apublic%3A%0A%20%20%20A%28%29%20%3A%20a%28new%20int%281%29%29%20%7B%7D%0A%20%20%20%7EA%28%29%20%7B%20delete%20a%3B%20%7D%0Aprotected%3A%0A%20%20%20int%2A%20a%3B%0A%7D%3B%0A%0Aclass%20B%20%3A%20public%20A%20%7B%0Apublic%3A%0A%20%20%20B%28%29%20%3A%20A%28%29%2C%20b%28new%20int%282%29%29%20%7B%7D%0A%20%20%20%7EB%28%29%20%7B%20delete%20b%3B%20%7D%0Aprotected%3A%0A%20%20%20int%2A%20b%3B%0A%7D%3B%0A%0Avoid%20main%28void%29%7B%0A%20%20%20A%2A%20a%20%3D%20new%20B%28%29%3B%0A%20%20%20/%2A%20new%20copy%20of%20a%20%28but%20type%20is%20B%29%2A/%0A%7D"
@@ -1945,7 +2030,7 @@
         {
             "question": "What's wrong with this code? Any enhancements?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "%23include%20%3Cstring%3E%0Aclass%20Points%3B%0Avoid%20Mover%28const%20bool%26%20state%29%3B%0AButton%28const%20size_t%26%20height%2C%20const%20std%3A%3Awstring%20text%29%3B%0AButton%28const%20Point%26%20point%2C%20const%20std%3A%3Awstring%20text%29%3B%0AFrame%28const%20size_t%26%20width%2C%20const%20size_t%26%20height%29%3B%0Aconst%20size_t%26%20Width%28%29%20const%3B%0Aconst%20size_t%26%20Heigh%28%29%20const%3B"
@@ -1953,7 +2038,7 @@
         {
             "question": "What's wrong with this code?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "void%20foo%28%29%20%7B%0A%20%20%20std%3A%3Avector%3Cstd%3A%3Astring%3E%20names%7B%22first%22%2C%20%22second%22%7D%3B%0A%20%20%20//%20...%0A%20%20%20for%20%28auto%20name%20%3A%20names%29%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20names%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%7D"
@@ -1961,7 +2046,7 @@
         {
             "question": "What's the difference?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "void%20foo%28const%20std%3A%3Avector%3Cint%3E%26%20values%29%20%7B%0A%20%20%20std%3A%3Avector%3Cint%3E%3A%3Aconst_iterator%20it%20%3D%20values.begin%28%29%3B%0A%20%20%20while%20%28it%20%21%3D%20values.end%28%29%29%20%7B%0A%20%20%20%20%20%20//%20it%2B%2B%3B%20vs%0A%20%20%20%20%20%20%2B%2Bit%3B%0A%20%20%20%7D%0A%7D"
@@ -1969,7 +2054,7 @@
         {
             "question": "What happens here?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "class%20BaseEx%20%7B/%2A%20...%20%2A/%7D%3B%0Aclass%20SpecialEx%20%3A%20public%20BaseEx%20%7B/%2A%20...%20%2A/%7D%3B%0Aint%20main%28%29%20%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20bool%20condition%3B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%20%20%20if%20%28condition%29%20%7B%0A%20%20%20%20%20%20%20%20%20throw%20BaseEx%28%29%3B%0A%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20throw%20SpecialEx%28%29%3B%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%7D%0A%20%20%20catch%28const%20BaseEx%26%20e%29%20%7B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%7D%0A%20%20%20catch%28const%20SpecialEx%26%20e%29%20%7B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%7D%0A%7D"
@@ -1977,7 +2062,7 @@
         {
             "question": "What happens here?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "struct%20Test%20%7B%0A%20%20%20void%20foo%28%29%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22foo%22%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%20%20%20virtual%20void%20bar%28%29%20const%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22bar%22%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%7D%3B%0Aint%20main%28%29%20%7B%0A%20%20%20Test%2A%20test%20%3D%20new%20Test%3B%0A%20%20%20delete%20test%3B%0A%20%20%20/%2A%20...%20%2A/%0A%20%20%20test-%3Efoo%28%29%3B%0A%20%20%20test-%3Ebar%28%29%3B%0A%20%20%20return%200%3B%0A%7D"
@@ -1985,7 +2070,7 @@
         {
             "question": "Write an assignment operator and move-constructor",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "struct%20resource%20%7B%0A%20%20%20int%20d%3B%0A%7D%3B%0Aclass%20wrapper%20%7B%0A%20%20%20resource%20%2Ap%3B%0Apublic%3A%0A%20%20%20wrapper%28%29%20%3A%20p%28new%20resource%29%20%7B%7D%0A%20%20%20%7Ewrapper%28%29%20%7Bdelete%20p%3B%7D%0A%7D%3B"
@@ -1993,7 +2078,7 @@
         {
             "question": "What's wrong with this macro?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "%23define%20MULT_BY_KILOBYTE%28N%29%201024%2AN"
@@ -2001,7 +2086,7 @@
         {
             "question": "What's wrong with this code?",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "void%20removeEach3%28const%20vector%3Cint%3E%26%20v%29%7B%0A%20%20%20for%20%28vector%3Cint%3E%3A%3Aiterator%20i%20%3D%20v.begin%28%29%2C%20e%20%3D%20v.end%28%29%3B%20i%21%3De%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20if%20%28%2Ai%20%3D%3D%203%29%20%7B%0A%20%20%20%20%20%20%20%20%20v.erase%28i%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D"
@@ -2009,7 +2094,7 @@
         {
             "question": "Difference between initializations",
             "tags": [
-                "cpp",
+                "c++",
                 "contains code"
             ],
             "code": "std%3A%3Avector%3Cint%3E%20vec1%285%2C1%29%3B%0A%20%20%20std%3A%3Avector%3Cint%3E%20vec2%7B5%7D%3B%0A%20%20%20std%3A%3Avector%3Cint%3E%20vec3%20%3D%20%7B5%7D%3B"
@@ -2210,10 +2295,10 @@
             "question": "Imagine following code: a=1, b=2 and then call sum and pass it a and b. Somewhere in the memory we allocated a and b, in asm we see jump and when the body of function is executed, how does the function know where to take these a and b?",
             "tags": [
                 "OS",
-                "cpp",
+                "c++",
                 "asm"
             ],
-            "hint":"CallConvention"
+            "hint": "CallConvention"
         },
         {
             "question": "Given a computer with 4 GB of RAM, then we start Photoshop and after some time we that it took 8 GB of RAM, how is that possible?",
@@ -2239,20 +2324,20 @@
         {
             "question": "We have a singleton class and we wan’t to forbid possible ways to create a second instance but allow inheritance, how to do it?",
             "tags": [
-                "cpp",
+                "c++",
                 "design/architecture"
             ]
         },
         {
             "question": "We have a string object and want to pass it deep to function, and in current context we don’t need it. What should we do?",
             "tags": [
-                "cpp"
+                "c++"
             ]
         },
         {
             "question": "Main concepts of OOP and how it is implemented in c++.",
             "tags": [
-                "cpp",
+                "c++",
                 "design/architecture"
             ]
         },
@@ -2276,7 +2361,7 @@
         {
             "question": "What is CMake, do you use it?",
             "tags": [
-                "cpp",
+                "c++",
                 "tools"
             ]
         },
@@ -2426,7 +2511,7 @@
                 "general",
                 "softskills"
             ],
-            "hint":"BeReadyToAnswerAndToBargain"
+            "hint": "BeReadyToAnswerAndToBargain"
         },
         {
             "question": "Scrum, Agile, Waterfall?",
