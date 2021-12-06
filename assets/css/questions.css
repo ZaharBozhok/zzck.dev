@@ -2,7 +2,6 @@
     border-radius: 15px;
     margin-top: 15px;
     margin-bottom: 20px;
-
 }
 .question-tag {
     border-radius: 5px;
@@ -13,8 +12,8 @@
     padding-left: 5px;
     padding-right: 5px;
     font-size: 11pt;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight:900;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 900;
     margin-right: 5px;
     margin-bottom: 5px;
     transition: 200ms;
@@ -45,7 +44,7 @@
     font-size: 12pt;
 }
 
-#test{
+#test {
     position: fixed;
     top: 0;
     right: 0;
@@ -60,13 +59,22 @@
     margin-bottom: 20px;
     margin-right: 40px;
 }
+#buymecoffeediv.mobile {
+    margin: 0;
+    margin-bottom: 28px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 #buymecoffespan {
     border-radius: 20px;
     border-style: solid;
     border-width: 1px;
     border-color: black;
     font-size: 14pt;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-weight: bold;
     cursor: pointer;
     user-select: none;
@@ -103,7 +111,7 @@
 .tagsContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;  
+    justify-content: left;
 }
 .fire {
     margin-left: -20px;
@@ -111,6 +119,6 @@
     font-style: normal;
 }
 .emoji {
-    font-weight:initial;
+    font-weight: initial;
     font-style: normal;
 }

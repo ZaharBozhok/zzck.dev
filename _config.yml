@@ -40,10 +40,10 @@ paginate: 25
 paginate_path: "/page:num/"
 
 comments: true  # enable comments
-disqus: true         # disqus account
+disqus: false         # disqus account
 
 mathjax: true # Mathematics
-mermaid: true # Diagrams
+mermaid: false # Diagrams
 
 permalink: /:year/:month/:day/:title
 

@@ -1,5 +1,10 @@
 let filterState = {};
 let respJson = {};
+function isMobile() {
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+        return true;
+    return false;
+}
 function anySelected(state) {
     for (const key in state) {
         if (state[key].enabled) return true;
@@ -126,7 +131,12 @@ function createQuestionBlock(question, max, indx) {
         const encodedcode = question["code"];
         const count = (encodedcode.match(/%0A/g) || []).length;
         const height = (21 * (count + 1)) + 200;
-        questionBlock.innerHTML += `<iframe loading="lazy" class="codeframe" height="${height}px"frameBorder="0" src="https://godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,source:'${encodedcode}'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:50,n:'0',o:'',s:0,t:'0'),(g:!((h:executor,i:(argsPanelShown:'1',compilationPanelShown:'0',compiler:g112,compilerOutShown:'0',execArgs:'',execStdin:'',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'',source:1,stdinPanelShown:'1',tree:'1',wrap:'1'),l:'5',n:'0',o:'Executor+x86-64+gcc+11.2+(C%2B%2B,+Editor+%231)',t:'0')),header:(),l:'4',m:50,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>`;
+        if (!isMobile()) {
+            questionBlock.innerHTML += `<iframe loading="lazy" class="codeframe" height="${height}px"frameBorder="0" src="https://godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,source:'${encodedcode}'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:50,n:'0',o:'',s:0,t:'0'),(g:!((h:executor,i:(argsPanelShown:'1',compilationPanelShown:'0',compiler:g112,compilerOutShown:'0',execArgs:'',execStdin:'',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'',source:1,stdinPanelShown:'1',tree:'1',wrap:'1'),l:'5',n:'0',o:'Executor+x86-64+gcc+11.2+(C%2B%2B,+Editor+%231)',t:'0')),header:(),l:'4',m:50,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>`;
+        }
+        else {
+            questionBlock.innerHTML += `<p><b>This part is under construction. Thank you for visiting!</b></p>`
+        }
     }
     return questionBlock;
 }
@@ -144,7 +154,6 @@ function createQuestionsDiv(questions, max) {
             taken++;
         }
     })
-    console.log(taken)
     return questionsDiv;
 }
 
@@ -162,7 +171,6 @@ async function loadQuestions() {
 
     const inner = document.getElementById('inner-questions-div');
     if (inner) {
-        console.log("Removing inner")
         mainDiv.removeChild(inner);
     }
     mainDiv.append(createQuestionsDiv(questions, max));
@@ -176,5 +184,9 @@ async function main() {
     await loadBd()
     await addNavbar()
     await loadQuestions()
+    let coffee = document.getElementById("buymecoffeediv")
+    if (isMobile()){
+        coffee.classList.add("mobile")
+    }
 }
 main()
