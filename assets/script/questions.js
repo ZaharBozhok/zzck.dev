@@ -1,7 +1,7 @@
 let filterState = {};
 let respJson = {};
 function isMobile() {
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
         return true;
     return false;
 }
@@ -15,14 +15,14 @@ async function myFunction(event) {
     const target = event.currentTarget;
     const tagName = target.getAttribute('tagName');
     if (tagName == 'clear') {
-        for(const key in filterState) {
+        for (const key in filterState) {
             if (filterState[key].enabled) {
                 filterState[key].enabled = false;
                 filterState[key].elem.classList.remove('question-tag-selected');
             }
         }
     }
-    else{
+    else {
         const tag = filterState[tagName];
         if (tag.enabled) {
             tag.elem.classList.remove('question-tag-selected');
@@ -33,7 +33,6 @@ async function myFunction(event) {
     }
     await loadQuestions()
 }
-
 async function createNavBar(allTags) {
     let navbar = document.createElement('div');
     navbar.id = "mynavbar";
@@ -49,16 +48,18 @@ async function createNavBar(allTags) {
         };
         navbar.append(tag);
     }
-    let close = document.createElement('span');
-    close.onclick = myFunction;
-    close.classList.add('question-tag', 'question-tag-nav');
-    close.innerHTML = `<i class='emoji'>❌</i>`
-    close.setAttribute('tagName', 'clear');
-    filterState['clear'] = {
-        elem: close,
-        enabled: false
-    };
-    navbar.append(close);
+    {
+        let close = document.createElement('span');
+        close.onclick = myFunction;
+        close.classList.add('question-tag', 'question-tag-nav');
+        close.innerHTML = `<i class='emoji'>❌</i>`
+        close.setAttribute('tagName', 'clear');
+        filterState['clear'] = {
+            elem: close,
+            enabled: false
+        };
+        navbar.append(close);
+    }
     return navbar;
 }
 
@@ -99,34 +100,56 @@ function takeQuestion(q) {
     return true;
 }
 
+function isHotQuestion(question, max) {
+    if ("timesAsked" in question) {
+        const timesAsked = question["timesAsked"];
+        if (timesAsked >= (max * 0.3)) {
+            return true;
+        }
+    }
+    return false;
+}
+
 function createQuestionBlock(question, max, indx) {
     if (!takeQuestion(question)) return undefined;
     let questionBlock = document.createElement("div");
     questionBlock.classList.add('question-block');
-    let questionP = document.createElement('p');
-    if ("timesAsked" in question) {
-        const timesAsked = question["timesAsked"];
-        if (timesAsked >= (max * 0.3)) {
+    const hotQuestion = isHotQuestion(question, max)
+    {
+        let questionP = document.createElement('p');
+
+        if (hotQuestion && !isMobile()) {
             questionP.innerHTML += `<i class="fire">🔥</i><b>${indx}.</b> ${question["question"]}`
         }
+        else {
+            questionP.innerHTML += `<b>${indx}.</b> ${question["question"]}`
+        }
+        questionBlock.append(questionP);
     }
-    else {
-        questionP.innerHTML += `<b>${indx}.</b> ${question["question"]}`
+    {
+        let tagsBlock = document.createElement("div");
+        tagsBlock.classList.add("tagsContainer")
+        if ("tags" in question) {
+            question["tags"].forEach(tag => {
+                let tagElem = document.createElement('span');
+                tagElem.classList.add('question-tag');
+                tagElem.innerText = tag;
+                tagElem.onclick = myFunction;
+                tagElem.setAttribute('tagName', tag);
+                tagsBlock.append(tagElem);
+            })
+        }
+        if (isMobile() && hotQuestion) {
+            let hotTag = document.createElement('span');
+            hotTag.classList.add('question-tag');
+            hotTag.innerText = '🔥';
+            //hotTag.onclick = myFunction;
+            //hotTag.setAttribute('tagName', 'hot');
+            tagsBlock.prepend(hotTag);
+        }
+
+        questionBlock.append(tagsBlock);
     }
-    questionBlock.append(questionP);
-    let tagsBlock = document.createElement("div");
-    tagsBlock.classList.add("tagsContainer")
-    if ("tags" in question) {
-        question["tags"].forEach(tag => {
-            let tagElem = document.createElement('span');
-            tagElem.classList.add('question-tag');
-            tagElem.innerText = tag;
-            tagElem.onclick = myFunction;
-            tagElem.setAttribute('tagName', tag);
-            tagsBlock.append(tagElem);
-        })
-    }
-    questionBlock.append(tagsBlock);
     if ("code" in question) {
         const encodedcode = question["code"];
         const count = (encodedcode.match(/%0A/g) || []).length;
@@ -185,7 +208,7 @@ async function main() {
     await addNavbar()
     await loadQuestions()
     let coffee = document.getElementById("buymecoffeediv")
-    if (isMobile()){
+    if (isMobile()) {
         coffee.classList.add("mobile")
     }
 }
