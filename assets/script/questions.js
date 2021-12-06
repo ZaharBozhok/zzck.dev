@@ -27,17 +27,20 @@ async function main() {
         if ("timesAsked" in question) {
             const timesAsked = question["timesAsked"];
             if (timesAsked >= (max * 0.3)) {
-                questionBlock.innerHTML += `<p>🔥${question["question"]}</p>`
+                questionBlock.innerHTML += `<p>🔥 ${question["question"]}</p>`
             }
         }
         else {
             questionBlock.innerHTML += `<p>${question["question"]}</p>`
         }
+        let tagsBlock = document.createElement("div");
+        tagsBlock.classList.add("tagsContainer")
         if ("tags" in question) {
             question["tags"].forEach(tag => {
-                questionBlock.innerHTML += `<span class='question-tag'>${tag}</span>`
+                tagsBlock.innerHTML += `<span class='question-tag'>${tag}</span>`
             })
         }
+        questionBlock.append(tagsBlock);
         if ("code" in question) {
             const encodedcode = question["code"];
             const count = (encodedcode.match(/%0A/g) || []).length;

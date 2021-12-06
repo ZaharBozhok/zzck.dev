@@ -2,6 +2,7 @@
     border-radius: 15px;
     margin-top: 15px;
     margin-bottom: 20px;
+
 }
 .question-tag {
     border-radius: 5px;
@@ -13,8 +14,9 @@
     padding-right: 5px;
     font-size: 11pt;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-weight:900;
     margin-right: 5px;
+    margin-bottom: 5px;
     transition: 200ms;
     cursor: pointer;
     user-select: none;
@@ -91,4 +93,13 @@
     border-style: solid;
     border-width: 1px;
     border-color: black;
+    margin-bottom: 20px;
+}
+
+.tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;  
+}
+.fire {
 }
