@@ -17,6 +17,7 @@
     margin-right: 5px;
     transition: 200ms;
     cursor: pointer;
+    user-select: none;
 }
 
 .question-tag:hover {
