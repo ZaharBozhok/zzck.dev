@@ -1,7 +1,7 @@
 .question-block {
     border-radius: 15px;
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .question-tag {
     border-radius: 5px;
@@ -16,7 +16,9 @@
     font-weight: bold;
     margin-right: 5px;
     transition: 200ms;
+    cursor: pointer;
 }
+
 .question-tag:hover {
     color: white;
     background-color: black;
@@ -26,10 +28,14 @@
 
 #mynavbar {
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .question-tag-nav {
     margin-left: 5px;
     margin-top: 2px;
     margin-bottom: 2px;
+    margin:1px;
 }
