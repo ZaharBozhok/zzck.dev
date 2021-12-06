@@ -1773,7 +1773,10 @@
             "code": "void%20foo%28%29%20throw%28std%3A%3Aruntime_error%29%20%7B%0A%20%20%20if%20%28/%2A...%2A/%29%20throw%20%28ex%29%3B%0A%7D"
         },
         {
-            "question": "To which type typedef `basic_streambuf<char>` corresponds [streambuf, streambuf<char>, cstreambuf]?"
+            "question": "To which type typedef `basic_streambuf<char>` corresponds [streambuf, streambuf<char>, cstreambuf]?",
+            "tags":[
+                "c++"
+            ]
         },
         {
             "question": "What will be the output of the following code?",
