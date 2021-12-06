@@ -13,7 +13,6 @@ tags: [C++,Interviewing,Puzzles,Questions]
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-cpp.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
-<!--<iframe id="test" style="url(&quot;https://marketplace.kony.com/static/dist/images/loader.svg&quot;) no-repeat scroll center center / 64px; transition: all 0.4s ease 0s;" src="https://www.buymeacoffee.com/widget/page/zzck.dev?description=Support%20me%20on%20Buy%20me%20a%20coffee!&amp;color=%23FF813F"></iframe>-->
 <div id="buymecoffeediv">
     <a href="https://www.buymeacoffee.com/zzck.dev" target="_blank" id="buymecoffespan">Buy me a Midi 🎹</a>
 </div>

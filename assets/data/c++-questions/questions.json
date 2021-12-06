@@ -19,7 +19,7 @@
             "emoji": "🤔"
         },
         "OS": {
-            "emoji": "🚬"
+            "emoji": "🖥"
         },
         "design/architecture": {
             "emoji": "🏛"
@@ -83,6 +83,9 @@
         },
         "funny/trick": {
             "emoji": "👻"
+        },
+        "hot": {
+            "emoji":"🔥"
         }
     },
     "questions": [
