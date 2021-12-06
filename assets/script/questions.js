@@ -26,7 +26,7 @@ async function main() {
         let tag = document.createElement('span');
         tag.onclick = myFunction;
         tag.classList.add('question-tag', 'question-tag-nav');
-        tag.innerText = `${allTags[key]['emoji']} ${key}`;
+        tag.innerHTML = `<i class='emoji'>${allTags[key]['emoji']}</i> ${key}`
         tag.setAttribute('tagName', key);
         tag.setAttribute('filterTag', "yes");
         filterState[key] = false;
