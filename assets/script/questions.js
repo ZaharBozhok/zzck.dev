@@ -8,7 +8,7 @@ async function main() {
     let navbar = document.createElement('div');
     navbar.id = "mynavbar";
     for(let key in allTags) {
-        navbar.innerHTML += `<span class='question-tag question-tag-nav'>${allTags[key]['emoji']}${key}</span>`
+        navbar.innerHTML += `<span class='question-tag question-tag-nav'>${allTags[key]['emoji']} ${key}</span>`
     }
     questionsDiv.append(navbar)
 
