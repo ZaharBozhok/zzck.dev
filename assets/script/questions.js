@@ -75,19 +75,21 @@ function takeQuestion(q) {
     return true;
 }
 
-function createQuestionBlock(question, max) {
+function createQuestionBlock(question, max, indx) {
     if (!takeQuestion(question)) return undefined;
     let questionBlock = document.createElement("div");
     questionBlock.classList.add('question-block');
+    let questionP = document.createElement('p');
     if ("timesAsked" in question) {
         const timesAsked = question["timesAsked"];
         if (timesAsked >= (max * 0.3)) {
-            questionBlock.innerHTML += `<p><i class="fire">🔥</i>${question["question"]}</p>`
+            questionP.innerHTML += `<i class="fire">🔥</i><b>${indx}.</b> ${question["question"]}`
         }
     }
     else {
-        questionBlock.innerHTML += `<p>${question["question"]}</p>`
+        questionP.innerHTML += `<b>${indx}.</b> ${question["question"]}`
     }
+    questionBlock.append(questionP);
     let tagsBlock = document.createElement("div");
     tagsBlock.classList.add("tagsContainer")
     if ("tags" in question) {
@@ -113,8 +115,10 @@ function createQuestionBlock(question, max) {
 function createQuestionsDiv(questions, max) {
     let questionsDiv = document.createElement('div');
     questionsDiv.id = 'inner-questions-div';
+    let indx = 0;
     questions.forEach(question => {
-        const questionBlock = createQuestionBlock(question, max)
+        indx++
+        const questionBlock = createQuestionBlock(question, max, indx)
         if (questionBlock) {
             questionsDiv.append(questionBlock)
         }
