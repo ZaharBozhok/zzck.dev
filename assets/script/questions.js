@@ -9,14 +9,23 @@ function anySelected(state) {
 async function myFunction(event) {
     const target = event.currentTarget;
     const tagName = target.getAttribute('tagName');
-
-    const tag = filterState[tagName];
-    if (tag.enabled) {
-        tag.elem.classList.remove('question-tag-selected');
-    } else {
-        tag.elem.classList.add('question-tag-selected');
+    if (tagName == 'clear') {
+        for(const key in filterState) {
+            if (filterState[key].enabled) {
+                filterState[key].enabled = false;
+                filterState[key].elem.classList.remove('question-tag-selected');
+            }
+        }
     }
-    tag.enabled = !tag.enabled;
+    else{
+        const tag = filterState[tagName];
+        if (tag.enabled) {
+            tag.elem.classList.remove('question-tag-selected');
+        } else {
+            tag.elem.classList.add('question-tag-selected');
+        }
+        tag.enabled = !tag.enabled;
+    }
     await loadQuestions()
 }
 
@@ -35,6 +44,16 @@ async function createNavBar(allTags) {
         };
         navbar.append(tag);
     }
+    let close = document.createElement('span');
+    close.onclick = myFunction;
+    close.classList.add('question-tag', 'question-tag-nav');
+    close.innerHTML = `<i class='emoji'>❌</i>`
+    close.setAttribute('tagName', 'clear');
+    filterState['clear'] = {
+        elem: close,
+        enabled: false
+    };
+    navbar.append(close);
     return navbar;
 }
 
@@ -49,7 +68,7 @@ function getMax(questions) {
     return max;
 }
 
-function isTagDisabled(tag){
+function isTagDisabled(tag) {
     if (tag in filterState) {
         if (filterState[tag].enabled == false) {
             return true;
@@ -65,8 +84,8 @@ function takeQuestion(q) {
     }
     let enabled = [];
     const qTags = q['tags'];
-    for(const key in filterState) {
-        if(filterState[key].enabled == true) {
+    for (const key in filterState) {
+        if (filterState[key].enabled == true) {
             if (!qTags.includes(key)) {
                 return false;
             }
@@ -116,13 +135,16 @@ function createQuestionsDiv(questions, max) {
     let questionsDiv = document.createElement('div');
     questionsDiv.id = 'inner-questions-div';
     let indx = 0;
+    let taken = 0;
     questions.forEach(question => {
         indx++
         const questionBlock = createQuestionBlock(question, max, indx)
         if (questionBlock) {
             questionsDiv.append(questionBlock)
+            taken++;
         }
     })
+    console.log(taken)
     return questionsDiv;
 }
 
