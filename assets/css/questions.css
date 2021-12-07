@@ -15,6 +15,8 @@
     transition: 200ms;
     cursor: pointer;
     user-select: none;
+    display: flex;
+    align-items:center;
 }
 .question-tag-selected {
     color: white;
@@ -31,8 +33,6 @@
 .question-tag-nav {
     margin: 4px;
     font-size: 12pt;
-    display: flex;
-    align-items:center;
 }
 #mynavbar {
     padding: 20px;
@@ -116,6 +116,8 @@
     margin-left: -20px;
     margin-right: 1px;
     font-style: normal;
+    width: 20px;
+    height: 20px;
 }
 img.emoji {
     font-weight: initial;
@@ -130,7 +132,18 @@ img.emoji {
 img.emoji-cross-mark {
     margin: 7px;
 }
+img.emoji-fire {
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+}
 .tag-text {
+    margin:0;
+    vertical-align: middle;
+    text-align: center;
+    margin: 2px 5px;
+}
+.nav-tag-text {
     margin:0;
     vertical-align: middle;
     text-align: center;

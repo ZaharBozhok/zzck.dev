@@ -47,7 +47,7 @@ async function createNavBar(allTags) {
             emoji.src = `/assets/images/emojis/${allTags[key]['emoji']}.png`
 
             let tagText = document.createElement('span');
-            tagText.classList.add('tag-text');
+            tagText.classList.add('nav-tag-text');
             tagText.innerText = key;
             
             tag.append(emoji);
@@ -136,21 +136,30 @@ function createQuestionBlock(question, max, indx) {
     questionBlock.classList.add('question-block');
     const hotQuestion = isHotQuestion(question, max)
     {
-        let questionP = document.createElement('p');
+        let questionP = document.createElement('span');
+
+        let indxText = document.createElement('b');
+        indxText.innerText = `${indx}. `
+
+        let questionText = document.createElement('p');
+        questionText.innerText = question['question'];
+        questionText.prepend(indxText)
 
         if (hotQuestion && !isMobile()) {
-            questionP.innerHTML += `<i class="fire">🔥</i><b>${indx}.</b> ${question["question"]}`
+            let fire = document.createElement('img');
+            fire.classList.add('fire');
+            fire.setAttribute('align', 'left')
+            fire.src = `/assets/images/emojis/fire.png`;
+            //questionP.prepend(fire); 
         }
-        else {
-            questionP.innerHTML += `<b>${indx}.</b> ${question["question"]}`
-        }
+        questionP.append(questionText);
         questionBlock.append(questionP);
     }
     {
         let tagsBlock = document.createElement("div");
         tagsBlock.classList.add("tagsContainer")
         if ("tags" in question) {
-            question["tags"].forEach(tag => {
+            question["tags"].sort().forEach(tag => {
                 let tagElem = document.createElement('span');
                 tagElem.classList.add('question-tag');
                 tagElem.onclick = myFunction;
@@ -164,10 +173,16 @@ function createQuestionBlock(question, max, indx) {
                 tagsBlock.append(tagElem);
             })
         }
-        if (isMobile() && hotQuestion) {
+        if (/*isMobile() && */hotQuestion) {
             let hotTag = document.createElement('span');
             hotTag.classList.add('question-tag');
-            hotTag.innerText = '🔥';
+
+            let fireEmoji = document.createElement('img');
+            fireEmoji.classList.add('emoji');
+            fireEmoji.classList.add('emoji-fire');
+            fireEmoji.src = `/assets/images/emojis/fire.png`;
+
+            hotTag.append(fireEmoji);
             //hotTag.onclick = myFunction;
             //hotTag.setAttribute('tagName', 'hot');
             tagsBlock.prepend(hotTag);
