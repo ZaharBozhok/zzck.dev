@@ -142,8 +142,9 @@ function createQuestionBlock(question, max, indx) {
         indxText.innerText = `${indx}. `
 
         let questionText = document.createElement('p');
-        questionText.innerText = question['question'];
-        questionText.prepend(indxText)
+        const newText = question['question']?.replace(/\`(.+?)\`/g, '<code class="inline-code">$1</code>');
+        questionText.innerHTML = newText;
+        //questionText.prepend(indxText)
 
         if (hotQuestion && !isMobile()) {
             let fire = document.createElement('img');

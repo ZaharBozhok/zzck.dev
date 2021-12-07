@@ -149,3 +149,11 @@ img.emoji-fire {
     text-align: center;
     margin: 5px;
 }
+code.inline-code {
+    background-color: rgb(219, 219, 219);
+    color:  #cf222e;
+    border-radius: 5px;
+    font-weight:700;
+    padding: 1px 5px;
+    font-size: 11pt;
+}

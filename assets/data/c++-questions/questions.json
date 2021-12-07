@@ -146,7 +146,7 @@
             "timesAsked": 4
         },
         {
-            "question": "Describe the purpose of the explicit keyword.",
+            "question": "Describe the purpose of the `explicit` keyword.",
             "tags": [
                 "c++"
             ]
@@ -207,13 +207,13 @@
             "timesAsked": 5
         },
         {
-            "question": "Explain how unique_ptr, shared_ptr, weak_ptr work.",
+            "question": "Explain how `std::unique_ptr`, `std::shared_ptr`, `std::weak_ptr` work.",
             "tags": [
                 "c++"
             ]
         },
         {
-            "question": "How does thread safety implemented in shared_ptr? ",
+            "question": "How does thread safety implemented in `std::shared_ptr`? ",
             "tags": [
                 "c++",
                 "concurrency"
@@ -221,7 +221,7 @@
             "timesAsked": 2
         },
         {
-            "question": "Why do shared_ptr and weak_ptr used together (which problems are resolved)?",
+            "question": "Why do `std::shared_ptr` and `std::weak_ptr` used together (which problems are resolved)?",
             "tags": [
                 "c++"
             ]
@@ -234,7 +234,7 @@
             "timesAsked": 2
         },
         {
-            "question": "Can we copy unique_ptr?",
+            "question": "Can we copy `std::unique_ptr`?",
             "tags": [
                 "c++"
             ]
@@ -247,14 +247,14 @@
             "timesAsked": 2
         },
         {
-            "question": "Advantage of using std::make_shared? ",
+            "question": "Advantage of using `std::make_shared`? ",
             "tags": [
                 "c++"
             ],
             "timesAsked": 2
         },
         {
-            "question": "Explain the purpose of std::enable_shared_from_this (and maybe how it’s implemented)?",
+            "question": "Explain the purpose of `std::enable_shared_from_this` (and maybe how it’s implemented)?",
             "tags": [
                 "c++"
             ]
@@ -267,7 +267,7 @@
             "timesAsked": 3
         },
         {
-            "question": "std::vector vs std::list?",
+            "question": "`std::vector` vs `std::list`?",
             "tags": [
                 "c++",
                 "general",
@@ -275,7 +275,7 @@
             ]
         },
         {
-            "question": "std::array vs std::vector?",
+            "question": "`std::array` vs `std::vector`?",
             "tags": [
                 "c++",
                 "general",
@@ -283,13 +283,13 @@
             ]
         },
         {
-            "question": "What is iterator invalidation when working with std::vector?",
+            "question": "What is iterator invalidation when working with `std::vector`?",
             "tags": [
                 "c++"
             ]
         },
         {
-            "question": "How to eliminate reallocation in vector (reserve)? ",
+            "question": "How to eliminate reallocation in `std::vector` (reserve)? ",
             "tags": [
                 "c++"
             ],
@@ -302,7 +302,7 @@
             ]
         },
         {
-            "question": "Difference between std::map and std::unordered_map (and use cases for them) ? ",
+            "question": "Difference between `std::map` and `std::unordered_map` (and use cases for them) ? ",
             "tags": [
                 "c++",
                 "general",
@@ -311,7 +311,7 @@
             "timesAsked": 3
         },
         {
-            "question": "Complexity of inserting into a std::map / std::unordered_map?",
+            "question": "Complexity of inserting into a `std::map`/`std::unordered_map`?",
             "tags": [
                 "c++",
                 "general",
@@ -320,7 +320,7 @@
             ]
         },
         {
-            "question": "What should be implemented in your class to be used as a key of std::map / std::unordered_map (big O of insert, search, …)? ",
+            "question": "What should be implemented in your class to be used as a key of `std::map`/`std::unordered_map` (big O of insert, search, …)? ",
             "tags": [
                 "c++",
                 "general",
@@ -376,7 +376,7 @@
             ]
         },
         {
-            "question": "How collisions are resolved in std::unordered_map?",
+            "question": "How collisions are resolved in `std::unordered_map`?",
             "tags": [
                 "general",
                 "data structures",
@@ -431,7 +431,7 @@
             ]
         },
         {
-            "question": "Explain difference between a mutex and a binary semaphore? ",
+            "question": "Explain difference between a `mutex` and a `binary semaphore`? ",
             "tags": [
                 "general",
                 "concurrency"
@@ -587,33 +587,33 @@
             "timesAsked": 4
         },
         {
-            "question": "What specific methods should be defined to use move semantics?",
+            "question": "What specific methods should be defined to use `move semantics`?",
             "tags": [
                 "c++"
             ]
         },
         {
-            "question": "Difference between rvalue and lvalue? ",
+            "question": "Difference between `rvalue` and `lvalue`? ",
             "tags": [
                 "c++"
             ],
             "timesAsked": 2
         },
         {
-            "question": "Where local variables are stored?",
+            "question": "Where are local variables stored?",
             "tags": [
                 "c++",
                 "OS"
             ]
         },
         {
-            "question": "Where static variables are stored?",
+            "question": "Where `static` variables are stored?",
             "tags": [
                 "c++"
             ]
         },
         {
-            "question": "What is container class?",
+            "question": "What is container `class`?",
             "tags": [
                 "c++"
             ]
@@ -640,7 +640,7 @@
             ]
         },
         {
-            "question": "Which one is better O(N) or O(1)?",
+            "question": "Which one is better `O(N)` or `O(1)`?",
             "tags": [
                 "general",
                 "algorithmic"
@@ -665,7 +665,7 @@
             ]
         },
         {
-            "question": "Do you have any experience with Kubernetes and docker?",
+            "question": "Do you have any experience with `Kubernetes` and `docker`?",
             "tags": [
                 "general",
                 "open question",
@@ -673,7 +673,7 @@
             ]
         },
         {
-            "question": "Did you create an image in Docker?",
+            "question": "Did you create an image in `docker`?",
             "tags": [
                 "general",
                 "open question",
@@ -681,7 +681,7 @@
             ]
         },
         {
-            "question": "Do you have an experience using Python?",
+            "question": "Do you have an experience using `Python?`",
             "tags": [
                 "general",
                 "technologies",
@@ -689,7 +689,7 @@
             ]
         },
         {
-            "question": "Experience an CI/CD?",
+            "question": "Experience an `CI/CD`?",
             "tags": [
                 "general",
                 "technologies",
@@ -697,14 +697,14 @@
             ]
         },
         {
-            "question": "Give 5 examples of UB in C++?",
+            "question": "Give 5 examples of UB in `C++`?",
             "tags": [
                 "c++"
             ],
             "hint": "1%20Unreferencing%20pointer%20to%20dead%20object%0A2%20Is%20arithmetics%20overflow%20in%20C%2B%2B%20is%20UB%3F%20%28yes%29%0A3%20Stack%20overflow%20is%20UB%0A4%0Astd%3A%3Avector%3Cint%3E%20xs%20%3D%20%7B1%2C%202%2C%203%7D%3B%0Aauto%26%20x%20%3D%20xs%5B0%5D%3B%0Axs.push_back%284%29%3B%0Astd%3A%3Acout%20%3C%3C%20x%20%3B%20%2F%2F%20UB%21%0A5%20Usage%20of%20not%20inited%20var%20is%20UB"
         },
         {
-            "question": "Why int is 32 bit both on 32 bit arch and 64 bit arch? (tricky question, just for fun)",
+            "question": "Why `int` is 32 bit both on 32 bit arch and 64 bit arch?",
             "tags": [
                 "general",
                 "c++",
@@ -822,7 +822,7 @@
             ]
         },
         {
-            "question": "How does internally implemented std::deque, std::stack, std::map, std::unordered_map? Which types of iterators are used? Provide O(n) notation for insertion, search and deletion.",
+            "question": "How does internally implemented `std::deque`, `std::stack`, `std::map`, `std::unordered_map`? Which types of iterators are used? Provide `O(n)` notation for insertion, search and deletion.",
             "tags": [
                 "general",
                 "data structures",
@@ -894,7 +894,7 @@
             ]
         },
         {
-            "question": "Types of memory models in c++?",
+            "question": "Types of `memory models` in c++?",
             "tags": [
                 "general",
                 "c++"
@@ -908,7 +908,7 @@
             ]
         },
         {
-            "question": "What are memory barriers? Why do we need them? How can we use them in C++?",
+            "question": "What are `memory barriers`? Why do we need them? How can we use them in C++?",
             "tags": [
                 "c++",
                 "concurrency",
@@ -962,7 +962,7 @@
             ]
         },
         {
-            "question": "Explain initialization and deletion of global, static, threadlocal objects",
+            "question": "Explain initialization and deletion of global, `static`, `threadlocal` objects",
             "tags": [
                 "c++"
             ]
@@ -1157,7 +1157,7 @@
             ]
         },
         {
-            "question": "Singleton in multithread environment?",
+            "question": "Singleton in multithreaded environment?",
             "tags": [
                 "c++",
                 "design/architecture"
@@ -1273,7 +1273,7 @@
             ]
         },
         {
-            "question": "Lifetime of static variables in functions and class member functions?",
+            "question": "Lifetime of `static` variables in functions and class member functions?",
             "tags": [
                 "c++"
             ]
@@ -1413,7 +1413,7 @@
             ]
         },
         {
-            "question": "What is SIMD / SSE?",
+            "question": "What is SIMD/SSE?",
             "tags": [
                 "concurrency",
                 "general",
@@ -1464,7 +1464,7 @@
             ]
         },
         {
-            "question": "Class vs Struct",
+            "question": "`class` vs `struct`",
             "tags": [
                 "c++",
                 "c"
@@ -1554,7 +1554,7 @@
             ]
         },
         {
-            "question": "What is std::jthread (C++20)?",
+            "question": "What is `std::jthread` (C++20)?",
             "tags": [
                 "c++",
                 "concurrency"
@@ -1619,7 +1619,7 @@
             "timesAsked": 3
         },
         {
-            "question": "Is std::shared_ptr threadsafe? ",
+            "question": "Is `std::shared_ptr` threadsafe? ",
             "tags": [
                 "c++",
                 "concurrency"
@@ -1627,7 +1627,7 @@
             "timesAsked": 2
         },
         {
-            "question": "std::thread vs std::async? ",
+            "question": "`std::thread` vs `std::async`? ",
             "tags": [
                 "concurrency",
                 "c++"
@@ -1770,7 +1770,7 @@
             "code": "void%20foo%28%29%20throw%28std%3A%3Aruntime_error%29%20%7B%0A%20%20%20if%20%28/%2A...%2A/%29%20throw%20%28ex%29%3B%0A%7D"
         },
         {
-            "question": "To which type typedef `basic_streambuf<char>` corresponds [streambuf, streambuf<char>, cstreambuf]?",
+            "question": "To which type typedef `basic_streambuf<char>` corresponds [`streambuf`, `streambuf<char>`, `cstreambuf`]?",
             "tags": [
                 "c++"
             ]
@@ -2295,7 +2295,7 @@
             ]
         },
         {
-            "question": "Imagine following code: a=1, b=2 and then call sum and pass it a and b. Somewhere in the memory we allocated a and b, in asm we see jump and when the body of function is executed, how does the function know where to take these a and b?",
+            "question": "Imagine following code: `a=1, b=2` and then call sum and pass it `a` and `b`. Somewhere in the memory we allocated a and b, in asm we see jump and when the body of function is executed, how does the function know where to take these a and b?",
             "tags": [
                 "OS",
                 "c++",
@@ -2449,7 +2449,7 @@
             ]
         },
         {
-            "question": "Tell about the hardest task/issue/case you had tackle? How did you tackle it?",
+            "question": "Tell about the hardest task/issue/case you had to tackle? How did you tackle it?",
             "tags": [
                 "general",
                 "softskills",
