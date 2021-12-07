@@ -1,88 +1,88 @@
 {
     "tags": {
         "general": {
-            "emoji": "👐"
+            "emoji": "open-hands"
         },
         "c++": {
-            "emoji": "💙"
+            "emoji": "blue-heart"
         },
         "concurrency": {
-            "emoji": "💣"
+            "emoji": "bomb"
         },
         "data structures": {
-            "emoji": "🔬"
+            "emoji": "microscope"
         },
         "algorithmic": {
-            "emoji": "🥷"
+            "emoji": "ninja"
         },
         "open question": {
-            "emoji": "🤔"
+            "emoji": "thinking-face"
         },
         "OS": {
-            "emoji": "🖥"
+            "emoji": "desktop-computer"
         },
         "design/architecture": {
-            "emoji": "🏛"
+            "emoji": "building-construction"
         },
         "technologies": {
-            "emoji": "🧑‍💻"
+            "emoji": "technologist"
         },
         "best practice": {
-            "emoji": "👍"
+            "emoji": "thumbs-up"
         },
         "nerdy": {
-            "emoji": "🤓"
+            "emoji": "nerd-face"
         },
         "optimizations": {
-            "emoji": "🏎"
+            "emoji": "racing-car"
         },
         "hardware": {
-            "emoji": "⚙️"
+            "emoji": "gear"
         },
         "networking": {
-            "emoji": "📡"
+            "emoji": "satellite-antenna"
         },
         "c": {
-            "emoji": "🔫"
+            "emoji": "pistol"
         },
         "interop": {
-            "emoji": "🤝"
+            "emoji": "handshake"
         },
         "security": {
-            "emoji": "🔒"
+            "emoji": "locked"
         },
         "web": {
-            "emoji": "🌐"
+            "emoji": "globe-with-meridians"
         },
         "contains code": {
-            "emoji": "🏋️"
+            "emoji": "person-lifting-weights"
         },
         "quiz": {
-            "emoji": "🧐"
+            "emoji": "face-with-monocle"
         },
         "tools": {
-            "emoji": "🛠"
+            "emoji": "hammer-and-wrench"
         },
         "linux": {
-            "emoji": "🐧"
+            "emoji": "penguin"
         },
         "asm": {
-            "emoji": "🤖"
+            "emoji": "robot"
         },
         "debugging": {
-            "emoji": "🪳"
+            "emoji": "cockroach"
         },
         "problem solving": {
-            "emoji": "💭"
+            "emoji": "thought-balloon"
         },
         "DB": {
-            "emoji": "🗄"
+            "emoji": "file-cabinet"
         },
         "softskills": {
-            "emoji": "🙊"
+            "emoji": "speak-no-evil-monkey"
         },
         "funny/trick": {
-            "emoji": "👻"
+            "emoji": "ghost"
         }
     },
     "questions": [
@@ -1771,7 +1771,7 @@
         },
         {
             "question": "To which type typedef `basic_streambuf<char>` corresponds [streambuf, streambuf<char>, cstreambuf]?",
-            "tags":[
+            "tags": [
                 "c++"
             ]
         },

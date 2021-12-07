@@ -37,10 +37,22 @@ async function createNavBar(allTags) {
     let navbar = document.createElement('div');
     navbar.id = "mynavbar";
     for (let key in allTags) {
-        let tag = document.createElement('span');
+        let tag = document.createElement('div');
         tag.onclick = myFunction;
         tag.classList.add('question-tag', 'question-tag-nav');
-        tag.innerHTML = `<i class='emoji'>${allTags[key]['emoji']}</i> ${key}`
+        {
+            let emoji = document.createElement('img');
+            emoji.classList.add('emoji');
+            emoji.setAttribute('align','left');
+            emoji.src = `/assets/images/emojis/${allTags[key]['emoji']}.png`
+
+            let tagText = document.createElement('span');
+            tagText.classList.add('tag-text');
+            tagText.innerText = key;
+            
+            tag.append(emoji);
+            tag.append(tagText)
+        }
         tag.setAttribute('tagName', key);
         filterState[key] = {
             elem: tag,
@@ -52,7 +64,15 @@ async function createNavBar(allTags) {
         let close = document.createElement('span');
         close.onclick = myFunction;
         close.classList.add('question-tag', 'question-tag-nav');
-        close.innerHTML = `<i class='emoji'>❌</i>`
+        {
+            let emoji = document.createElement('img');
+            emoji.classList.add('emoji');
+            emoji.classList.add('emoji-cross-mark');
+            emoji.setAttribute('align','left');
+            emoji.src = `/assets/images/emojis/cross-mark.png`;
+
+            close.append(emoji);
+        }
         close.setAttribute('tagName', 'clear');
         filterState['clear'] = {
             elem: close,
@@ -133,9 +153,14 @@ function createQuestionBlock(question, max, indx) {
             question["tags"].forEach(tag => {
                 let tagElem = document.createElement('span');
                 tagElem.classList.add('question-tag');
-                tagElem.innerText = tag;
                 tagElem.onclick = myFunction;
                 tagElem.setAttribute('tagName', tag);
+                
+                let tagText = document.createElement('span');
+                tagText.innerText = tag;
+                tagText.classList.add('tag-text')
+
+                tagElem.append(tagText);
                 tagsBlock.append(tagElem);
             })
         }

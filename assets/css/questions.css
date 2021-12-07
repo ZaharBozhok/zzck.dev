@@ -7,13 +7,9 @@
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
     font-size: 11pt;
     font-family: "Courier New", Courier, monospace;
-    font-weight: 900;
+    font-weight: bold;
     margin-right: 5px;
     margin-bottom: 5px;
     transition: 200ms;
@@ -32,6 +28,12 @@
     transition: 200ms;
 }
 
+.question-tag-nav {
+    margin: 4px;
+    font-size: 12pt;
+    display: flex;
+    align-items:center;
+}
 #mynavbar {
     padding: 20px;
     display: flex;
@@ -39,10 +41,6 @@
     justify-content: center;
 }
 
-.question-tag-nav {
-    margin: 4px;
-    font-size: 12pt;
-}
 
 #test {
     position: fixed;
@@ -112,13 +110,29 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
+    padding:0;
 }
 .fire {
     margin-left: -20px;
     margin-right: 1px;
     font-style: normal;
 }
-.emoji {
+img.emoji {
     font-weight: initial;
     font-style: normal;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    float: left;
+    vertical-align: middle;
+    margin: 5px;
+}
+img.emoji-cross-mark {
+    margin: 7px;
+}
+.tag-text {
+    margin:0;
+    vertical-align: middle;
+    text-align: center;
+    margin: 5px;
 }
