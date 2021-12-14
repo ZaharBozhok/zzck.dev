@@ -11,7 +11,19 @@ function anySelected(state) {
     }
     return false;
 }
-async function myFunction(event) {
+async function writeToLocalStore() {
+    window.localStorage.setItem('filterState', JSON.stringify(filterState));
+}
+async function readFromLocalStore() {
+    const item = window.localStorage.getItem('filterState');
+    if (item == null) {
+        filterState = {}
+    }
+    else {
+        filterState = JSON.parse(item);
+    }
+}
+async function onFilterButtonClicked(event) {
     const target = event.currentTarget;
     const tagName = target.getAttribute('tagName');
     if (tagName == 'clear') {
@@ -32,13 +44,14 @@ async function myFunction(event) {
         tag.enabled = !tag.enabled;
     }
     await loadQuestions()
+    await writeToLocalStore()
 }
 async function createNavBar(allTags) {
     let navbar = document.createElement('div');
     navbar.id = "mynavbar";
     for (let key in allTags) {
         let tag = document.createElement('div');
-        tag.onclick = myFunction;
+        tag.onclick = onFilterButtonClicked;
         tag.classList.add('question-tag', 'question-tag-nav');
         {
             let emoji = document.createElement('img');
@@ -62,7 +75,7 @@ async function createNavBar(allTags) {
     }
     {
         let close = document.createElement('span');
-        close.onclick = myFunction;
+        close.onclick = onFilterButtonClicked;
         close.classList.add('question-tag', 'question-tag-nav');
         {
             let emoji = document.createElement('img');
@@ -163,7 +176,7 @@ function createQuestionBlock(question, max, indx) {
             question["tags"].sort().forEach(tag => {
                 let tagElem = document.createElement('span');
                 tagElem.classList.add('question-tag');
-                tagElem.onclick = myFunction;
+                tagElem.onclick = onFilterButtonClicked;
                 tagElem.setAttribute('tagName', tag);
                 
                 let tagText = document.createElement('span');
@@ -184,7 +197,7 @@ function createQuestionBlock(question, max, indx) {
             fireEmoji.src = `/assets/images/emojis/fire.png`;
 
             hotTag.append(fireEmoji);
-            //hotTag.onclick = myFunction;
+            //hotTag.onclick = onFilterButtonClicked;
             //hotTag.setAttribute('tagName', 'hot');
             tagsBlock.prepend(hotTag);
         }
@@ -246,6 +259,7 @@ async function loadBd() {
 
 async function main() {
     await loadBd()
+    await readFromLocalStore()
     await addNavbar()
     await loadQuestions()
     let coffee = document.getElementById("buymecoffeediv")
