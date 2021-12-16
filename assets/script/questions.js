@@ -67,10 +67,17 @@ async function createNavBar(allTags) {
             tag.append(tagText)
         }
         tag.setAttribute('tagName', key);
-        filterState[key] = {
-            elem: tag,
-            enabled: false
-        };
+        if(key in filterState) {
+            if (filterState[key].enabled) {
+                tag.classList.add('question-tag-selected');
+            }
+            filterState[key].elem = tag;
+        } else {
+            filterState[key] = {
+                elem: tag,
+                enabled: false
+            };
+        }
         navbar.append(tag);
     }
     {
@@ -157,15 +164,8 @@ function createQuestionBlock(question, max, indx) {
         let questionText = document.createElement('p');
         const newText = question['question']?.replace(/\`(.+?)\`/g, '<code class="inline-code">$1</code>');
         questionText.innerHTML = newText;
-        //questionText.prepend(indxText)
+        questionText.prepend(indxText)
 
-        if (hotQuestion && !isMobile()) {
-            let fire = document.createElement('img');
-            fire.classList.add('fire');
-            fire.setAttribute('align', 'left')
-            fire.src = `/assets/images/emojis/fire.png`;
-            //questionP.prepend(fire); 
-        }
         questionP.append(questionText);
         questionBlock.append(questionP);
     }
@@ -180,28 +180,17 @@ function createQuestionBlock(question, max, indx) {
                 tagElem.setAttribute('tagName', tag);
                 
                 let tagText = document.createElement('span');
-                tagText.innerText = tag;
+                if (tag == 'hot') {   
+                    tagText.innerText = '🔥' + tag;
+                } else {
+                    tagText.innerText += tag;
+                }
                 tagText.classList.add('tag-text')
 
                 tagElem.append(tagText);
                 tagsBlock.append(tagElem);
             })
         }
-        if (/*isMobile() && */hotQuestion) {
-            let hotTag = document.createElement('span');
-            hotTag.classList.add('question-tag');
-
-            let fireEmoji = document.createElement('img');
-            fireEmoji.classList.add('emoji');
-            fireEmoji.classList.add('emoji-fire');
-            fireEmoji.src = `/assets/images/emojis/fire.png`;
-
-            hotTag.append(fireEmoji);
-            //hotTag.onclick = onFilterButtonClicked;
-            //hotTag.setAttribute('tagName', 'hot');
-            tagsBlock.prepend(hotTag);
-        }
-
         questionBlock.append(tagsBlock);
     }
     if ("code" in question) {
@@ -244,7 +233,6 @@ async function loadQuestions() {
     const questions = respJson["questions"];
 
     let max = getMax(questions);
-    let min = 1;
 
     const inner = document.getElementById('inner-questions-div');
     if (inner) {
@@ -255,6 +243,12 @@ async function loadQuestions() {
 
 async function loadBd() {
     respJson = await (await fetch("/assets/data/c++-questions/questions.json")).json();
+    let max = getMax(respJson['questions']);
+    respJson['questions'].forEach(question => {
+        if (isHotQuestion(question, max)) {
+            question['tags'].push('hot');
+        }
+    });
 }
 
 async function main() {

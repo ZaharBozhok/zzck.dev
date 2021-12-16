@@ -1,5 +1,8 @@
 {
     "tags": {
+        "hot" : {
+            "emoji": "fire"
+        },
         "general": {
             "emoji": "open-hands"
         },
