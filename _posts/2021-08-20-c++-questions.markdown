@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "C/C++ interview questions"
+title:  "Interview questions"
 date:   2021-08-20
 last_modified_at: 2021-11-23
 categories: [C++]
