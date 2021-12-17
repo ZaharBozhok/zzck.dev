@@ -1715,8 +1715,7 @@
                 "c++",
                 "contains code"
             ],
-            "code": "//%20Option%201%0Avector%20vec%3B%0A/%2A%20...%20%2A/%0Afor%20%28auto%20itr%20%3D%20vec.begin%28%29%3B%20itr%20%21%3D%20vec.end%28%29%3B%20itr%2B%2B%29%20%7B%0A%20%20%20itr-%3Eprint%28%29%3B%0A%7D",
-            "code1": "//%20Option%202%0Avector%20vec%3B%0A/%2A%20...%20%2A/%0Afor%20%28auto%20itr%20%3D%20vec.begin%28%29%3B%20itr%20%21%3D%20vec.end%28%29%3B%20%2B%2Bitr%29%20%7B%0A%20%20%20itr-%3Eprint%28%29%3B%0A%7D"
+            "code": "//+Option+1%0Avector+vec%3B%0A/*+...+*/%0Afor+(auto+itr+%3D+vec.begin()%3B+itr+!!%3D+vec.end()%3B+itr%2B%2B)+%7B%0A++++itr-%3Eprint()%3B%0A%7D%0A//+Option+2%0Avector+vec%3B%0A/*+...+*/%0Afor+(auto+itr+%3D+vec.begin()%3B+itr+!!%3D+vec.end()%3B+%2B%2Bitr)+%7B%0A++++itr-%3Eprint()%3B%0A%7D"
         },
         {
             "question": "Is it possible to have a recursive inline function?",
@@ -1754,7 +1753,7 @@
                 "c++",
                 "contains code"
             ],
-            "code": "MyString%20%2ApStr%20%3D%20new%20MyString%28%22Hello%20world%21%22%29%3B"
+            "code": "MyString+*pStr+%3D+new+MyString(%22Hello+world!!%22)%3B"
         },
         {
             "question": "How many objects of A does the D class have",
@@ -1784,7 +1783,7 @@
                 "c++",
                 "contains code"
             ],
-            "code": "struct%20Test%20%7B%0A%20%20%20%20Test%28%29%20%20%20%20%20%20%20%7B%20std%3A%3Acout%20%3C%3C%20%22d%22%3B%20%7D%0A%20%20%20%20Test%28int%20i%29%20%20%7B%20std%3A%3Acout%20%3C%3C%20%22i%22%3B%20%7D%0A%20%20%20%20Test%28char%20c%29%20%7B%20std%3A%3Acout%20%3C%3C%20%22c%22%3B%20%7D%0A%20%20%20%20Test%28long%20l%29%20%7B%20std%3A%3Acout%20%3C%3C%20%22l%22%3B%20%7D%0A%20%20%20%20Test%28float%20f%29%7B%20std%3A%3Acout%20%3C%3C%20%22f%22%3B%20%7D%0A%7D%3B%0A%0Aint%20main%28%29%0A%7B%0A%20%20%20%20Test%20t1%28%27c%27%29%3B%0A%20%20%20%20Test%20t2%28%27c%27%20%2B%203%29%3B%0A%20%20%20%20Test%20t3%2845%29%3B%0A%20%20%20%20Test%20t4%280xFF%29%3B%0A%20%20%20%20Test%20t5%280x1234L%29%3B%0A%20%20%20%20Test%20t6%289999.9f%29%3B%0A%20%20%20%20return%200%3B%0A%7D"
+            "code": "struct+Test+%7B%0A++++Test()+++++++%7B+std::cout+%3C%3C+%22d%22%3B+%7D%0A++++Test(int+i)++%7B+std::cout+%3C%3C+%22i%22%3B+%7D%0A++++Test(char+c)+%7B+std::cout+%3C%3C+%22c%22%3B+%7D%0A++++Test(long+l)+%7B+std::cout+%3C%3C+%22l%22%3B+%7D%0A++++Test(float+f)%7B+std::cout+%3C%3C+%22f%22%3B+%7D%0A%7D%3B%0A%0Aint+main()%0A%7B%0A++++Test+t1(!'c!')%3B%0A++++Test+t2(!'c!'+%2B+3)%3B%0A++++Test+t3(45)%3B%0A++++Test+t4(0xFF)%3B%0A++++Test+t5(0x1234L)%3B%0A++++Test+t6(9999.9f)%3B%0A++++return+0%3B%0A%7D"
         },
         {
             "question": "Write a method signature which will override given virtual function / or tell will Derived work? ",
@@ -1900,7 +1899,7 @@
                 "c++",
                 "contains code"
             ],
-            "code": "template%3Cclass%20T%3E%20void%20foo%28T%20op1%2C%20T%20op2%29%20%7B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22op1%20%3D%20%22%20%3C%3C%20op1%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22op2%20%3D%20%22%20%3C%3C%20op2%20%3C%3C%20std%3A%3Aendl%3B%0A%7D%0A%0Atemplate%3Cclass%20T%3E%0Astruct%20sum%20%7B%0A%20%20%20%20static%20void%20foo%20%28T%20op1%2C%20T%20op2%29%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22sum%20%3D%20%22%20%3C%3C%20op2%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%20%7D%0A%7D%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20foo%281%2C%203%29%3B%20%20%20%20%20%20%20%20%20%20//%20Line%201%0A%20%20%20%20foo%3Cint%3E%281%2C%20%273%27%29%3B%20%20%20//%20Line%202%0A%20%20%20%20sum%3A%3Afoo%281%2C%202%29%3B%20%20%20%20%20//%20Line%203%0A%20%20%20%20return%200%3B%0A%7D"
+            "code": "template%3Cclass+T%3E+void+foo(T+op1,+T+op2)+%7B%0A++++std::cout+%3C%3C+%22op1+%3D+%22+%3C%3C+op1+%3C%3C+std::endl%3B%0A++++std::cout+%3C%3C+%22op2+%3D+%22+%3C%3C+op2+%3C%3C+std::endl%3B%0A%7D%0A%0Atemplate%3Cclass+T%3E%0Astruct+sum+%7B%0A++++static+void+foo+(T+op1,+T+op2)+%7B%0A++++++++std::cout+%3C%3C+%22sum+%3D+%22+%3C%3C+op2+%3C%3C+std::endl%3B%0A++++%7D%0A%7D%3B%0A%0Aint+main()+%7B%0A++++foo(1,+3)%3B++++++++++//+Line+1%0A++++foo%3Cint%3E(1,+!'3!')%3B+++//+Line+2%0A++++sum::foo(1,+2)%3B+++++//+Line+3%0A++++return+0%3B%0A%7D"
         },
         {
             "question": "What is the primary purpose of header files?",
@@ -1932,7 +1931,7 @@
                 "c++",
                 "contains code"
             ],
-            "code": "void%20func%28%29%20throw%28float%29%20%7B%0A%20%20%20throw%2010.0f%3B%0A%7D%0Aint%20main%28%29%20%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%271%27%3B%0A%20%20%20%20%20%20%20%20func%28%29%3B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%272%27%3B%0A%20%20%20%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%273%27%3B%0A%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%7D"
+            "code": "void+func()+throw(float)+%7B%0A+++throw+10.0f%3B%0A%7D%0Aint+main()+%7B%0A+++try+%7B%0A++++++++std::cout+%3C%3C+!'1!'%3B%0A++++++++func()%3B%0A++++++++std::cout+%3C%3C+!'2!'%3B%0A+++%7D+catch+(...)+%7B%0A++++++++std::cout+%3C%3C+!'3!'%3B%0A+++%7D%0A%0A++++return+0%3B%0A%7D"
         },
         {
             "question": "What will be the output of the following code?",
@@ -2055,7 +2054,7 @@
                 "c++",
                 "contains code"
             ],
-            "code": "void%20foo%28const%20std%3A%3Avector%3Cint%3E%26%20values%29%20%7B%0A%20%20%20std%3A%3Avector%3Cint%3E%3A%3Aconst_iterator%20it%20%3D%20values.begin%28%29%3B%0A%20%20%20while%20%28it%20%21%3D%20values.end%28%29%29%20%7B%0A%20%20%20%20%20%20//%20it%2B%2B%3B%20vs%0A%20%20%20%20%20%20%2B%2Bit%3B%0A%20%20%20%7D%0A%7D"
+            "code": "void+foo(const+std::vector%3Cint%3E%26+values)+%7B%0A+++std::vector%3Cint%3E::const_iterator+it+%3D+values.begin()%3B%0A+++while+(it+!!%3D+values.end())+%7B%0A++++++//+it%2B%2B%3B+vs%0A++++++%2B%2Bit%3B%0A+++%7D%0A%7D"
         },
         {
             "question": "What happens here?",
@@ -2095,7 +2094,7 @@
                 "c++",
                 "contains code"
             ],
-            "code": "void%20removeEach3%28const%20vector%3Cint%3E%26%20v%29%7B%0A%20%20%20for%20%28vector%3Cint%3E%3A%3Aiterator%20i%20%3D%20v.begin%28%29%2C%20e%20%3D%20v.end%28%29%3B%20i%21%3De%3B%20i%2B%2B%29%20%7B%0A%20%20%20%20%20%20if%20%28%2Ai%20%3D%3D%203%29%20%7B%0A%20%20%20%20%20%20%20%20%20v.erase%28i%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D"
+            "code": "void+removeEach3(const+vector%3Cint%3E%26+v)%7B%0A+++for+(vector%3Cint%3E::iterator+i+%3D+v.begin(),+e+%3D+v.end()%3B+i!!%3De%3B+i%2B%2B)+%7B%0A++++++if+(*i+%3D%3D+3)+%7B%0A+++++++++v.erase(i)%3B%0A++++++%7D%0A+++%7D%0A%7D"
         },
         {
             "question": "Difference between initializations",
