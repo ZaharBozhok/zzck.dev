@@ -60,9 +60,6 @@
         "contains code": {
             "emoji": "person-lifting-weights"
         },
-        "quiz": {
-            "emoji": "face-with-monocle"
-        },
         "tools": {
             "emoji": "hammer-and-wrench"
         },
@@ -96,7 +93,7 @@
             ]
         },
         {
-            "question": "What is the difference between ‘class’ and ‘struct’?",
+            "question": "What is the difference between `class` and `struct`?",
             "tags": [
                 "c++"
             ]
@@ -176,7 +173,7 @@
             ]
         },
         {
-            "question": "Does allocated memory occupy continuos block in real memory?",
+            "question": "Does allocated memory occupy continuos block in physical memory?",
             "tags": [
                 "general"
             ]
@@ -230,7 +227,7 @@
             ]
         },
         {
-            "question": "How can be transfer the ownership of the unique_ptr? ",
+            "question": "How can we transfer the ownership of the `std::unique_ptr`? ",
             "tags": [
                 "c++"
             ],
@@ -286,13 +283,13 @@
             ]
         },
         {
-            "question": "What is iterator invalidation when working with `std::vector`?",
+            "question": "What is iterator invalidation while working with `std::vector`?",
             "tags": [
                 "c++"
             ]
         },
         {
-            "question": "How to eliminate reallocation in `std::vector` (reserve)? ",
+            "question": "How to eliminate reallocation in `std::vector` provided we know the total number of elements? ",
             "tags": [
                 "c++"
             ],
@@ -314,7 +311,7 @@
             "timesAsked": 3
         },
         {
-            "question": "Complexity of inserting into a `std::map`/`std::unordered_map`?",
+            "question": "Complexity of inserting into a `std::map`,`std::unordered_map`?",
             "tags": [
                 "c++",
                 "general",
@@ -323,7 +320,7 @@
             ]
         },
         {
-            "question": "What should be implemented in your class to be used as a key of `std::map`/`std::unordered_map` (big O of insert, search, …)? ",
+            "question": "What should be implemented in user's class to be used as a key of `std::map`/`std::unordered_map`? ",
             "tags": [
                 "c++",
                 "general",
@@ -333,7 +330,7 @@
             "timesAsked": 2
         },
         {
-            "question": "Which multithreading functional have you used?",
+            "question": "Which types of technics in concurrency have you used?",
             "tags": [
                 "general",
                 "concurrency",
@@ -349,14 +346,15 @@
             "timesAsked": 3
         },
         {
-            "question": "How could deadlocks be resolved (wait with timeout, reorder)?",
+            "question": "How to resolve a deadlock?",
             "tags": [
                 "general",
-                "concurrency"
+                "concurrency",
+                "open question"
             ]
         },
         {
-            "question": "Describe the difference between thread and process.",
+            "question": "Describe the difference between a thread and a process.",
             "tags": [
                 "general",
                 "OS"
@@ -364,7 +362,7 @@
             "timesAsked": 3
         },
         {
-            "question": "What types of IPC do you know? ",
+            "question": "What types of IPC do you know?",
             "tags": [
                 "c++",
                 "general"
@@ -403,7 +401,7 @@
             ]
         },
         {
-            "question": "What is rehash and when it happen?",
+            "question": "What is rehash and when it happens?",
             "tags": [
                 "general",
                 "data structures",
@@ -411,7 +409,7 @@
             ]
         },
         {
-            "question": "How is memory handled between multiple processes?",
+            "question": "How does memory handled between multiple processes?",
             "tags": [
                 "c++",
                 "general",
@@ -434,7 +432,7 @@
             ]
         },
         {
-            "question": "Explain difference between a `mutex` and a `binary semaphore`? ",
+            "question": "Explain the difference between a `mutex` and a `binary semaphore`? ",
             "tags": [
                 "general",
                 "concurrency"
@@ -456,7 +454,7 @@
             ]
         },
         {
-            "question": "If we want to synchronize several processes on same machine, how can we do that?",
+            "question": "We want to synchronize several processes on the same machine. How can we do that?",
             "tags": [
                 "general",
                 "concurrency"
@@ -516,42 +514,42 @@
             "timesAsked": 3
         },
         {
-            "question": "Explain Observer pattern.",
+            "question": "Explain `Observer` pattern.",
             "tags": [
                 "general",
                 "design/architecture"
             ]
         },
         {
-            "question": "What is MVC pattern?",
+            "question": "What is `MVC` pattern?",
             "tags": [
                 "general",
                 "design/architecture"
             ]
         },
         {
-            "question": "What is MVVM pattern?",
+            "question": "What is `MVVM` pattern?",
             "tags": [
                 "general",
                 "design/architecture"
             ]
         },
         {
-            "question": "What is data binding (resuming MVVM)?",
+            "question": "What is data binding (resuming `MVVM`)?",
             "tags": [
                 "general",
                 "design/architecture"
             ]
         },
         {
-            "question": "Explain Abstract factory design pattern?",
+            "question": "Explain `Abstract factory` design pattern?",
             "tags": [
                 "general",
                 "design/architecture"
             ]
         },
         {
-            "question": "What kind of synchronization mechanisms do you know? Which one STL implements? ",
+            "question": "What kind of synchronization mechanisms do you know? Which ones STL implements? ",
             "tags": [
                 "general",
                 "concurrency",
@@ -560,7 +558,7 @@
             "timesAsked": 3
         },
         {
-            "question": "How many c++ standards do you know? ",
+            "question": "How many C++ standards do you know? ",
             "tags": [
                 "c++"
             ],
@@ -575,7 +573,7 @@
             ]
         },
         {
-            "question": "Do smart pointers guarantee no memory leaks?",
+            "question": "Do smart pointers guarantee absence of memory leaks?",
             "tags": [
                 "general",
                 "design/architecture",
@@ -583,7 +581,7 @@
             ]
         },
         {
-            "question": "What is move semantics in c++? ",
+            "question": "What is move semantics in c++?",
             "tags": [
                 "c++"
             ],
@@ -603,7 +601,7 @@
             "timesAsked": 2
         },
         {
-            "question": "Where are local variables stored?",
+            "question": "Where local variables are stored?",
             "tags": [
                 "c++",
                 "OS"
@@ -636,7 +634,7 @@
             ]
         },
         {
-            "question": "What is a time complexity and memory complexity of the algorithm?",
+            "question": "What is a `time complexity` and `memory complexity` of the algorithm?",
             "tags": [
                 "general",
                 "algorithmic"
@@ -650,7 +648,7 @@
             ]
         },
         {
-            "question": "Can a destructor be overloaded?",
+            "question": "Can destructor be overloaded?",
             "tags": [
                 "c++"
             ]
@@ -676,7 +674,7 @@
             ]
         },
         {
-            "question": "Did you create an image in `docker`?",
+            "question": "Did you create an image using `docker`?",
             "tags": [
                 "general",
                 "open question",
@@ -684,7 +682,7 @@
             ]
         },
         {
-            "question": "Do you have an experience using `Python?`",
+            "question": "Do you have any experience using `Python?`",
             "tags": [
                 "general",
                 "technologies",
@@ -692,7 +690,7 @@
             ]
         },
         {
-            "question": "Experience an `CI/CD`?",
+            "question": "Do you have any experience using/configuring `CI/CD`?",
             "tags": [
                 "general",
                 "technologies",
@@ -700,7 +698,7 @@
             ]
         },
         {
-            "question": "Give 5 examples of UB in `C++`?",
+            "question": "Give 5 examples of UB in c++?",
             "tags": [
                 "c++"
             ],
@@ -724,14 +722,14 @@
             ]
         },
         {
-            "question": "How exchange data between two processes?",
+            "question": "How to exchange data between two processes?",
             "tags": [
                 "general",
                 "concurrency"
             ]
         },
         {
-            "question": "Can we allocate 8 GB of ram (alloc(8GB)) ?",
+            "question": "Can we allocate 8 GB of ram (alloc(8GB))?",
             "tags": [
                 "general",
                 "OS"
@@ -762,20 +760,20 @@
             ]
         },
         {
-            "question": "Which STL function can be used to check whether several sets have intersection?",
+            "question": "Name STL function can be used to check whether several sets have intersection?",
             "tags": [
                 "c++"
             ]
         },
         {
-            "question": "Composition vs aggregation vs association vs inheritance?",
+            "question": "`Composition` vs `aggregation` vs `association` vs `inheritance`?",
             "tags": [
                 "general",
                 "design/architecture"
             ]
         },
         {
-            "question": "Equality vs Equivalence? Where it used in STL?",
+            "question": "`Equality` vs `Equivalence`? Where it used in STL?",
             "tags": [
                 "general",
                 "c++"
@@ -870,7 +868,7 @@
             ]
         },
         {
-            "question": "How can be implemented reference counting in `std::shared_ptr`?",
+            "question": "How reference counting implemented in `std::shared_ptr`?",
             "tags": [
                 "c++",
                 "concurrency"
@@ -925,7 +923,7 @@
             ]
         },
         {
-            "question": "What is SFINAE? Where is used in STL?",
+            "question": "What is SFINAE? Where it used in STL?",
             "tags": [
                 "c++"
             ]
@@ -999,7 +997,7 @@
             ]
         },
         {
-            "question": "Which types of leaks do you know (memory leak / …?) ?",
+            "question": "Which types of leaks do you know ?",
             "tags": [
                 "general",
                 "c++"
@@ -1046,14 +1044,14 @@
             ]
         },
         {
-            "question": "Which pattern can help you avoid leaks? (wrapper)",
+            "question": "Which pattern can help you avoid leaks?",
             "tags": [
                 "general",
                 "design/architecture"
             ]
         },
         {
-            "question": "How does RAII is implemented in c++?",
+            "question": "How does RAII implemented in c++?",
             "tags": [
                 "c++",
                 "design/architecture"
@@ -1134,7 +1132,7 @@
             ]
         },
         {
-            "question": "What is a lambda ?",
+            "question": "What is a lambda?",
             "tags": [
                 "c++",
                 "general"
@@ -1160,7 +1158,7 @@
             ]
         },
         {
-            "question": "Singleton in multithreaded environment?",
+            "question": "Singleton in concurrent environment?",
             "tags": [
                 "c++",
                 "design/architecture"
@@ -1192,7 +1190,7 @@
             ]
         },
         {
-            "question": "Describe the behavior of the conditional variable and the `mutex` associated with it. Spurious wake up?",
+            "question": "Describe the behavior of the conditional variable and the `mutex` associated with it. What is Spurious wake up?",
             "tags": [
                 "c++",
                 "concurrency",
@@ -1234,7 +1232,7 @@
             ]
         },
         {
-            "question": "What is ABI?",
+            "question": "What is an ABI?",
             "tags": [
                 "c++",
                 "general"
@@ -1256,7 +1254,7 @@
             ]
         },
         {
-            "question": "What is function overloading in C++? How it works?",
+            "question": "What is function overloading in C++? How does it work?",
             "tags": [
                 "c++"
             ]
@@ -1955,20 +1953,6 @@
             ]
         },
         {
-            "quiz": "With regard to enumeration types, which one of the following statements is true?",
-            "tags": [
-                "c++",
-                "quiz"
-            ],
-            "answers": [
-                "When enumerator is used, its value is implicitly converted to an integer when needed.",
-                "An integer can implicitly be converted to an enumeration type.",
-                "Only one identifier in an enum list can have the value zero.",
-                "Enumerators for which no value is explicitly specified have a value of zero.",
-                "Enumeration types must be defined in the body of a class definition."
-            ]
-        },
-        {
             "question": "Will this code compile?",
             "tags": [
                 "c++",
@@ -2171,7 +2155,7 @@
             ]
         },
         {
-            "question": "Which networking tools do you know? iperf? tcpdump?",
+            "question": "Which networking tools do you know? Did you use `iperf`, `tcpdump`?",
             "tags": [
                 "tools",
                 "linux",
@@ -2201,7 +2185,7 @@
             ]
         },
         {
-            "question": "Encrypting algorithms in networking?",
+            "question": "What types of encryption algorithms in networking do you know?",
             "tags": [
                 "technologies",
                 "networking",
@@ -2234,7 +2218,7 @@
             ]
         },
         {
-            "question": "Cerberus, SAML?",
+            "question": "What is Cerberus, SAML?",
             "tags": [
                 "technologies",
                 "networking",
@@ -2271,13 +2255,13 @@
             "code": "struct%20Node%20%7B%0Aint%20date%3B%0ANode%2A%20next%3B%0A%7D%3B%0ANode%2A%20Reverse%28Node%2A%20head%29%20%7B%0A%2F%2A...%2A%2F%0A%7D"
         },
         {
-            "question": "Write an algo which checks whether the string is palindrome?",
+            "question": "Write an algorithm which checks whether the string is palindrome?",
             "tags": [
                 "algorithmic"
             ]
         },
         {
-            "question": "We have an IP camera which streams 1MB in size frames, and we have to sync frames to local storage (HDD/SSD/…), why do we need multithreading here?",
+            "question": "We have an IP camera which streams frames 1MB in size, and we have to sync frames to local storage (HDD/SSD/…), why do we need concurrency here?",
             "tags": [
                 "design/architecture",
                 "concurrency",
@@ -2306,28 +2290,28 @@
             "hint": "CallConvention"
         },
         {
-            "question": "Given a computer with 4 GB of RAM, then we start Photoshop and after some time we that it took 8 GB of RAM, how is that possible?",
+            "question": "Given a computer with 4 GB of RAM, then we start Photoshop and after some time we see it took 8 GB of RAM. How can that be possible?",
             "tags": [
                 "general",
                 "OS"
             ]
         },
         {
-            "question": "Imagine you start designing new design/architecture of classes, how do you do it?",
+            "question": "Imagine you start designing new design/architecture of classes. Describe your desging process?",
             "tags": [
                 "general",
                 "design/architecture"
             ]
         },
         {
-            "question": "Give several examples of Patterns of OOP?",
+            "question": "Give several examples of OOP Patterns?",
             "tags": [
                 "general",
                 "design/architecture"
             ]
         },
         {
-            "question": "We have a singleton class and we wan’t to forbid possible ways to create a second instance but allow inheritance, how to do it?",
+            "question": "We have a singleton class and we wan’t to forbid possible ways to create a second instance but allow inheritance. How to achieve that?",
             "tags": [
                 "c++",
                 "design/architecture"
@@ -2353,7 +2337,8 @@
                 "OS",
                 "web",
                 "debugging",
-                "problem solving"
+                "problem solving",
+                "open question"
             ]
         },
         {
@@ -2364,7 +2349,7 @@
             ]
         },
         {
-            "question": "What is CMake, do you use it?",
+            "question": "What is CMake? Do you use it?",
             "tags": [
                 "c++",
                 "tools"
@@ -2392,21 +2377,21 @@
             ]
         },
         {
-            "question": "Can we delete a row if it’s referenced by other row by index (question about cascade delete)?",
+            "question": "Can we delete a row if it’s referenced by other row by index?",
             "tags": [
                 "general",
                 "DB"
             ]
         },
         {
-            "question": "What is transaction?",
+            "question": "What is a transaction?",
             "tags": [
                 "general",
                 "DB"
             ]
         },
         {
-            "question": "What is isolation level?",
+            "question": "What is an isolation level?",
             "tags": [
                 "general",
                 "DB"
@@ -2428,14 +2413,6 @@
             ]
         },
         {
-            "question": "Do you have cases while library integration process you understand that it doesn’t suit your needs fully? How did you workaround it?",
-            "tags": [
-                "general",
-                "problem solving",
-                "softskills"
-            ]
-        },
-        {
             "question": "Which types of libraries you can’t integrate into the propriate solution?",
             "tags": [
                 "general",
@@ -2451,14 +2428,6 @@
             ]
         },
         {
-            "question": "Tell about the hardest task/issue/case you had to tackle? How did you tackle it?",
-            "tags": [
-                "general",
-                "softskills",
-                "open question"
-            ]
-        },
-        {
             "question": "Have you done architecture-related work, tell about last ones.",
             "tags": [
                 "general",
@@ -2467,7 +2436,7 @@
             ]
         },
         {
-            "question": "Do you have experience in mentoring?",
+            "question": "Do you have any experience in mentoring?",
             "tags": [
                 "general",
                 "softskills"
@@ -2482,7 +2451,7 @@
             ]
         },
         {
-            "question": "Which instruments for debug do you know?",
+            "question": "Which debugging instruments do you know?",
             "tags": [
                 "general",
                 "debugging",
@@ -2540,7 +2509,7 @@
             ]
         },
         {
-            "question": "There is only one water lily in the lake. Everyday the number of lilys doubles. On the day 48 the lake was full. Which day there lake was half fulled?",
+            "question": "There is only one water lily in the lake. Everyday the number of lilys doubles. On the day 48 the lake was full. Which day the lake was half fulled?",
             "tags": [
                 "general",
                 "algorithmic",

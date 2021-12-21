@@ -220,6 +220,18 @@ function createQuestionsDiv(questions, max) {
             taken++;
         }
     })
+    const elem = document.getElementById('counter');
+    elem.innerText = "0"
+    let i = 0;
+    var interval = setInterval(function() {
+        if (i < 15) {
+            elem.innerText = " " + ((parseInt(elem.innerText)) + Math.round(taken / 15));
+            i++;
+        } else {
+            elem.innerText = " " + taken
+            clearInterval(interval)
+        }
+    }, 25);
     return questionsDiv;
 }
 
@@ -251,10 +263,28 @@ async function loadBd() {
     });
 }
 
+async function addCounter() {
+    const mainDiv = document.getElementById("questions");
+    const counterContainer = document.createElement('div');
+    counterContainer.classList.add('counterContainer')
+    const counter = document.createElement('div');
+    counter.classList.add('counter-inner')
+    const counterText = document.createElement('div');
+    counterText.classList.add('counter-inner')
+    counterText.innerText = "Result:";
+    counter.setAttribute('align', 'center');
+    counter.id = "counter"
+    counter.innerText = "0"
+    mainDiv.append(counterText);
+    mainDiv.append(counter);
+    mainDiv.append(counterContainer);
+}
+
 async function main() {
     await loadBd()
     await readFromLocalStore()
     await addNavbar()
+    await addCounter()
     await loadQuestions()
     let coffee = document.getElementById("buymecoffeediv")
     if (isMobile()) {
