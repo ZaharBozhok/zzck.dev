@@ -11,4 +11,7 @@ tags: [C++,Interviewing,Puzzles,Questions]
     <a href="https://www.buymeacoffee.com/zzck.dev" target="_blank" id="buymecoffespan">Buy me a Midi 🎹</a>
 </div>
 <div id="questions" style="margin-top:20px"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/cpp.min.js"></script>
 <script src="/assets/script/questions.js"/>

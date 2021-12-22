@@ -44,6 +44,7 @@ async function onFilterButtonClicked(event) {
         tag.enabled = !tag.enabled;
     }
     await loadQuestions()
+    hljs.highlightAll();
     await writeToLocalStore()
 }
 async function createNavBar(allTags) {
@@ -56,18 +57,18 @@ async function createNavBar(allTags) {
         {
             let emoji = document.createElement('img');
             emoji.classList.add('emoji');
-            emoji.setAttribute('align','left');
+            emoji.setAttribute('align', 'left');
             emoji.src = `/assets/images/emojis/${allTags[key]['emoji']}.png`
 
             let tagText = document.createElement('span');
             tagText.classList.add('nav-tag-text');
             tagText.innerText = key;
-            
+
             tag.append(emoji);
             tag.append(tagText)
         }
         tag.setAttribute('tagName', key);
-        if(key in filterState) {
+        if (key in filterState) {
             if (filterState[key].enabled) {
                 tag.classList.add('question-tag-selected');
             }
@@ -88,7 +89,7 @@ async function createNavBar(allTags) {
             let emoji = document.createElement('img');
             emoji.classList.add('emoji');
             emoji.classList.add('emoji-cross-mark');
-            emoji.setAttribute('align','left');
+            emoji.setAttribute('align', 'left');
             emoji.src = `/assets/images/emojis/cross-mark.png`;
 
             close.append(emoji);
@@ -178,9 +179,9 @@ function createQuestionBlock(question, max, indx) {
                 tagElem.classList.add('question-tag');
                 tagElem.onclick = onFilterButtonClicked;
                 tagElem.setAttribute('tagName', tag);
-                
+
                 let tagText = document.createElement('span');
-                if (tag == 'hot') {   
+                if (tag == 'hot') {
                     tagText.innerText = '🔥' + tag;
                 } else {
                     tagText.innerText += tag;
@@ -193,15 +194,25 @@ function createQuestionBlock(question, max, indx) {
         }
         questionBlock.append(tagsBlock);
     }
-    if ("code" in question) {
-        const encodedcode = question["code"];
-        const count = (encodedcode.match(/%0A/g) || []).length;
-        const height = (21 * (count + 1)) + 200;
-        if (!isMobile()) {
+    if (!isMobile()) {
+        if ("godBoltcode" in question) {
+            const encodedcode = question["godBoltcode"];
+            const count = (encodedcode.match(/%0A/g) || []).length;
+            const height = (21 * (count + 1)) + 200;
             questionBlock.innerHTML += `<iframe loading="lazy" class="codeframe" height="${height}px"frameBorder="0" src="https://godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,source:'${encodedcode}'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:50,n:'0',o:'',s:0,t:'0'),(g:!((h:executor,i:(argsPanelShown:'1',compilationPanelShown:'0',compiler:g112,compilerOutShown:'0',execArgs:'',execStdin:'',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'',source:1,stdinPanelShown:'1',tree:'1',wrap:'1'),l:'5',n:'0',o:'Executor+x86-64+gcc+11.2+(C%2B%2B,+Editor+%231)',t:'0')),header:(),l:'4',m:50,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>`;
         }
-        else {
-            questionBlock.innerHTML += `<p><b>Thank you for your interest. Questions that contain code available only on desktop.</b></p>`
+    }
+    else {
+        if ("urlEncodedCode" in question) {
+            const encodedcode = question["urlEncodedCode"];
+            let elem = `<pre><code class="language-cpp">${decodeURIComponent(encodedcode)
+                    .replace(/&/g, '&amp;')
+                    .replace(/\</, '&lt;')
+                    .replace(/\>/, '&gt;')
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;")
+                }</code></pre>`;
+            questionBlock.innerHTML += elem;
         }
     }
     return questionBlock;
@@ -223,7 +234,7 @@ function createQuestionsDiv(questions, max) {
     const elem = document.getElementById('counter');
     elem.innerText = "0"
     let i = 0;
-    var interval = setInterval(function() {
+    var interval = setInterval(function () {
         if (i < 15) {
             elem.innerText = " " + ((parseInt(elem.innerText)) + Math.round(taken / 15));
             i++;
@@ -290,5 +301,6 @@ async function main() {
     if (isMobile()) {
         coffee.classList.add("mobile")
     }
+    hljs.highlightAll();
 }
 main()

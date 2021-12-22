@@ -1,6 +1,6 @@
 {
     "tags": {
-        "hot" : {
+        "hot": {
             "emoji": "fire"
         },
         "general": {
@@ -120,28 +120,32 @@
         {
             "question": "How do virtual functions work?",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
         {
             "question": "When virtual function table is created? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 3
         },
         {
             "question": "Is it possible to have virtual constructor (why would yes or not)? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
         {
             "question": "Why do we need virtual destructors? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 4
         },
@@ -195,14 +199,16 @@
             "question": "What is RAII (Resource allocation is acquisition)? ",
             "tags": [
                 "c++",
-                "general"
+                "general",
+                "hot"
             ],
             "timesAsked": 5
         },
         {
             "question": "What is smart pointer (how many types do you know)? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 5
         },
@@ -216,7 +222,8 @@
             "question": "How does thread safety implemented in `std::shared_ptr`? ",
             "tags": [
                 "c++",
-                "concurrency"
+                "concurrency",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -229,7 +236,8 @@
         {
             "question": "How can we transfer the ownership of the `std::unique_ptr`? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -242,14 +250,16 @@
         {
             "question": "How can we forbid object copying? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
         {
             "question": "Advantage of using `std::make_shared`? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -262,7 +272,8 @@
         {
             "question": "How many STL containers did you work with (name them)? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 3
         },
@@ -291,7 +302,8 @@
         {
             "question": "How to eliminate reallocation in `std::vector` provided we know the total number of elements? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -306,7 +318,8 @@
             "tags": [
                 "c++",
                 "general",
-                "data structures"
+                "data structures",
+                "hot"
             ],
             "timesAsked": 3
         },
@@ -325,7 +338,8 @@
                 "c++",
                 "general",
                 "data structures",
-                "algorithmic"
+                "algorithmic",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -341,7 +355,8 @@
             "question": "What is a deadlock? ",
             "tags": [
                 "general",
-                "concurrency"
+                "concurrency",
+                "hot"
             ],
             "timesAsked": 3
         },
@@ -357,7 +372,8 @@
             "question": "Describe the difference between a thread and a process.",
             "tags": [
                 "general",
-                "OS"
+                "OS",
+                "hot"
             ],
             "timesAsked": 3
         },
@@ -365,7 +381,8 @@
             "question": "What types of IPC do you know?",
             "tags": [
                 "c++",
-                "general"
+                "general",
+                "hot"
             ],
             "timesAsked": 5
         },
@@ -435,7 +452,8 @@
             "question": "Explain the difference between a `mutex` and a `binary semaphore`? ",
             "tags": [
                 "general",
-                "concurrency"
+                "concurrency",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -509,7 +527,8 @@
             "tags": [
                 "general",
                 "design/architecture",
-                "best practice"
+                "best practice",
+                "hot"
             ],
             "timesAsked": 3
         },
@@ -553,14 +572,16 @@
             "tags": [
                 "general",
                 "concurrency",
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 3
         },
         {
             "question": "How many C++ standards do you know? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -583,7 +604,8 @@
         {
             "question": "What is move semantics in c++?",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 4
         },
@@ -596,7 +618,8 @@
         {
             "question": "Difference between `rvalue` and `lvalue`? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -782,7 +805,8 @@
         {
             "question": "In some functions it is not recommended to throw exceptions. What are these functions? Why it is not recommended?",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 3
         },
@@ -1068,7 +1092,8 @@
             "question": "What types of network protocols do you know? Difference between them? OSI model?",
             "tags": [
                 "general",
-                "networking"
+                "networking",
+                "hot"
             ],
             "timesAsked": 3
         },
@@ -1076,7 +1101,8 @@
             "question": "TCP vs UDP, HTTPS?",
             "tags": [
                 "general",
-                "networking"
+                "networking",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -1518,7 +1544,8 @@
         {
             "question": "`mutable` keyword?",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -1585,14 +1612,16 @@
             "tags": [
                 "c++",
                 "OS",
-                "concurrency"
+                "concurrency",
+                "hot"
             ],
             "timesAsked": 2
         },
         {
             "question": "What does the const member function qualifier do? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -1600,7 +1629,8 @@
             "question": "What is stack unwinding? ",
             "tags": [
                 "c++",
-                "general"
+                "general",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -1608,14 +1638,16 @@
             "question": "What is exception safety, which do you know? ",
             "tags": [
                 "c++",
-                "general"
+                "general",
+                "hot"
             ],
             "timesAsked": 2
         },
         {
             "question": "Types of STL iterators? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 3
         },
@@ -1623,7 +1655,8 @@
             "question": "Is `std::shared_ptr` threadsafe? ",
             "tags": [
                 "c++",
-                "concurrency"
+                "concurrency",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -1631,7 +1664,8 @@
             "question": "`std::thread` vs `std::async`? ",
             "tags": [
                 "concurrency",
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -1640,7 +1674,8 @@
             "tags": [
                 "c++",
                 "optimizations",
-                "hardware"
+                "hardware",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -1648,7 +1683,8 @@
             "question": "`std::move` vs `std::forward`? And why do we need them? ",
             "tags": [
                 "c++",
-                "optimizations"
+                "optimizations",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -1656,21 +1692,24 @@
             "question": "Which design patterns do you know (GoF)? ",
             "tags": [
                 "c++",
-                "design/architecture"
+                "design/architecture",
+                "hot"
             ],
             "timesAsked": 4
         },
         {
             "question": "Where is the virtual function table stored? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
         {
             "question": "What kind of casts in c++ do you know? ",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -1679,7 +1718,8 @@
             "tags": [
                 "c++",
                 "OS",
-                "optimizations"
+                "optimizations",
+                "hot"
             ],
             "timesAsked": 2
         },
@@ -1689,7 +1729,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "std%3A%3Acout%20%3C%3C%201u%20-%202%3B"
+            "urlEncodedCode": "std%3A%3Acout%20%3C%3C%201u%20-%202%3B",
+            "godBoltcode": "std%3A%3Acout%20%3C%3C%201u%20-%202%3B"
         },
         {
             "question": "What is the error in the code below?",
@@ -1697,7 +1738,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "my_struct_t%20%2Abar%3B%0A/%2A%20...%20do%20stuff%2C%20including%20setting%20bar%20to%20point%20to%20a%20defined%20my_struct_t%20object%20...%20%2A/%0Amemset%28bar%2C%200%2C%20sizeof%28bar%29%29%3B"
+            "urlEncodedCode": "my_struct_t%20*bar%3B%0A%2F*%20...%20do%20stuff%2C%20including%20setting%20bar%20to%20point%20to%20a%20defined%20my_struct_t%20object%20...%20*%2F%0Amemset(bar%2C%200%2C%20sizeof(bar))%3B",
+            "godBoltcode": "my_struct_t%20%2Abar%3B%0A/%2A%20...%20do%20stuff%2C%20including%20setting%20bar%20to%20point%20to%20a%20defined%20my_struct_t%20object%20...%20%2A/%0Amemset%28bar%2C%200%2C%20sizeof%28bar%29%29%3B"
         },
         {
             "question": "What is the problem in the code below? What would be an alternate way of implementing this that would avoid the problem?",
@@ -1705,7 +1747,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "size_t%20sz%20%3D%20buf-%3Esize%28%29%3B%0Awhile%20%28%20--sz%20%3E%3D%200%29%0A%7B%0A%20%20%20/%2A%20do%20something%20%2A/%0A%7D"
+            "urlEncodedCode": "size_t%20sz%20%3D%20buf-%3Esize()%3B%0Awhile%20(%20--sz%20%3E%3D%200)%0A%7B%0A%20%20%20%2F*%20do%20something%20*%2F%0A%7D",
+            "godBoltcode": "size_t%20sz%20%3D%20buf-%3Esize%28%29%3B%0Awhile%20%28%20--sz%20%3E%3D%200%29%0A%7B%0A%20%20%20/%2A%20do%20something%20%2A/%0A%7D"
         },
         {
             "question": "Consider the two code snippets below for printing a vector. Is there any advantage of one vs. the other? Explain. (Hint: in any compiler will optimize it out)",
@@ -1713,7 +1756,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "//+Option+1%0Avector+vec%3B%0A/*+...+*/%0Afor+(auto+itr+%3D+vec.begin()%3B+itr+!!%3D+vec.end()%3B+itr%2B%2B)+%7B%0A++++itr-%3Eprint()%3B%0A%7D%0A//+Option+2%0Avector+vec%3B%0A/*+...+*/%0Afor+(auto+itr+%3D+vec.begin()%3B+itr+!!%3D+vec.end()%3B+%2B%2Bitr)+%7B%0A++++itr-%3Eprint()%3B%0A%7D"
+            "urlEncodedCode": "%2F%2F%20Option%201%0Avector%20vec%3B%0A%2F*%20...%20*%2F%0Afor%20(auto%20itr%20%3D%20vec.begin()%3B%20itr%20!!%3D%20vec.end()%3B%20itr%2B%2B)%20%7B%0A%20%20%20%20itr-%3Eprint()%3B%0A%7D%0A%2F%2F%20Option%202%0Avector%20vec%3B%0A%2F*%20...%20*%2F%0Afor%20(auto%20itr%20%3D%20vec.begin()%3B%20itr%20!!%3D%20vec.end()%3B%20%2B%2Bitr)%20%7B%0A%20%20%20%20itr-%3Eprint()%3B%0A%7D",
+            "godBoltcode": "//+Option+1%0Avector+vec%3B%0A/*+...+*/%0Afor+(auto+itr+%3D+vec.begin()%3B+itr+!!%3D+vec.end()%3B+itr%2B%2B)+%7B%0A++++itr-%3Eprint()%3B%0A%7D%0A//+Option+2%0Avector+vec%3B%0A/*+...+*/%0Afor+(auto+itr+%3D+vec.begin()%3B+itr+!!%3D+vec.end()%3B+%2B%2Bitr)+%7B%0A++++itr-%3Eprint()%3B%0A%7D"
         },
         {
             "question": "Is it possible to have a recursive inline function?",
@@ -1727,7 +1771,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "%23include%20%3Ciostream%3E%0A%0Aclass%20A%20%7B%0A%20%20%20public%3A%0A%20%20%20A%28%29%7B%7D%0A%20%20%20~A%28%29%7B%0A%20%20%20%20%20%20throw%2042%3B%0A%20%20%20%7D%0A%7D%3B%0A%0Aint%20main%28%29%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20A%20a%3B%0A%20%20%20%20%20%20throw%2032%3B%0A%20%20%20%7D%20catch%28int%20a%29%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20a%3B%0A%20%20%20%7D%0A%20%20%20return%200%3B%0A%7D"
+            "urlEncodedCode": "%23include%20%3Ciostream%3E%0A%0Aclass%20A%20%7B%0A%20%20%20public%3A%0A%20%20%20A()%7B%7D%0A%20%20%20~A()%7B%0A%20%20%20%20%20%20throw%2042%3B%0A%20%20%20%7D%0A%7D%3B%0A%0Aint%20main()%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20A%20a%3B%0A%20%20%20%20%20%20throw%2032%3B%0A%20%20%20%7D%20catch(int%20a)%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20a%3B%0A%20%20%20%7D%0A%20%20%20return%200%3B%0A%7D",
+            "godBoltcode": "%23include%20%3Ciostream%3E%0A%0Aclass%20A%20%7B%0A%20%20%20public%3A%0A%20%20%20A%28%29%7B%7D%0A%20%20%20~A%28%29%7B%0A%20%20%20%20%20%20throw%2042%3B%0A%20%20%20%7D%0A%7D%3B%0A%0Aint%20main%28%29%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20A%20a%3B%0A%20%20%20%20%20%20throw%2032%3B%0A%20%20%20%7D%20catch%28int%20a%29%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20a%3B%0A%20%20%20%7D%0A%20%20%20return%200%3B%0A%7D"
         },
         {
             "question": "What will be printed? Explain.",
@@ -1735,7 +1780,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "%23include%20%3Ciostream%3E%0Aclass%20Base%20%7B%0A%20%20%20virtual%20void%20method%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22from%20Base%22%20%3C%3C%20std%3A%3Aendl%3B%7D%0Apublic%3A%0A%20%20%20virtual%20%7EBase%28%29%20%7Bmethod%28%29%3B%7D%0A%20%20%20void%20baseMethod%28%29%20%7Bmethod%28%29%3B%7D%0A%7D%3B%0A%0Aclass%20A%20%3A%20public%20Base%20%7B%0A%20%20%20void%20method%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22from%20A%22%20%3C%3Cstd%3A%3Aendl%3B%7D%0Apublic%3A%0A%20%20%20%7EA%28%29%20%7Bmethod%28%29%3B%7D%0A%7D%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20Base%20%2Abase%20%3D%20new%20A%3B%0A%20%20%20base-%3EbaseMethod%28%29%3B%0A%20%20%20delete%20base%3B%0A%20%20%20return%200%3B%0A%7D"
+            "urlEncodedCode": "%23include%20%3Ciostream%3E%0Aclass%20Base%20%7B%0A%20%20%20virtual%20void%20method()%20%7Bstd%3A%3Acout%20%3C%3C%20%22from%20Base%22%20%3C%3C%20std%3A%3Aendl%3B%7D%0Apublic%3A%0A%20%20%20virtual%20~Base()%20%7Bmethod()%3B%7D%0A%20%20%20void%20baseMethod()%20%7Bmethod()%3B%7D%0A%7D%3B%0A%0Aclass%20A%20%3A%20public%20Base%20%7B%0A%20%20%20void%20method()%20%7Bstd%3A%3Acout%20%3C%3C%20%22from%20A%22%20%3C%3Cstd%3A%3Aendl%3B%7D%0Apublic%3A%0A%20%20%20~A()%20%7Bmethod()%3B%7D%0A%7D%3B%0A%0Aint%20main()%20%7B%0A%20%20%20Base%20*base%20%3D%20new%20A%3B%0A%20%20%20base-%3EbaseMethod()%3B%0A%20%20%20delete%20base%3B%0A%20%20%20return%200%3B%0A%7D",
+            "godBoltcode": "%23include%20%3Ciostream%3E%0Aclass%20Base%20%7B%0A%20%20%20virtual%20void%20method%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22from%20Base%22%20%3C%3C%20std%3A%3Aendl%3B%7D%0Apublic%3A%0A%20%20%20virtual%20%7EBase%28%29%20%7Bmethod%28%29%3B%7D%0A%20%20%20void%20baseMethod%28%29%20%7Bmethod%28%29%3B%7D%0A%7D%3B%0A%0Aclass%20A%20%3A%20public%20Base%20%7B%0A%20%20%20void%20method%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22from%20A%22%20%3C%3Cstd%3A%3Aendl%3B%7D%0Apublic%3A%0A%20%20%20%7EA%28%29%20%7Bmethod%28%29%3B%7D%0A%7D%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20Base%20%2Abase%20%3D%20new%20A%3B%0A%20%20%20base-%3EbaseMethod%28%29%3B%0A%20%20%20delete%20base%3B%0A%20%20%20return%200%3B%0A%7D"
         },
         {
             "question": "How many iterations will this loop execute?",
@@ -1743,7 +1789,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "unsigned%20char%20half_limit%20%20%3D%20150%3B%0Afor%28unsigned%20char%20i%20%3D%200%3B%20i%20%3C%20%282%20%2A%20half_limit%29%3B%20%2B%2Bi%29%20%7B%0A%20%20%20//%20do%20sth%0A%7D"
+            "urlEncodedCode": "unsigned%20char%20half_limit%20%20%3D%20150%3B%0Afor(unsigned%20char%20i%20%3D%200%3B%20i%20%3C%20(2%20*%20half_limit)%3B%20%2B%2Bi)%20%7B%0A%20%20%20%2F%2F%20do%20sth%0A%7D",
+            "godBoltcode": "unsigned%20char%20half_limit%20%20%3D%20150%3B%0Afor%28unsigned%20char%20i%20%3D%200%3B%20i%20%3C%20%282%20%2A%20half_limit%29%3B%20%2B%2Bi%29%20%7B%0A%20%20%20//%20do%20sth%0A%7D"
         },
         {
             "question": "How to invoke the destructor for pStr?",
@@ -1751,7 +1798,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "MyString+*pStr+%3D+new+MyString(%22Hello+world!!%22)%3B"
+            "urlEncodedCode": "MyString%20*pStr%20%3D%20new%20MyString(%22Hello%20world!!%22)%3B",
+            "godBoltcode": "MyString+*pStr+%3D+new+MyString(%22Hello+world!!%22)%3B"
         },
         {
             "question": "How many objects of A does the D class have",
@@ -1759,7 +1807,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "class%20A%20%7B%7D%3B%0Aclass%20B%20%3A%20virtual%20public%20A%20%7B%7D%3B%0Aclass%20C%20%3A%20virtual%20public%20A%20%7B%7D%3B%0Aclass%20D%20%3A%20public%20B%2C%20public%20C%2C%20virtual%20public%20A%20%7B%7D%3B"
+            "urlEncodedCode": "class%20A%20%7B%7D%3B%0Aclass%20B%20%3A%20virtual%20public%20A%20%7B%7D%3B%0Aclass%20C%20%3A%20virtual%20public%20A%20%7B%7D%3B%0Aclass%20D%20%3A%20public%20B%2C%20public%20C%2C%20virtual%20public%20A%20%7B%7D%3B",
+            "godBoltcode": "class%20A%20%7B%7D%3B%0Aclass%20B%20%3A%20virtual%20public%20A%20%7B%7D%3B%0Aclass%20C%20%3A%20virtual%20public%20A%20%7B%7D%3B%0Aclass%20D%20%3A%20public%20B%2C%20public%20C%2C%20virtual%20public%20A%20%7B%7D%3B"
         },
         {
             "question": "Which of the following types are valid ex [std::logic_error, std::range_error, std::invalid_argument, std::bad_alloc, std::exception]?",
@@ -1767,7 +1816,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "void%20foo%28%29%20throw%28std%3A%3Aruntime_error%29%20%7B%0A%20%20%20if%20%28/%2A...%2A/%29%20throw%20%28ex%29%3B%0A%7D"
+            "urlEncodedCode": "void%20foo()%20throw(std%3A%3Aruntime_error)%20%7B%0A%20%20%20if%20(%2F*...*%2F)%20throw%20(ex)%3B%0A%7D",
+            "godBoltcode": "void%20foo%28%29%20throw%28std%3A%3Aruntime_error%29%20%7B%0A%20%20%20if%20%28/%2A...%2A/%29%20throw%20%28ex%29%3B%0A%7D"
         },
         {
             "question": "To which type typedef `basic_streambuf<char>` corresponds [`streambuf`, `streambuf<char>`, `cstreambuf`]?",
@@ -1781,7 +1831,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "struct+Test+%7B%0A++++Test()+++++++%7B+std::cout+%3C%3C+%22d%22%3B+%7D%0A++++Test(int+i)++%7B+std::cout+%3C%3C+%22i%22%3B+%7D%0A++++Test(char+c)+%7B+std::cout+%3C%3C+%22c%22%3B+%7D%0A++++Test(long+l)+%7B+std::cout+%3C%3C+%22l%22%3B+%7D%0A++++Test(float+f)%7B+std::cout+%3C%3C+%22f%22%3B+%7D%0A%7D%3B%0A%0Aint+main()%0A%7B%0A++++Test+t1(!'c!')%3B%0A++++Test+t2(!'c!'+%2B+3)%3B%0A++++Test+t3(45)%3B%0A++++Test+t4(0xFF)%3B%0A++++Test+t5(0x1234L)%3B%0A++++Test+t6(9999.9f)%3B%0A++++return+0%3B%0A%7D"
+            "urlEncodedCode": "struct%20Test%20%7B%0A%20%20%20%20Test()%20%20%20%20%20%20%20%7B%20std%3A%3Acout%20%3C%3C%20%22d%22%3B%20%7D%0A%20%20%20%20Test(int%20i)%20%20%7B%20std%3A%3Acout%20%3C%3C%20%22i%22%3B%20%7D%0A%20%20%20%20Test(char%20c)%20%7B%20std%3A%3Acout%20%3C%3C%20%22c%22%3B%20%7D%0A%20%20%20%20Test(long%20l)%20%7B%20std%3A%3Acout%20%3C%3C%20%22l%22%3B%20%7D%0A%20%20%20%20Test(float%20f)%7B%20std%3A%3Acout%20%3C%3C%20%22f%22%3B%20%7D%0A%7D%3B%0A%0Aint%20main()%0A%7B%0A%20%20%20%20Test%20t1(!'c!')%3B%0A%20%20%20%20Test%20t2(!'c!'%20%2B%203)%3B%0A%20%20%20%20Test%20t3(45)%3B%0A%20%20%20%20Test%20t4(0xFF)%3B%0A%20%20%20%20Test%20t5(0x1234L)%3B%0A%20%20%20%20Test%20t6(9999.9f)%3B%0A%20%20%20%20return%200%3B%0A%7D",
+            "godBoltcode": "struct+Test+%7B%0A++++Test()+++++++%7B+std::cout+%3C%3C+%22d%22%3B+%7D%0A++++Test(int+i)++%7B+std::cout+%3C%3C+%22i%22%3B+%7D%0A++++Test(char+c)+%7B+std::cout+%3C%3C+%22c%22%3B+%7D%0A++++Test(long+l)+%7B+std::cout+%3C%3C+%22l%22%3B+%7D%0A++++Test(float+f)%7B+std::cout+%3C%3C+%22f%22%3B+%7D%0A%7D%3B%0A%0Aint+main()%0A%7B%0A++++Test+t1(!'c!')%3B%0A++++Test+t2(!'c!'+%2B+3)%3B%0A++++Test+t3(45)%3B%0A++++Test+t4(0xFF)%3B%0A++++Test+t5(0x1234L)%3B%0A++++Test+t6(9999.9f)%3B%0A++++return+0%3B%0A%7D"
         },
         {
             "question": "Write a method signature which will override given virtual function / or tell will Derived work? ",
@@ -1789,7 +1840,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "struct%20Test%20%7B%0A%20%20%20int%20virtual%20doMagic%28%29%20throw%28uint8_t%2C%20uint64_t%2C%20uint32_t%29%3B%0A%7D%3B%0Astruct%20Derived%20%7B%0A%20%20%20int%20virtual%20doMagic%28%29%20throw%28uint64_t%2C%20uint8_t%2C%20uint32_t%29%3B%0A%7D%3B"
+            "urlEncodedCode": "struct%20Test%20%7B%0A%20%20%20int%20virtual%20doMagic()%20throw(uint8_t%2C%20uint64_t%2C%20uint32_t)%3B%0A%7D%3B%0Astruct%20Derived%20%7B%0A%20%20%20int%20virtual%20doMagic()%20throw(uint64_t%2C%20uint8_t%2C%20uint32_t)%3B%0A%7D%3B",
+            "godBoltcode": "struct%20Test%20%7B%0A%20%20%20int%20virtual%20doMagic%28%29%20throw%28uint8_t%2C%20uint64_t%2C%20uint32_t%29%3B%0A%7D%3B%0Astruct%20Derived%20%7B%0A%20%20%20int%20virtual%20doMagic%28%29%20throw%28uint64_t%2C%20uint8_t%2C%20uint32_t%29%3B%0A%7D%3B"
         },
         {
             "question": "Consider following struct `struct Test {int a,b,c;};`. Can Test be inherited? Can subclasses of Test access its member variables? Is it okay to declare as `struct` or should be declared as `class`? Objects of Test cannot be created because it lacks a ctor? Are member variables are accessible from outside of the class (for example by dot operator)?",
@@ -1804,7 +1856,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "int%20f%28%29%20%7B%0A%20%20%20int%20i%20%3D%2012%3B%0A%20%20%20int%20%26r%20%3D%20i%3B%0A%20%20%20r%20%2B%3D%20r/4%3B%0A%20%20%20int%20%2Ap%20%3D%20%26r%3B%0A%20%20%20%2Ap%20%3D%20r%3B%0A%20%20%20return%20i%3B%0A%7D"
+            "urlEncodedCode": "int%20f()%20%7B%0A%20%20%20int%20i%20%3D%2012%3B%0A%20%20%20int%20%26r%20%3D%20i%3B%0A%20%20%20r%20%2B%3D%20r%2F4%3B%0A%20%20%20int%20*p%20%3D%20%26r%3B%0A%20%20%20*p%20%3D%20r%3B%0A%20%20%20return%20i%3B%0A%7D",
+            "godBoltcode": "int%20f%28%29%20%7B%0A%20%20%20int%20i%20%3D%2012%3B%0A%20%20%20int%20%26r%20%3D%20i%3B%0A%20%20%20r%20%2B%3D%20r/4%3B%0A%20%20%20int%20%2Ap%20%3D%20%26r%3B%0A%20%20%20%2Ap%20%3D%20r%3B%0A%20%20%20return%20i%3B%0A%7D"
         },
         {
             "question": "Which declarations are valid?",
@@ -1812,7 +1865,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "int%20%2At%20%3D%20new%20int%5B15%5D%3B%0Aint%20t%5B15%5D%3B%0Aint%20t%5B15%5D%20%3D%20new%20int%2A%3B%0Aint%20%2At%5B15%5D%3B%0Aint%20%2A%2At%20%3D%20new%20int%2A%5B15%5D%3B"
+            "urlEncodedCode": "int%20*t%20%3D%20new%20int%5B15%5D%3B%0Aint%20t%5B15%5D%3B%0Aint%20t%5B15%5D%20%3D%20new%20int*%3B%0Aint%20*t%5B15%5D%3B%0Aint%20**t%20%3D%20new%20int*%5B15%5D%3B",
+            "godBoltcode": "int%20%2At%20%3D%20new%20int%5B15%5D%3B%0Aint%20t%5B15%5D%3B%0Aint%20t%5B15%5D%20%3D%20new%20int%2A%3B%0Aint%20%2At%5B15%5D%3B%0Aint%20%2A%2At%20%3D%20new%20int%2A%5B15%5D%3B"
         },
         {
             "question": "What will be the output of the following code?",
@@ -1820,7 +1874,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "struct%20Foo%20%7B%0A%20%20%20Foo%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22Foo%22%3B%7D%0A%7D%3B%0A%0Astruct%20Bar%20%7B%0A%20%20%20Bar%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22Bar%22%3B%7D%0A%7D%3B%0A%0Astruct%20FooToo%20%3A%20virtual%20Foo%20%7B%0A%20%20%20FooToo%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22FooToo%22%3B%7D%0A%7D%3B%0A%0Astruct%20FooTooBar%20%3A%20virtual%20FooToo%2C%20virtual%20Bar%20%7B%0A%20%20%20FooTooBar%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22FooTooBar%22%3B%7D%0A%7D%3B"
+            "urlEncodedCode": "struct%20Foo%20%7B%0A%20%20%20Foo()%20%7Bstd%3A%3Acout%20%3C%3C%20%22Foo%22%3B%7D%0A%7D%3B%0A%0Astruct%20Bar%20%7B%0A%20%20%20Bar()%20%7Bstd%3A%3Acout%20%3C%3C%20%22Bar%22%3B%7D%0A%7D%3B%0A%0Astruct%20FooToo%20%3A%20virtual%20Foo%20%7B%0A%20%20%20FooToo()%20%7Bstd%3A%3Acout%20%3C%3C%20%22FooToo%22%3B%7D%0A%7D%3B%0A%0Astruct%20FooTooBar%20%3A%20virtual%20FooToo%2C%20virtual%20Bar%20%7B%0A%20%20%20FooTooBar()%20%7Bstd%3A%3Acout%20%3C%3C%20%22FooTooBar%22%3B%7D%0A%7D%3B",
+            "godBoltcode": "struct%20Foo%20%7B%0A%20%20%20Foo%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22Foo%22%3B%7D%0A%7D%3B%0A%0Astruct%20Bar%20%7B%0A%20%20%20Bar%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22Bar%22%3B%7D%0A%7D%3B%0A%0Astruct%20FooToo%20%3A%20virtual%20Foo%20%7B%0A%20%20%20FooToo%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22FooToo%22%3B%7D%0A%7D%3B%0A%0Astruct%20FooTooBar%20%3A%20virtual%20FooToo%2C%20virtual%20Bar%20%7B%0A%20%20%20FooTooBar%28%29%20%7Bstd%3A%3Acout%20%3C%3C%20%22FooTooBar%22%3B%7D%0A%7D%3B"
         },
         {
             "question": "What's wrong with the sample below?",
@@ -1828,7 +1883,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "struct%20Test%20%7B%0A%20%20%20int%20x%3B%0A%20%20%20static%20void%20func%28int%20v%29%3B%0A%7D%3B%0A%0Avoid%20Test%3A%3Afunc%28int%20v%29%20%7Bx%20%3D%20v%3B%7D"
+            "urlEncodedCode": "struct%20Test%20%7B%0A%20%20%20int%20x%3B%0A%20%20%20static%20void%20func(int%20v)%3B%0A%7D%3B%0A%0Avoid%20Test%3A%3Afunc(int%20v)%20%7Bx%20%3D%20v%3B%7D",
+            "godBoltcode": "struct%20Test%20%7B%0A%20%20%20int%20x%3B%0A%20%20%20static%20void%20func%28int%20v%29%3B%0A%7D%3B%0A%0Avoid%20Test%3A%3Afunc%28int%20v%29%20%7Bx%20%3D%20v%3B%7D"
         },
         {
             "question": "Which ones are correct and what do the mean?",
@@ -1836,7 +1892,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "void%20%28Test%2A%3A%3Afunc%29%28int%26%29%3B%0Avoid%20%28Test%3A%3A%2Afunc%29%28int%26%29%3B%0Avoid%20%28Test%3A%3Afunc%29%28int%26%29%3B%0Avoid%20%28%2ATest%3A%3Afunc%29%28int%26%29%3B%0Avoid%20%28Test%3A%3Afunc%2A%29%28int%26%29%3B"
+            "urlEncodedCode": "void%20(Test*%3A%3Afunc)(int%26)%3B%0Avoid%20(Test%3A%3A*func)(int%26)%3B%0Avoid%20(Test%3A%3Afunc)(int%26)%3B%0Avoid%20(*Test%3A%3Afunc)(int%26)%3B%0Avoid%20(Test%3A%3Afunc*)(int%26)%3B",
+            "godBoltcode": "void%20%28Test%2A%3A%3Afunc%29%28int%26%29%3B%0Avoid%20%28Test%3A%3A%2Afunc%29%28int%26%29%3B%0Avoid%20%28Test%3A%3Afunc%29%28int%26%29%3B%0Avoid%20%28%2ATest%3A%3Afunc%29%28int%26%29%3B%0Avoid%20%28Test%3A%3Afunc%2A%29%28int%26%29%3B"
         },
         {
             "question": "What's wrong with the code below?",
@@ -1844,7 +1901,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "template%3Cclass%20T1%3B%20class%20T2%3B%20class%20T3%3E%0Aint%20Function%28T1%20t1%2C%20T2%20t2%2C%20T3%29%20%7B%0A%20%20%20return%20t1%20%2A%20t2%20/%20t3%3B%0A%7D"
+            "urlEncodedCode": "template%3Cclass%20T1%3B%20class%20T2%3B%20class%20T3%3E%0Aint%20Function(T1%20t1%2C%20T2%20t2%2C%20T3)%20%7B%0A%20%20%20return%20t1%20*%20t2%20%2F%20t3%3B%0A%7D",
+            "godBoltcode": "template%3Cclass%20T1%3B%20class%20T2%3B%20class%20T3%3E%0Aint%20Function%28T1%20t1%2C%20T2%20t2%2C%20T3%29%20%7B%0A%20%20%20return%20t1%20%2A%20t2%20/%20t3%3B%0A%7D"
         },
         {
             "question": "Explain what these methods do?",
@@ -1852,7 +1910,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "std%3A%3Avector%3Cstd%3A%3Astring%3E%20vec%3B%0Astd%3A%3Afill%28vec.begin%28%29%2C%20vec.end%28%29%2C%20%22hello%22%29%3B%0Astd%3A%3Afill_n%28std%3A%3Aback_inserter%28vs%29%2C%205%2C%20%22hello%22%29%3B%0Astd%3A%3Agenerate%28vec.begin%28%29%2C%20vec.end%28%29%2C%20%5B%5D%20%7B%20return%20%22hello%22%3B%20%7D%29%3B%0Avs%20%3D%20std%3A%3Avector%3Cstd%3A%3Astring%3E%28%22hello%22%29%3B"
+            "urlEncodedCode": "std%3A%3Avector%3Cstd%3A%3Astring%3E%20vec%3B%0Astd%3A%3Afill(vec.begin()%2C%20vec.end()%2C%20%22hello%22)%3B%0Astd%3A%3Afill_n(std%3A%3Aback_inserter(vs)%2C%205%2C%20%22hello%22)%3B%0Astd%3A%3Agenerate(vec.begin()%2C%20vec.end()%2C%20%5B%5D%20%7B%20return%20%22hello%22%3B%20%7D)%3B%0Avs%20%3D%20std%3A%3Avector%3Cstd%3A%3Astring%3E(%22hello%22)%3B",
+            "godBoltcode": "std%3A%3Avector%3Cstd%3A%3Astring%3E%20vec%3B%0Astd%3A%3Afill%28vec.begin%28%29%2C%20vec.end%28%29%2C%20%22hello%22%29%3B%0Astd%3A%3Afill_n%28std%3A%3Aback_inserter%28vs%29%2C%205%2C%20%22hello%22%29%3B%0Astd%3A%3Agenerate%28vec.begin%28%29%2C%20vec.end%28%29%2C%20%5B%5D%20%7B%20return%20%22hello%22%3B%20%7D%29%3B%0Avs%20%3D%20std%3A%3Avector%3Cstd%3A%3Astring%3E%28%22hello%22%29%3B"
         },
         {
             "question": "Explain the code below",
@@ -1860,7 +1919,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "extern%20void%0AFunc%28double%2C%20char%29%20throw%28const%20char%2A%2C%20RangeErr%29"
+            "urlEncodedCode": "extern%20void%0AFunc(double%2C%20char)%20throw(const%20char*%2C%20RangeErr)",
+            "godBoltcode": "extern%20void%0AFunc%28double%2C%20char%29%20throw%28const%20char%2A%2C%20RangeErr%29"
         },
         {
             "question": "How to make this code more efficient?",
@@ -1868,7 +1928,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "struct%20Test%20%7B%0A%20%20%20char%20data%5B10000%5D%3B%0A%20%20%20Test%28%29%3B%0A%20%20%20%7ETest%28%29%3B%0A%7D%3B%0A%0Astruct%20Another%20%7B%0A%20%20%20Another%28%29%20%7B%20a%20%3D%200%3B%7D%0A%20%20%20void%20FillData%28Test%20t%29%3B%0Aprivate%3A%0A%20%20%20int%20a%20%3D%200%3B%0A%7D%3B"
+            "urlEncodedCode": "struct%20Test%20%7B%0A%20%20%20char%20data%5B10000%5D%3B%0A%20%20%20Test()%3B%0A%20%20%20~Test()%3B%0A%7D%3B%0A%0Astruct%20Another%20%7B%0A%20%20%20Another()%20%7B%20a%20%3D%200%3B%7D%0A%20%20%20void%20FillData(Test%20t)%3B%0Aprivate%3A%0A%20%20%20int%20a%20%3D%200%3B%0A%7D%3B",
+            "godBoltcode": "struct%20Test%20%7B%0A%20%20%20char%20data%5B10000%5D%3B%0A%20%20%20Test%28%29%3B%0A%20%20%20%7ETest%28%29%3B%0A%7D%3B%0A%0Astruct%20Another%20%7B%0A%20%20%20Another%28%29%20%7B%20a%20%3D%200%3B%7D%0A%20%20%20void%20FillData%28Test%20t%29%3B%0Aprivate%3A%0A%20%20%20int%20a%20%3D%200%3B%0A%7D%3B"
         },
         {
             "question": "How to get number of characters in std::string (using which function)? ",
@@ -1889,7 +1950,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "void%20func%28%29%20%7B%0A%20%20%20%20int%20a%20%3D%20std%3A%3Arand%28%29%20%25%203%3B%0A%20%20%20%20if%28%20a%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20throw%20%22str%22%3B%0A%20%20%20%20if%28%20a%20%3D%3D%201%29%0A%20%20%20%20%20%20%20%20throw%2010%3B%0A%20%20%20%20if%28%20a%20%3D%3D%202%29%0A%20%20%20%20%20%20%20%20throw%200.5%3B%0A%7D%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20func%28%29%3B%0A%20%20%20%20%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20%20%20%20%20return%201%3B%0A%20%20%20%20%7D%20catch%20%28int%20i%29%20%7B%0A%20%20%20%20%20%20%20%20return%202%3B%0A%20%20%20%20%7D%20catch%20%28const%20char%2A%20cp%29%20%7B%0A%20%20%20%20%20%20%20%20return%203%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%7D"
+            "urlEncodedCode": "void%20func()%20%7B%0A%20%20%20%20int%20a%20%3D%20std%3A%3Arand()%20%25%203%3B%0A%20%20%20%20if(%20a%20%3D%3D%200)%0A%20%20%20%20%20%20%20%20throw%20%22str%22%3B%0A%20%20%20%20if(%20a%20%3D%3D%201)%0A%20%20%20%20%20%20%20%20throw%2010%3B%0A%20%20%20%20if(%20a%20%3D%3D%202)%0A%20%20%20%20%20%20%20%20throw%200.5%3B%0A%7D%0A%0Aint%20main()%20%7B%0A%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20func()%3B%0A%20%20%20%20%7D%20catch%20(...)%20%7B%0A%20%20%20%20%20%20%20%20return%201%3B%0A%20%20%20%20%7D%20catch%20(int%20i)%20%7B%0A%20%20%20%20%20%20%20%20return%202%3B%0A%20%20%20%20%7D%20catch%20(const%20char*%20cp)%20%7B%0A%20%20%20%20%20%20%20%20return%203%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%7D",
+            "godBoltcode": "void%20func%28%29%20%7B%0A%20%20%20%20int%20a%20%3D%20std%3A%3Arand%28%29%20%25%203%3B%0A%20%20%20%20if%28%20a%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20throw%20%22str%22%3B%0A%20%20%20%20if%28%20a%20%3D%3D%201%29%0A%20%20%20%20%20%20%20%20throw%2010%3B%0A%20%20%20%20if%28%20a%20%3D%3D%202%29%0A%20%20%20%20%20%20%20%20throw%200.5%3B%0A%7D%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20func%28%29%3B%0A%20%20%20%20%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20%20%20%20%20return%201%3B%0A%20%20%20%20%7D%20catch%20%28int%20i%29%20%7B%0A%20%20%20%20%20%20%20%20return%202%3B%0A%20%20%20%20%7D%20catch%20%28const%20char%2A%20cp%29%20%7B%0A%20%20%20%20%20%20%20%20return%203%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%7D"
         },
         {
             "question": "Does any commented line has an error?",
@@ -1897,7 +1959,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "template%3Cclass+T%3E+void+foo(T+op1,+T+op2)+%7B%0A++++std::cout+%3C%3C+%22op1+%3D+%22+%3C%3C+op1+%3C%3C+std::endl%3B%0A++++std::cout+%3C%3C+%22op2+%3D+%22+%3C%3C+op2+%3C%3C+std::endl%3B%0A%7D%0A%0Atemplate%3Cclass+T%3E%0Astruct+sum+%7B%0A++++static+void+foo+(T+op1,+T+op2)+%7B%0A++++++++std::cout+%3C%3C+%22sum+%3D+%22+%3C%3C+op2+%3C%3C+std::endl%3B%0A++++%7D%0A%7D%3B%0A%0Aint+main()+%7B%0A++++foo(1,+3)%3B++++++++++//+Line+1%0A++++foo%3Cint%3E(1,+!'3!')%3B+++//+Line+2%0A++++sum::foo(1,+2)%3B+++++//+Line+3%0A++++return+0%3B%0A%7D"
+            "urlEncodedCode": "template%3Cclass%20T%3E%20void%20foo(T%20op1%2C%20T%20op2)%20%7B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22op1%20%3D%20%22%20%3C%3C%20op1%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22op2%20%3D%20%22%20%3C%3C%20op2%20%3C%3C%20std%3A%3Aendl%3B%0A%7D%0A%0Atemplate%3Cclass%20T%3E%0Astruct%20sum%20%7B%0A%20%20%20%20static%20void%20foo%20(T%20op1%2C%20T%20op2)%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22sum%20%3D%20%22%20%3C%3C%20op2%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%20%7D%0A%7D%3B%0A%0Aint%20main()%20%7B%0A%20%20%20%20foo(1%2C%203)%3B%20%20%20%20%20%20%20%20%20%20%2F%2F%20Line%201%0A%20%20%20%20foo%3Cint%3E(1%2C%20!'3!')%3B%20%20%20%2F%2F%20Line%202%0A%20%20%20%20sum%3A%3Afoo(1%2C%202)%3B%20%20%20%20%20%2F%2F%20Line%203%0A%20%20%20%20return%200%3B%0A%7D",
+            "godBoltcode": "template%3Cclass+T%3E+void+foo(T+op1,+T+op2)+%7B%0A++++std::cout+%3C%3C+%22op1+%3D+%22+%3C%3C+op1+%3C%3C+std::endl%3B%0A++++std::cout+%3C%3C+%22op2+%3D+%22+%3C%3C+op2+%3C%3C+std::endl%3B%0A%7D%0A%0Atemplate%3Cclass+T%3E%0Astruct+sum+%7B%0A++++static+void+foo+(T+op1,+T+op2)+%7B%0A++++++++std::cout+%3C%3C+%22sum+%3D+%22+%3C%3C+op2+%3C%3C+std::endl%3B%0A++++%7D%0A%7D%3B%0A%0Aint+main()+%7B%0A++++foo(1,+3)%3B++++++++++//+Line+1%0A++++foo%3Cint%3E(1,+!'3!')%3B+++//+Line+2%0A++++sum::foo(1,+2)%3B+++++//+Line+3%0A++++return+0%3B%0A%7D"
         },
         {
             "question": "What is the primary purpose of header files?",
@@ -1929,7 +1992,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "void+func()+throw(float)+%7B%0A+++throw+10.0f%3B%0A%7D%0Aint+main()+%7B%0A+++try+%7B%0A++++++++std::cout+%3C%3C+!'1!'%3B%0A++++++++func()%3B%0A++++++++std::cout+%3C%3C+!'2!'%3B%0A+++%7D+catch+(...)+%7B%0A++++++++std::cout+%3C%3C+!'3!'%3B%0A+++%7D%0A%0A++++return+0%3B%0A%7D"
+            "urlEncodedCode": "void%20func()%20throw(float)%20%7B%0A%20%20%20throw%2010.0f%3B%0A%7D%0Aint%20main()%20%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20!'1!'%3B%0A%20%20%20%20%20%20%20%20func()%3B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20!'2!'%3B%0A%20%20%20%7D%20catch%20(...)%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20!'3!'%3B%0A%20%20%20%7D%0A%0A%20%20%20%20return%200%3B%0A%7D",
+            "godBoltcode": "void+func()+throw(float)+%7B%0A+++throw+10.0f%3B%0A%7D%0Aint+main()+%7B%0A+++try+%7B%0A++++++++std::cout+%3C%3C+!'1!'%3B%0A++++++++func()%3B%0A++++++++std::cout+%3C%3C+!'2!'%3B%0A+++%7D+catch+(...)+%7B%0A++++++++std::cout+%3C%3C+!'3!'%3B%0A+++%7D%0A%0A++++return+0%3B%0A%7D"
         },
         {
             "question": "What will be the output of the following code?",
@@ -1937,12 +2001,14 @@
                 "c++",
                 "contains code"
             ],
-            "code": "try%20%7B%0A%20%20%20%20throw%20std%3A%3Astring%28%224%22%29%3B%0A%7D%20catch%20%28std%3A%3Astring%20%26s%29%20%7B%0A%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20s%3B%0A%20%20%20%20%20%20%20%20throw%202%3B%0A%20%20%20%20%7D%20catch%20%28int%20i%29%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20i%3B%0A%20%20%20%20%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20%20%20%20%20throw%3B%0A%20%20%20%20%7D%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22s%22%20%2B%20s%3B%0A%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22all%22%3B%0A%7D"
+            "urlEncodedCode": "try%20%7B%0A%20%20%20%20throw%20std%3A%3Astring(%224%22)%3B%0A%7D%20catch%20(std%3A%3Astring%20%26s)%20%7B%0A%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20s%3B%0A%20%20%20%20%20%20%20%20throw%202%3B%0A%20%20%20%20%7D%20catch%20(int%20i)%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20i%3B%0A%20%20%20%20%7D%20catch%20(...)%20%7B%0A%20%20%20%20%20%20%20%20throw%3B%0A%20%20%20%20%7D%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22s%22%20%2B%20s%3B%0A%7D%20catch%20(...)%20%7B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22all%22%3B%0A%7D",
+            "godBoltcode": "try%20%7B%0A%20%20%20%20throw%20std%3A%3Astring%28%224%22%29%3B%0A%7D%20catch%20%28std%3A%3Astring%20%26s%29%20%7B%0A%20%20%20%20try%20%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20s%3B%0A%20%20%20%20%20%20%20%20throw%202%3B%0A%20%20%20%20%7D%20catch%20%28int%20i%29%7B%0A%20%20%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20i%3B%0A%20%20%20%20%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20%20%20%20%20throw%3B%0A%20%20%20%20%7D%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22s%22%20%2B%20s%3B%0A%7D%20catch%20%28...%29%20%7B%0A%20%20%20%20std%3A%3Acout%20%3C%3C%20%22all%22%3B%0A%7D"
         },
         {
             "question": "What is the purpose of the explicit keyword in constructors?",
             "tags": [
-                "c++"
+                "c++",
+                "hot"
             ],
             "timesAsked": 3
         },
@@ -1958,7 +2024,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "extern%20void%20print%28int%20%2Aia%2C%20int%20sz%29%3B%0Avoid%20print%28int%20%2Aarray%2C%20int%20size%29%3B"
+            "urlEncodedCode": "extern%20void%20print(int%20*ia%2C%20int%20sz)%3B%0Avoid%20print(int%20*array%2C%20int%20size)%3B",
+            "godBoltcode": "extern%20void%20print%28int%20%2Aia%2C%20int%20sz%29%3B%0Avoid%20print%28int%20%2Aarray%2C%20int%20size%29%3B"
         },
         {
             "question": "What's wrong with this code?",
@@ -1966,7 +2033,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "namespace%20%7B%20static%20int%20n%3B%20%7D%0Anamespace%20A%20%7B%0A%20%20%20%20namespace%20%7B%20static%20int%20n%3B%20%7D%0A%7D%0A%0Ausing%20namespace%20A%3B%0Aint%20main%28%29%20%7B%0A%20%20%20%20n%20%3D%205%3B%0A%20%20%20%20return%200%3B%0A%7D"
+            "urlEncodedCode": "namespace%20%7B%20static%20int%20n%3B%20%7D%0Anamespace%20A%20%7B%0A%20%20%20%20namespace%20%7B%20static%20int%20n%3B%20%7D%0A%7D%0A%0Ausing%20namespace%20A%3B%0Aint%20main()%20%7B%0A%20%20%20%20n%20%3D%205%3B%0A%20%20%20%20return%200%3B%0A%7D",
+            "godBoltcode": "namespace%20%7B%20static%20int%20n%3B%20%7D%0Anamespace%20A%20%7B%0A%20%20%20%20namespace%20%7B%20static%20int%20n%3B%20%7D%0A%7D%0A%0Ausing%20namespace%20A%3B%0Aint%20main%28%29%20%7B%0A%20%20%20%20n%20%3D%205%3B%0A%20%20%20%20return%200%3B%0A%7D"
         },
         {
             "question": "What's wrong with this code?",
@@ -1974,7 +2042,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "void%20log%28std%3A%3Astring%20message%29%3B%0A%0Aclass%20Account%0A%7B%0Apublic%3A%0A%20%20%20Account%28int%20id%29%3B%0A%20%20%20virtual%20%7EAccount%28%29%3B%0A%20%20%20virtual%20std%3A%3Astring%20get_name%28%29%20%3D%200%3B%0A%20%20%20int%20get_id%28%29%3B%0A%7D%3B%0A%0AAccount%3A%3A%7EAccount%28%29%0A%7B%0A%20%20%20log%28%22Destroying%3A%20%22%20%2B%20get_name%28%29%29%3B%0A%7D"
+            "urlEncodedCode": "void%20log(std%3A%3Astring%20message)%3B%0A%0Aclass%20Account%0A%7B%0Apublic%3A%0A%20%20%20Account(int%20id)%3B%0A%20%20%20virtual%20~Account()%3B%0A%20%20%20virtual%20std%3A%3Astring%20get_name()%20%3D%200%3B%0A%20%20%20int%20get_id()%3B%0A%7D%3B%0A%0AAccount%3A%3A~Account()%0A%7B%0A%20%20%20log(%22Destroying%3A%20%22%20%2B%20get_name())%3B%0A%7D",
+            "godBoltcode": "void%20log%28std%3A%3Astring%20message%29%3B%0A%0Aclass%20Account%0A%7B%0Apublic%3A%0A%20%20%20Account%28int%20id%29%3B%0A%20%20%20virtual%20%7EAccount%28%29%3B%0A%20%20%20virtual%20std%3A%3Astring%20get_name%28%29%20%3D%200%3B%0A%20%20%20int%20get_id%28%29%3B%0A%7D%3B%0A%0AAccount%3A%3A%7EAccount%28%29%0A%7B%0A%20%20%20log%28%22Destroying%3A%20%22%20%2B%20get_name%28%29%29%3B%0A%7D"
         },
         {
             "question": "How many characters are there in this string and why?",
@@ -1982,7 +2051,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "char%20abc%5B%5D%20%3D%20%22%22%3B"
+            "urlEncodedCode": "char%20abc%5B%5D%20%3D%20%22%22%3B",
+            "godBoltcode": "char%20abc%5B%5D%20%3D%20%22%22%3B"
         },
         {
             "question": "What member function should be defined to make this code work?",
@@ -1990,7 +2060,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "template%3Cclass%20T%2C%20class%20X%3E%20class%20Obj%20%7B%0A%20%20%20%20T%20my_t%3B%0A%20%20%20%20X%20my_x%3B%0Apublic%3A%0A%20%20%20%20Obj%28T%20t%2C%20X%20x%29%3A%20my_t%28t%29%2C%20my_x%28x%29%7B%7D%0A%20%20%20%20/%2A%20put%20a%20function%20here%20%2A/%0A%7D%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20int%20iT%3B%0A%20%20%20%20Obj%3Cint%2C%20float%3E%200%2815%2C%2010.375%29%3B%0A%0A%20%20%20%20iT%20%3D%20O%3B%0A%20%20%20%20return%200%3B%0A%7D"
+            "urlEncodedCode": "template%3Cclass%20T%2C%20class%20X%3E%20class%20Obj%20%7B%0A%20%20%20%20T%20my_t%3B%0A%20%20%20%20X%20my_x%3B%0Apublic%3A%0A%20%20%20%20Obj(T%20t%2C%20X%20x)%3A%20my_t(t)%2C%20my_x(x)%7B%7D%0A%20%20%20%20%2F*%20put%20a%20function%20here%20*%2F%0A%7D%3B%0A%0Aint%20main()%20%7B%0A%20%20%20%20int%20iT%3B%0A%20%20%20%20Obj%3Cint%2C%20float%3E%200(15%2C%2010.375)%3B%0A%0A%20%20%20%20iT%20%3D%20O%3B%0A%20%20%20%20return%200%3B%0A%7D",
+            "godBoltcode": "template%3Cclass%20T%2C%20class%20X%3E%20class%20Obj%20%7B%0A%20%20%20%20T%20my_t%3B%0A%20%20%20%20X%20my_x%3B%0Apublic%3A%0A%20%20%20%20Obj%28T%20t%2C%20X%20x%29%3A%20my_t%28t%29%2C%20my_x%28x%29%7B%7D%0A%20%20%20%20/%2A%20put%20a%20function%20here%20%2A/%0A%7D%3B%0A%0Aint%20main%28%29%20%7B%0A%20%20%20%20int%20iT%3B%0A%20%20%20%20Obj%3Cint%2C%20float%3E%200%2815%2C%2010.375%29%3B%0A%0A%20%20%20%20iT%20%3D%20O%3B%0A%20%20%20%20return%200%3B%0A%7D"
         },
         {
             "question": "How to free allocated memory by this code?",
@@ -1998,7 +2069,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "int%2A%20pi%20%3D%20new%20int%5B10%5D%3B"
+            "urlEncodedCode": "int*%20pi%20%3D%20new%20int%5B10%5D%3B",
+            "godBoltcode": "int%2A%20pi%20%3D%20new%20int%5B10%5D%3B"
         },
         {
             "question": "What's wrong with this code?",
@@ -2006,7 +2078,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "template%20%3Ctypename%20T%3E%0Aclass%20Foo%0A%7B%0A%20%20%20T%20tVar%3B%0Apublic%3A%0A%20%20%20Foo%28T%20t%29%20%3A%20tVar%28t%29%20%7B%20%7D%0A%7D%3B%0A%0Aclass%20FooDerived%20%3A%20public%20Foo%3Cstd%3A%3Astring%3E%20%7B%20%7D%3B%0A%0AFooDerived%20fd%3B"
+            "urlEncodedCode": "template%20%3Ctypename%20T%3E%0Aclass%20Foo%0A%7B%0A%20%20%20T%20tVar%3B%0Apublic%3A%0A%20%20%20Foo(T%20t)%20%3A%20tVar(t)%20%7B%20%7D%0A%7D%3B%0A%0Aclass%20FooDerived%20%3A%20public%20Foo%3Cstd%3A%3Astring%3E%20%7B%20%7D%3B%0A%0AFooDerived%20fd%3B",
+            "godBoltcode": "template%20%3Ctypename%20T%3E%0Aclass%20Foo%0A%7B%0A%20%20%20T%20tVar%3B%0Apublic%3A%0A%20%20%20Foo%28T%20t%29%20%3A%20tVar%28t%29%20%7B%20%7D%0A%7D%3B%0A%0Aclass%20FooDerived%20%3A%20public%20Foo%3Cstd%3A%3Astring%3E%20%7B%20%7D%3B%0A%0AFooDerived%20fd%3B"
         },
         {
             "question": "Write a copy constructor, and how to clone ",
@@ -2014,7 +2087,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "class%20A%20%7B%0Apublic%3A%0A%20%20%20A%28%29%20%3A%20a%28new%20int%281%29%29%20%7B%7D%0A%20%20%20%7EA%28%29%20%7B%20delete%20a%3B%20%7D%0Aprotected%3A%0A%20%20%20int%2A%20a%3B%0A%7D%3B%0A%0Aclass%20B%20%3A%20public%20A%20%7B%0Apublic%3A%0A%20%20%20B%28%29%20%3A%20A%28%29%2C%20b%28new%20int%282%29%29%20%7B%7D%0A%20%20%20%7EB%28%29%20%7B%20delete%20b%3B%20%7D%0Aprotected%3A%0A%20%20%20int%2A%20b%3B%0A%7D%3B%0A%0Avoid%20main%28void%29%7B%0A%20%20%20A%2A%20a%20%3D%20new%20B%28%29%3B%0A%20%20%20/%2A%20new%20copy%20of%20a%20%28but%20type%20is%20B%29%2A/%0A%7D"
+            "urlEncodedCode": "class%20A%20%7B%0Apublic%3A%0A%20%20%20A()%20%3A%20a(new%20int(1))%20%7B%7D%0A%20%20%20~A()%20%7B%20delete%20a%3B%20%7D%0Aprotected%3A%0A%20%20%20int*%20a%3B%0A%7D%3B%0A%0Aclass%20B%20%3A%20public%20A%20%7B%0Apublic%3A%0A%20%20%20B()%20%3A%20A()%2C%20b(new%20int(2))%20%7B%7D%0A%20%20%20~B()%20%7B%20delete%20b%3B%20%7D%0Aprotected%3A%0A%20%20%20int*%20b%3B%0A%7D%3B%0A%0Avoid%20main(void)%7B%0A%20%20%20A*%20a%20%3D%20new%20B()%3B%0A%20%20%20%2F*%20new%20copy%20of%20a%20(but%20type%20is%20B)*%2F%0A%7D",
+            "godBoltcode": "class%20A%20%7B%0Apublic%3A%0A%20%20%20A%28%29%20%3A%20a%28new%20int%281%29%29%20%7B%7D%0A%20%20%20%7EA%28%29%20%7B%20delete%20a%3B%20%7D%0Aprotected%3A%0A%20%20%20int%2A%20a%3B%0A%7D%3B%0A%0Aclass%20B%20%3A%20public%20A%20%7B%0Apublic%3A%0A%20%20%20B%28%29%20%3A%20A%28%29%2C%20b%28new%20int%282%29%29%20%7B%7D%0A%20%20%20%7EB%28%29%20%7B%20delete%20b%3B%20%7D%0Aprotected%3A%0A%20%20%20int%2A%20b%3B%0A%7D%3B%0A%0Avoid%20main%28void%29%7B%0A%20%20%20A%2A%20a%20%3D%20new%20B%28%29%3B%0A%20%20%20/%2A%20new%20copy%20of%20a%20%28but%20type%20is%20B%29%2A/%0A%7D"
         },
         {
             "question": "What's wrong with this code? Any enhancements?",
@@ -2022,7 +2096,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "%23include%20%3Cstring%3E%0Aclass%20Points%3B%0Avoid%20Mover%28const%20bool%26%20state%29%3B%0AButton%28const%20size_t%26%20height%2C%20const%20std%3A%3Awstring%20text%29%3B%0AButton%28const%20Point%26%20point%2C%20const%20std%3A%3Awstring%20text%29%3B%0AFrame%28const%20size_t%26%20width%2C%20const%20size_t%26%20height%29%3B%0Aconst%20size_t%26%20Width%28%29%20const%3B%0Aconst%20size_t%26%20Heigh%28%29%20const%3B"
+            "urlEncodedCode": "%23include%20%3Cstring%3E%0Aclass%20Points%3B%0Avoid%20Mover(const%20bool%26%20state)%3B%0AButton(const%20size_t%26%20height%2C%20const%20std%3A%3Awstring%20text)%3B%0AButton(const%20Point%26%20point%2C%20const%20std%3A%3Awstring%20text)%3B%0AFrame(const%20size_t%26%20width%2C%20const%20size_t%26%20height)%3B%0Aconst%20size_t%26%20Width()%20const%3B%0Aconst%20size_t%26%20Heigh()%20const%3B",
+            "godBoltcode": "%23include%20%3Cstring%3E%0Aclass%20Points%3B%0Avoid%20Mover%28const%20bool%26%20state%29%3B%0AButton%28const%20size_t%26%20height%2C%20const%20std%3A%3Awstring%20text%29%3B%0AButton%28const%20Point%26%20point%2C%20const%20std%3A%3Awstring%20text%29%3B%0AFrame%28const%20size_t%26%20width%2C%20const%20size_t%26%20height%29%3B%0Aconst%20size_t%26%20Width%28%29%20const%3B%0Aconst%20size_t%26%20Heigh%28%29%20const%3B"
         },
         {
             "question": "What's wrong with this code?",
@@ -2030,7 +2105,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "void%20foo%28%29%20%7B%0A%20%20%20std%3A%3Avector%3Cstd%3A%3Astring%3E%20names%7B%22first%22%2C%20%22second%22%7D%3B%0A%20%20%20//%20...%0A%20%20%20for%20%28auto%20name%20%3A%20names%29%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20names%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%7D"
+            "urlEncodedCode": "void%20foo()%20%7B%0A%20%20%20std%3A%3Avector%3Cstd%3A%3Astring%3E%20names%7B%22first%22%2C%20%22second%22%7D%3B%0A%20%20%20%2F%2F%20...%0A%20%20%20for%20(auto%20name%20%3A%20names)%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20names%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%7D",
+            "godBoltcode": "void%20foo%28%29%20%7B%0A%20%20%20std%3A%3Avector%3Cstd%3A%3Astring%3E%20names%7B%22first%22%2C%20%22second%22%7D%3B%0A%20%20%20//%20...%0A%20%20%20for%20%28auto%20name%20%3A%20names%29%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20names%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%7D"
         },
         {
             "question": "What's the difference?",
@@ -2038,7 +2114,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "void+foo(const+std::vector%3Cint%3E%26+values)+%7B%0A+++std::vector%3Cint%3E::const_iterator+it+%3D+values.begin()%3B%0A+++while+(it+!!%3D+values.end())+%7B%0A++++++//+it%2B%2B%3B+vs%0A++++++%2B%2Bit%3B%0A+++%7D%0A%7D"
+            "urlEncodedCode": "void%20foo(const%20std%3A%3Avector%3Cint%3E%26%20values)%20%7B%0A%20%20%20std%3A%3Avector%3Cint%3E%3A%3Aconst_iterator%20it%20%3D%20values.begin()%3B%0A%20%20%20while%20(it%20!!%3D%20values.end())%20%7B%0A%20%20%20%20%20%20%2F%2F%20it%2B%2B%3B%20vs%0A%20%20%20%20%20%20%2B%2Bit%3B%0A%20%20%20%7D%0A%7D",
+            "godBoltcode": "void+foo(const+std::vector%3Cint%3E%26+values)+%7B%0A+++std::vector%3Cint%3E::const_iterator+it+%3D+values.begin()%3B%0A+++while+(it+!!%3D+values.end())+%7B%0A++++++//+it%2B%2B%3B+vs%0A++++++%2B%2Bit%3B%0A+++%7D%0A%7D"
         },
         {
             "question": "What happens here?",
@@ -2046,7 +2123,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "class%20BaseEx%20%7B/%2A%20...%20%2A/%7D%3B%0Aclass%20SpecialEx%20%3A%20public%20BaseEx%20%7B/%2A%20...%20%2A/%7D%3B%0Aint%20main%28%29%20%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20bool%20condition%3B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%20%20%20if%20%28condition%29%20%7B%0A%20%20%20%20%20%20%20%20%20throw%20BaseEx%28%29%3B%0A%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20throw%20SpecialEx%28%29%3B%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%7D%0A%20%20%20catch%28const%20BaseEx%26%20e%29%20%7B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%7D%0A%20%20%20catch%28const%20SpecialEx%26%20e%29%20%7B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%7D%0A%7D"
+            "urlEncodedCode": "class%20BaseEx%20%7B%2F*%20...%20*%2F%7D%3B%0Aclass%20SpecialEx%20%3A%20public%20BaseEx%20%7B%2F*%20...%20*%2F%7D%3B%0Aint%20main()%20%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20bool%20condition%3B%0A%20%20%20%20%20%20%2F*%20...%20*%2F%0A%20%20%20%20%20%20if%20(condition)%20%7B%0A%20%20%20%20%20%20%20%20%20throw%20BaseEx()%3B%0A%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20throw%20SpecialEx()%3B%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%7D%0A%20%20%20catch(const%20BaseEx%26%20e)%20%7B%0A%20%20%20%20%20%20%2F*%20...%20*%2F%0A%20%20%20%7D%0A%20%20%20catch(const%20SpecialEx%26%20e)%20%7B%0A%20%20%20%20%20%20%2F*%20...%20*%2F%0A%20%20%20%7D%0A%7D",
+            "godBoltcode": "class%20BaseEx%20%7B/%2A%20...%20%2A/%7D%3B%0Aclass%20SpecialEx%20%3A%20public%20BaseEx%20%7B/%2A%20...%20%2A/%7D%3B%0Aint%20main%28%29%20%7B%0A%20%20%20try%20%7B%0A%20%20%20%20%20%20bool%20condition%3B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%20%20%20if%20%28condition%29%20%7B%0A%20%20%20%20%20%20%20%20%20throw%20BaseEx%28%29%3B%0A%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20throw%20SpecialEx%28%29%3B%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%7D%0A%20%20%20catch%28const%20BaseEx%26%20e%29%20%7B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%7D%0A%20%20%20catch%28const%20SpecialEx%26%20e%29%20%7B%0A%20%20%20%20%20%20/%2A%20...%20%2A/%0A%20%20%20%7D%0A%7D"
         },
         {
             "question": "What happens here?",
@@ -2054,7 +2132,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "struct%20Test%20%7B%0A%20%20%20void%20foo%28%29%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22foo%22%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%20%20%20virtual%20void%20bar%28%29%20const%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22bar%22%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%7D%3B%0Aint%20main%28%29%20%7B%0A%20%20%20Test%2A%20test%20%3D%20new%20Test%3B%0A%20%20%20delete%20test%3B%0A%20%20%20/%2A%20...%20%2A/%0A%20%20%20test-%3Efoo%28%29%3B%0A%20%20%20test-%3Ebar%28%29%3B%0A%20%20%20return%200%3B%0A%7D"
+            "urlEncodedCode": "struct%20Test%20%7B%0A%20%20%20void%20foo()%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22foo%22%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%20%20%20virtual%20void%20bar()%20const%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22bar%22%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%7D%3B%0Aint%20main()%20%7B%0A%20%20%20Test*%20test%20%3D%20new%20Test%3B%0A%20%20%20delete%20test%3B%0A%20%20%20%2F*%20...%20*%2F%0A%20%20%20test-%3Efoo()%3B%0A%20%20%20test-%3Ebar()%3B%0A%20%20%20return%200%3B%0A%7D",
+            "godBoltcode": "struct%20Test%20%7B%0A%20%20%20void%20foo%28%29%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22foo%22%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%20%20%20virtual%20void%20bar%28%29%20const%20%7B%0A%20%20%20%20%20%20std%3A%3Acout%20%3C%3C%20%22bar%22%20%3C%3C%20std%3A%3Aendl%3B%0A%20%20%20%7D%0A%7D%3B%0Aint%20main%28%29%20%7B%0A%20%20%20Test%2A%20test%20%3D%20new%20Test%3B%0A%20%20%20delete%20test%3B%0A%20%20%20/%2A%20...%20%2A/%0A%20%20%20test-%3Efoo%28%29%3B%0A%20%20%20test-%3Ebar%28%29%3B%0A%20%20%20return%200%3B%0A%7D"
         },
         {
             "question": "Write an assignment operator and move-constructor",
@@ -2062,7 +2141,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "struct%20resource%20%7B%0A%20%20%20int%20d%3B%0A%7D%3B%0Aclass%20wrapper%20%7B%0A%20%20%20resource%20%2Ap%3B%0Apublic%3A%0A%20%20%20wrapper%28%29%20%3A%20p%28new%20resource%29%20%7B%7D%0A%20%20%20%7Ewrapper%28%29%20%7Bdelete%20p%3B%7D%0A%7D%3B"
+            "urlEncodedCode": "struct%20resource%20%7B%0A%20%20%20int%20d%3B%0A%7D%3B%0Aclass%20wrapper%20%7B%0A%20%20%20resource%20*p%3B%0Apublic%3A%0A%20%20%20wrapper()%20%3A%20p(new%20resource)%20%7B%7D%0A%20%20%20~wrapper()%20%7Bdelete%20p%3B%7D%0A%7D%3B",
+            "godBoltcode": "struct%20resource%20%7B%0A%20%20%20int%20d%3B%0A%7D%3B%0Aclass%20wrapper%20%7B%0A%20%20%20resource%20%2Ap%3B%0Apublic%3A%0A%20%20%20wrapper%28%29%20%3A%20p%28new%20resource%29%20%7B%7D%0A%20%20%20%7Ewrapper%28%29%20%7Bdelete%20p%3B%7D%0A%7D%3B"
         },
         {
             "question": "What's wrong with this macro?",
@@ -2070,7 +2150,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "%23define%20MULT_BY_KILOBYTE%28N%29%201024%2AN"
+            "urlEncodedCode": "%23define%20MULT_BY_KILOBYTE(N)%201024*N",
+            "godBoltcode": "%23define%20MULT_BY_KILOBYTE%28N%29%201024%2AN"
         },
         {
             "question": "What's wrong with this code?",
@@ -2078,7 +2159,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "void+removeEach3(const+vector%3Cint%3E%26+v)%7B%0A+++for+(vector%3Cint%3E::iterator+i+%3D+v.begin(),+e+%3D+v.end()%3B+i!!%3De%3B+i%2B%2B)+%7B%0A++++++if+(*i+%3D%3D+3)+%7B%0A+++++++++v.erase(i)%3B%0A++++++%7D%0A+++%7D%0A%7D"
+            "urlEncodedCode": "void%20removeEach3(const%20vector%3Cint%3E%26%20v)%7B%0A%20%20%20for%20(vector%3Cint%3E%3A%3Aiterator%20i%20%3D%20v.begin()%2C%20e%20%3D%20v.end()%3B%20i!!%3De%3B%20i%2B%2B)%20%7B%0A%20%20%20%20%20%20if%20(*i%20%3D%3D%203)%20%7B%0A%20%20%20%20%20%20%20%20%20v.erase(i)%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D",
+            "godBoltcode": "void+removeEach3(const+vector%3Cint%3E%26+v)%7B%0A+++for+(vector%3Cint%3E::iterator+i+%3D+v.begin(),+e+%3D+v.end()%3B+i!!%3De%3B+i%2B%2B)+%7B%0A++++++if+(*i+%3D%3D+3)+%7B%0A+++++++++v.erase(i)%3B%0A++++++%7D%0A+++%7D%0A%7D"
         },
         {
             "question": "Difference between initializations",
@@ -2086,7 +2168,8 @@
                 "c++",
                 "contains code"
             ],
-            "code": "std%3A%3Avector%3Cint%3E%20vec1%285%2C1%29%3B%0A%20%20%20std%3A%3Avector%3Cint%3E%20vec2%7B5%7D%3B%0A%20%20%20std%3A%3Avector%3Cint%3E%20vec3%20%3D%20%7B5%7D%3B"
+            "urlEncodedCode": "std%3A%3Avector%3Cint%3E%20vec1(5%2C1)%3B%0A%20%20%20std%3A%3Avector%3Cint%3E%20vec2%7B5%7D%3B%0A%20%20%20std%3A%3Avector%3Cint%3E%20vec3%20%3D%20%7B5%7D%3B",
+            "godBoltcode": "std%3A%3Avector%3Cint%3E%20vec1%285%2C1%29%3B%0A%20%20%20std%3A%3Avector%3Cint%3E%20vec2%7B5%7D%3B%0A%20%20%20std%3A%3Avector%3Cint%3E%20vec3%20%3D%20%7B5%7D%3B"
         },
         {
             "question": "How to get list of opened sockets in linux?",
@@ -2252,7 +2335,8 @@
                 "algorithmic",
                 "data structures"
             ],
-            "code": "struct%20Node%20%7B%0Aint%20date%3B%0ANode%2A%20next%3B%0A%7D%3B%0ANode%2A%20Reverse%28Node%2A%20head%29%20%7B%0A%2F%2A...%2A%2F%0A%7D"
+            "urlEncodedCode": "struct%20Node%20%7B%0Aint%20date%3B%0ANode*%20next%3B%0A%7D%3B%0ANode*%20Reverse(Node*%20head)%20%7B%0A%2F*...*%2F%0A%7D",
+            "godBoltcode": "struct%20Node%20%7B%0Aint%20date%3B%0ANode%2A%20next%3B%0A%7D%3B%0ANode%2A%20Reverse%28Node%2A%20head%29%20%7B%0A%2F%2A...%2A%2F%0A%7D"
         },
         {
             "question": "Write an algorithm which checks whether the string is palindrome?",
