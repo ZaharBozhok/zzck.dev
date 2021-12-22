@@ -120,32 +120,28 @@
         {
             "question": "How do virtual functions work?",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "When virtual function table is created? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 3
         },
         {
             "question": "Is it possible to have virtual constructor (why would yes or not)? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "Why do we need virtual destructors? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 4
         },
@@ -199,16 +195,14 @@
             "question": "What is RAII (Resource allocation is acquisition)? ",
             "tags": [
                 "c++",
-                "general",
-                "hot"
+                "general"
             ],
             "timesAsked": 5
         },
         {
             "question": "What is smart pointer (how many types do you know)? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 5
         },
@@ -222,8 +216,7 @@
             "question": "How does thread safety implemented in `std::shared_ptr`? ",
             "tags": [
                 "c++",
-                "concurrency",
-                "hot"
+                "concurrency"
             ],
             "timesAsked": 2
         },
@@ -236,8 +229,7 @@
         {
             "question": "How can we transfer the ownership of the `std::unique_ptr`? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
@@ -250,16 +242,14 @@
         {
             "question": "How can we forbid object copying? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "Advantage of using `std::make_shared`? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
@@ -272,8 +262,7 @@
         {
             "question": "How many STL containers did you work with (name them)? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 3
         },
@@ -302,8 +291,7 @@
         {
             "question": "How to eliminate reallocation in `std::vector` provided we know the total number of elements? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
@@ -318,8 +306,7 @@
             "tags": [
                 "c++",
                 "general",
-                "data structures",
-                "hot"
+                "data structures"
             ],
             "timesAsked": 3
         },
@@ -338,8 +325,7 @@
                 "c++",
                 "general",
                 "data structures",
-                "algorithmic",
-                "hot"
+                "algorithmic"
             ],
             "timesAsked": 2
         },
@@ -355,8 +341,7 @@
             "question": "What is a deadlock? ",
             "tags": [
                 "general",
-                "concurrency",
-                "hot"
+                "concurrency"
             ],
             "timesAsked": 3
         },
@@ -372,8 +357,7 @@
             "question": "Describe the difference between a thread and a process.",
             "tags": [
                 "general",
-                "OS",
-                "hot"
+                "OS"
             ],
             "timesAsked": 3
         },
@@ -381,8 +365,7 @@
             "question": "What types of IPC do you know?",
             "tags": [
                 "c++",
-                "general",
-                "hot"
+                "general"
             ],
             "timesAsked": 5
         },
@@ -452,8 +435,7 @@
             "question": "Explain the difference between a `mutex` and a `binary semaphore`? ",
             "tags": [
                 "general",
-                "concurrency",
-                "hot"
+                "concurrency"
             ],
             "timesAsked": 2
         },
@@ -527,8 +509,7 @@
             "tags": [
                 "general",
                 "design/architecture",
-                "best practice",
-                "hot"
+                "best practice"
             ],
             "timesAsked": 3
         },
@@ -572,16 +553,14 @@
             "tags": [
                 "general",
                 "concurrency",
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 3
         },
         {
             "question": "How many C++ standards do you know? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
@@ -604,8 +583,7 @@
         {
             "question": "What is move semantics in c++?",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 4
         },
@@ -618,8 +596,7 @@
         {
             "question": "Difference between `rvalue` and `lvalue`? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
@@ -805,8 +782,7 @@
         {
             "question": "In some functions it is not recommended to throw exceptions. What are these functions? Why it is not recommended?",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 3
         },
@@ -1092,8 +1068,7 @@
             "question": "What types of network protocols do you know? Difference between them? OSI model?",
             "tags": [
                 "general",
-                "networking",
-                "hot"
+                "networking"
             ],
             "timesAsked": 3
         },
@@ -1101,8 +1076,7 @@
             "question": "TCP vs UDP, HTTPS?",
             "tags": [
                 "general",
-                "networking",
-                "hot"
+                "networking"
             ],
             "timesAsked": 2
         },
@@ -1544,8 +1518,7 @@
         {
             "question": "`mutable` keyword?",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
@@ -1612,16 +1585,14 @@
             "tags": [
                 "c++",
                 "OS",
-                "concurrency",
-                "hot"
+                "concurrency"
             ],
             "timesAsked": 2
         },
         {
             "question": "What does the const member function qualifier do? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
@@ -1629,8 +1600,7 @@
             "question": "What is stack unwinding? ",
             "tags": [
                 "c++",
-                "general",
-                "hot"
+                "general"
             ],
             "timesAsked": 2
         },
@@ -1638,16 +1608,14 @@
             "question": "What is exception safety, which do you know? ",
             "tags": [
                 "c++",
-                "general",
-                "hot"
+                "general"
             ],
             "timesAsked": 2
         },
         {
             "question": "Types of STL iterators? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 3
         },
@@ -1655,8 +1623,7 @@
             "question": "Is `std::shared_ptr` threadsafe? ",
             "tags": [
                 "c++",
-                "concurrency",
-                "hot"
+                "concurrency"
             ],
             "timesAsked": 2
         },
@@ -1664,8 +1631,7 @@
             "question": "`std::thread` vs `std::async`? ",
             "tags": [
                 "concurrency",
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
@@ -1674,8 +1640,7 @@
             "tags": [
                 "c++",
                 "optimizations",
-                "hardware",
-                "hot"
+                "hardware"
             ],
             "timesAsked": 2
         },
@@ -1683,8 +1648,7 @@
             "question": "`std::move` vs `std::forward`? And why do we need them? ",
             "tags": [
                 "c++",
-                "optimizations",
-                "hot"
+                "optimizations"
             ],
             "timesAsked": 2
         },
@@ -1692,24 +1656,21 @@
             "question": "Which design patterns do you know (GoF)? ",
             "tags": [
                 "c++",
-                "design/architecture",
-                "hot"
+                "design/architecture"
             ],
             "timesAsked": 4
         },
         {
             "question": "Where is the virtual function table stored? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
         {
             "question": "What kind of casts in c++ do you know? ",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 2
         },
@@ -1718,8 +1679,7 @@
             "tags": [
                 "c++",
                 "OS",
-                "optimizations",
-                "hot"
+                "optimizations"
             ],
             "timesAsked": 2
         },
@@ -2007,8 +1967,7 @@
         {
             "question": "What is the purpose of the explicit keyword in constructors?",
             "tags": [
-                "c++",
-                "hot"
+                "c++"
             ],
             "timesAsked": 3
         },
