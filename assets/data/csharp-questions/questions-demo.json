@@ -1,0 +1,3087 @@
+{
+    "tags": {
+        "c#": {
+            "emoji": "csharp"
+        },
+        "general": {
+            "emoji": "open-hands"
+        },
+        "asp.net": {
+            "emoji": "aspnet"
+        },
+        "async": {
+            "emoji": "bomb"
+        },
+        "data structures": {
+            "emoji": "microscope"
+        },
+        "algorithmic": {
+            "emoji": "ninja"
+        },
+        "design/architecture": {
+            "emoji": "building-construction"
+        },
+        "networking": {
+            "emoji": "satellite-antenna"
+        },
+        "contains code": {
+            "emoji": "person-lifting-weights"
+        },
+        "problem solving": {
+            "emoji": "thought-balloon"
+        },
+        "open question": {
+            "emoji": "thinking-face"
+        },
+        "DB": {
+            "emoji": "file-cabinet"
+        },
+        "tests": {
+            "emoji":"testtube"
+        },
+        "git": {
+            "emoji": "git"
+        },
+        "entity framework": {
+            "emoji": "eff"
+        }
+    },
+    "questions": [
+        {
+            "question": "What is the main idea of Web API and how it works in general(explain by your own words)",
+            "tags": [
+                "general",
+                "design/architecture",
+                "networking",
+                "asp.net"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between POST and GET requests",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "How parameters can be passed via POST and GET requests",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "How HTTP works in general",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Name HTTP headers",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is filters in Web API?",
+            "tags": [
+                "networking",
+                "asp.net"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What attributes can be in controller?",
+            "tags": [
+                "networking",
+                "asp.net"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is REST? How do you understand it?",
+            "tags": [
+                "networking",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "You have database that contains books and Web API to work with this database. How you see implementation of this Web API? What about paging?",
+            "tags": [
+                "networking",
+                "asp.net",
+                "open question",
+                "problem solving"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "How user can be authenticated? How HTTP requests can get authenticated?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is cookies?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What are the main entities in ADO.NET?",
+            "tags": [
+                "db",
+                "c#",
+                "ado.net"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "How parameters can be passed to stored procedures in ADO.NET?",
+            "tags": [
+                "ado.net",
+                "db",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "Why you can't pass pure SQL in requests?",
+            "tags": [
+                "db",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is SQL injections? Give an example",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How you can optimize database?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Name messaging patterns and how they work",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Why do we need to use messaging patterns?",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is \"using\" in C#?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is IDisposable and why do we need it?",
+            "tags": [
+                "c#",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What if we forgot to use Dispose() method?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the recommended implementation of IDisposable?",
+            "tags": [
+                "c#",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is finalizer?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is async/await how it works?",
+            "tags": [
+                "c#",
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "VARTEQ",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Why do we need to use async/await?",
+            "tags": [
+                "c#",
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How you can synchronize threads?",
+            "tags": [
+                "c#",
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What will be written if we call DoFirst?",
+            "tags": [
+                "contains code",
+                "async",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ],
+            "urlEncodedCode": "https://godbolt.org/#z:OYLghAFBqd5QCxAYwPYBMCmBRdBLAF1QCcAaPECAMzwBtMA7AQwFtMQByARg9KtQYEAysib0QXACx8BBAKoBnTAAUAHpwAMvAFYTStJg1DIFCJsQAOpJfWQE8Ayo3QBhVLQCuLBiABMpZwAZPAZMADkvACNMYj9/C1QFQgcGN09vP1IEpPsBYNCIlmjY338bTDsUoQJzAjSvHzLMW1yGatr88KiYuOsa4jr3BsyFfoJOwuK4gEprVA9iZHYOCw9I2jxkAGpkAwUFLcDUZABrABVMUYBSDQBBK4B2ACEb2633rYtiPAA3JgJMFtUJFtBUCFsAPq0Y4nGJbK4AZgAIltQgB3LYAeRBYIg00RLzurw%2BnzWG22P1QeHQWwAYnhiKM8cSPo9CW8SR9oacIFCYTF8XdOaznizhSS3AwFO5MAA6ADq3wBnQgV1KXDVvnxCPZ4s5QgqAnQzJ1Yr1W0l0voCqVmBVmt8mu1uvFjyRZrdrzNq3Wmy2lOpWwNaAYxsFHPebLNJO5J15sYF0ZFLvNFoEVrlisIdpCmFVpWDRqdBKTkYe7qFIor93Lrw4s1onAArLwfBwtKRUJwXGqEVtpQslvDfAieKQCJp67MTiAmxp9JxJK3J53OLwFCB5xP2/XSHBYEg0CwLHQYuRKEeT/RYuhUARQgQAGwaLgmMyWPh0AGMyiRFeREJzAAT04McjzYQRMQYWgQJ3UgsBYQxgHEOD8GIMFfkuFdMFUCoPABUDeBCAFGzgjZImIYC3CwFcCG%2BFhCNmKgDGABQADU8EwNFMQsRhCJkQQRDEdgpAE%2BQlDUFddC4fQkJQUxzCsciN0gWZUAsVoNw4ddmgwxwIGceoMgATnnIJc0mHppGyZIBCMnxTKyRJbIYCZuliaRykqAR2gGeyQEcrzWl88YLPckBPLGfzArGNyiis2YB0WETx3Q5YeAbZtlzgrsOFlMJsDOLZH1lDRZS4F8tggHsR1ILZcEIEhh1HOq3GPU9iGarhpl4bctGmadZ3nUil1INsO1y9dN3HScBoXDhfGyia1xmnc5p%2BGIkkcSQgA%3D%3D%3D"
+        },
+        {
+            "question": "What is reentrant lock?",
+            "tags": [
+                "async",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What if we change locker from object type to int type?",
+            "tags": [
+                "async",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is ThreadStatic?",
+            "tags": [
+                "async",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is ThreadLocal?",
+            "tags": [
+                "async",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is LINQ? How you can use it generally?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "Calculate mean age for students that are 18 years old or older",
+            "tags": [
+                "contains code",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ],
+            "urlEncodedCode": ""
+        },
+        {
+            "question": "What is Dependency Injection?",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is Dependency Injection Containers? How to use it?",
+            "tags": [
+                "design/architecture",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between unit and integration tests?",
+            "tags": [
+                "tests",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is mocks in unit testing?",
+            "tags": [
+                "tests"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Array contains currency rate for each day. Write program that finds period of days when rate falling for longest time(strart and end day, number of days)",
+            "tags": [
+                "contains code",
+                "c#",
+                "algorithmic"
+            ],
+            "companies": [
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is indexes in DB? What is clustered and non-clustered indexes? How do they implemented inside?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is HAVING in SQL?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What aggregation functions are present in SQL?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is USING in SQL?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is JOIN? WHat is the difference between INNER and OUTER JOIN?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How garbage collector works?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between stack and heap?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Write Singleton implementation",
+            "tags": [
+                "c#",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Name design patterns and explain how they can be implemented and why do you need each",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "VARTEQ",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is Inversion of Control?",
+            "tags": [
+                "c#",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is default interface methods?",
+            "tags": [
+                "c#",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Difference between abstract class and interface",
+            "tags": [
+                "c#",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between abstract and virtual?",
+            "tags": [
+                "c#",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between IQueriable and IEnumerable?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between IQueriable and IEnumerable?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between HTTP and HTPPS?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the ORM?",
+            "tags": [
+                "design/architecture",
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is Entity Framework in general?",
+            "tags": [
+                "design/architecture",
+                "db",
+                "entity framework"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is WebSockets?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Authentication vs Authorization",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is JWT token?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Onventis",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Trinetix",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "How you can estimate your tasks?",
+            "tags": [
+                "general"
+            ],
+            "companies": [
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Why you can't add index for each column?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "Can you create recursive requests in SQL?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is unmanaged memory?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What if in \"using\" will occur an exception",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is \"finally\"?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is stack overflow?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How garbage collector knows that object must be deleted?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Name SOLID principles and explain them",
+            "tags": [
+                "c#",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is closures?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "VARTEQ",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is algorithms complexity?",
+            "tags": [
+                "algorithmic"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What means O and n in O(n) function?",
+            "tags": [
+                "algorithmic"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "Name data structures",
+            "tags": [
+                "data structures"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the binary tree?",
+            "tags": [
+                "data structures"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the associative array?",
+            "tags": [
+                "data structures"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the hash array? How it works inside?",
+            "tags": [
+                "data structures"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the complexity of adding element by key in Dictionary?",
+            "tags": [
+                "data structures",
+                "algorithmic"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "Name the loop types in C#",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What do you need to implement in class to can use it in \"foreach\" loop?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "Name the paradigms of programming",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is FP?",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is Structured Programming?",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the main difference between OOP and FP? What operator does not exists in FP?",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between multithreading and asynchrony?",
+            "tags": [
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Why is it bad to create a lot of threads? Problems with it relates to proccessor or memory?",
+            "tags": [
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "Why is it bad to thread to wait synchronously?",
+            "tags": [
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is context switching?",
+            "tags": [
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between pointer and value types? What type is string?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "Name the OOP principles",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the incapsulation?",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is DRY? In what situations you don't need to use it?",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is git branch in general?",
+            "tags": [
+                "git"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is git merge? What can go wrong while merging branches and why?",
+            "tags": [
+                "git"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is ReSharper?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the relational db?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is database normalization?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "Why you need to separate data to several tables? How is it related to table updating speed?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What weaknesses relational databases have?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "Is JOIN related to proccessor or memory high consuming?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is transactions?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is ACID in transactions?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the structure of memory in computer?",
+            "tags": [
+                "c#",
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the mutex and semaphore?",
+            "tags": [
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is hot spot in code?",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is OSI model? What levels does it have?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "How TCP packet relates to IP packet?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is DNS?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the differences between IPv4 and IPv6?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is Scrum, Kanban, Waterfall?",
+            "tags": [
+                "general"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is structure documentation in xml code?",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What code can be considered as good code?",
+            "tags": [
+                "general",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is the estimates in storypoints and hours?",
+            "tags": [
+                "general"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What will be your algorithm of work to do new task?",
+            "tags": [
+                "general"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How much time will you spend to research the task before asking team for help?",
+            "tags": [
+                "general"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "How do you estimate your tasks?",
+            "tags": [
+                "general"
+            ],
+            "companies": [
+                {
+                    "name": "Sigma",
+                    "salary_min": 3000,
+                    "salary_max": 3000,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ISsoft",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "When do you need to create new branch?",
+            "tags": [
+                "git",
+                "general"
+            ],
+            "companies": [
+                {
+                    "name": "VARTEQ",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between merge and rebase?",
+            "tags": [
+                "git"
+            ],
+            "companies": [
+                {
+                    "name": "VARTEQ",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Write SQL script to create table with these fields. Write stored procedure that updates only one record in database",
+            "tags": [
+                "db",
+                "contains code"
+            ],
+            "companies": [
+                {
+                    "name": "VARTEQ",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How you can assign new value to identity column in SQL?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "VARTEQ",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between Startegy and Abstract Factory?",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "VARTEQ",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Write code to return only distinct symbols from array",
+            "tags": [
+                "algorithmic",
+                "contains code"
+            ],
+            "companies": [
+                {
+                    "name": "VARTEQ",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What will be written in following code and what will contain each variable?",
+            "tags": [
+                "async",
+                "contains code"
+            ],
+            "companies": [
+                {
+                    "name": "VARTEQ",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What amount of indexes per table you need to create optimal?",
+            "tags": [
+                "db",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is functions in SQL?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How you can debug stored procedures?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between stub and mock?",
+            "tags": [
+                "tests"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between POST and PUT?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What the JWT token consist of?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is Azure in general?",
+            "tags": [
+                "design/architecture",
+                "general"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is Azure functions?",
+            "tags": [
+                "design/architecture",
+                "general"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is Azure slots?",
+            "tags": [
+                "design/architecture",
+                "general"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is middleware in ASP.NET?",
+            "tags": [
+                "asp.net"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What are code first and database first in Entity Framework?",
+            "tags": [
+                "design/architecture",
+                "entity framework"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How to do lazy loading in Entity Framework?",
+            "tags": [
+                "design/architecture",
+                "entity framework"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How to do lazy loading in Entity Framework?",
+            "tags": [
+                "design/architecture",
+                "entity framework"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How Entity Framework generates SQL requests?",
+            "tags": [
+                "design/architecture",
+                "entity framework"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Why controllers better to be async?",
+            "tags": [
+                "asp.net",
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is CPU bound and IO bound operations?",
+            "tags": [
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is Task and why do we need them?",
+            "tags": [
+                "async",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is Wait() and how it works?",
+            "tags": [
+                "async",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How we can pass code executing to separate thread in TPL?",
+            "tags": [
+                "async",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Why do we need thread pool?",
+            "tags": [
+                "async",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Salesflow",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How to select from table count of repetition for each value? How to do it without HAVING?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What do you need transactions for?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                },
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Why do you need interface?",
+            "tags": [
+                "c#",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "Why do you need to use POST for get data?",
+            "tags": [
+                "networking",
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "How does IQueariable optimize requests?",
+            "tags": [
+                "db",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3500,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What is Docker in general? What is the differences with VM?",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "Deloitte",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "yes"
+                }
+            ]
+        },
+        {
+            "question": "What are the weaknesses of garbage collector?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Can garbage collection be forced run?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Why do we need small and large objects heaps?",
+            "tags": [
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between List and array?",
+            "tags": [
+                "data structures"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What happens if you add new element to List and it exceeds its capacity?",
+            "tags": [
+                "data structures"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How Dictionary is implemented inside? How values are stored in memory?",
+            "tags": [
+                "data structures"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the algorithm of adding new element inside Dictionary?",
+            "tags": [
+                "data structures"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How key of Dictionary is stored in memory?",
+            "tags": [
+                "data structures"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is hash collisions and how to fix them?",
+            "tags": [
+                "data structures",
+                "problem solving"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Name the immutable collections",
+            "tags": [
+                "data structures"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is concurrent collections?",
+            "tags": [
+                "data structures",
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is lock and how it works inside?",
+            "tags": [
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is volatile and how it is implemnted? Where the value of volatile variable will be stored?",
+            "tags": [
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is task factory scheduler?",
+            "tags": [
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is synchronization context?",
+            "tags": [
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is async state machine?",
+            "tags": [
+                "async"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How to run multiple parallel Tasks?",
+            "tags": [
+                "async",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is WhenAny(), WhenAll()?",
+            "tags": [
+                "async",
+                "c#"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is TCP and UDP and what is the difference?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Name HTTP methods",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is HTTP method PATCH?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is Uri?",
+            "tags": [
+                "networking"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What Dependency Injection Container present in ASP.NET Core?",
+            "tags": [
+                "asp.net"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Name scopes in Dependency Injection",
+            "tags": [
+                "design/architecture"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is WITH AS in SQL?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between LEFT and RIGHT JOIN?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is the difference between WHERE and HAVING?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Can aggregation functions be used with GROUP BY?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How to profile SQL requests?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "How to profile SQL requests?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What is CAP Theorem?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "What isolation levels does transaction have?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "ITOMYCH",
+                    "salary_min": 3000,
+                    "salary_max": 3500,
+                    "got_offer": "no"
+                }
+            ]
+        }
+    ]
+}

@@ -41,6 +41,13 @@
     justify-content: center;
 }
 
+.tag-nav-bar {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 #test {
     position: fixed;
     top: 0;
