@@ -9,6 +9,9 @@
         "asp.net": {
             "emoji": "aspnet"
         },
+        "ado.net": {
+            "emoji": "aspnet"
+        },
         "async": {
             "emoji": "bomb"
         },
@@ -33,7 +36,7 @@
         "open question": {
             "emoji": "thinking-face"
         },
-        "DB": {
+        "db": {
             "emoji": "file-cabinet"
         },
         "tests": {

@@ -1,8 +1,5 @@
 {
     "tags": {
-        "hot": {
-            "emoji": "fire"
-        },
         "c#": {
             "emoji": "csharp"
         },
@@ -10,6 +7,9 @@
             "emoji": "open-hands"
         },
         "asp.net": {
+            "emoji": "aspnet"
+        },
+        "ado.net": {
             "emoji": "aspnet"
         },
         "async": {
@@ -36,7 +36,7 @@
         "open question": {
             "emoji": "thinking-face"
         },
-        "DB": {
+        "db": {
             "emoji": "file-cabinet"
         },
         "tests": {
