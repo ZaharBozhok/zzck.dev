@@ -376,7 +376,7 @@ class CopyLinkButton {
 
         this.toast = document.createElement('div');
         this.toast.id = 'snackbar'
-        this.toast.innerText = "Copied to clipboard!"
+        this.toast.innerText = "Link copied to clipboard!"
 
         this.htmlElem.append(this.toast)
     }
