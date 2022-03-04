@@ -321,6 +321,7 @@ class FilterCounterState {
         }
     }
 }
+
 class FilterCounter {
     constructor(props, state) {
         this.numState = state
@@ -357,19 +358,18 @@ class FilterCounter {
     }
 }
 
-async function main(questionsJson) {
+async function processQuestionsContainers(questionsContainerHtmlElem, questionsJson) {
     let bd = new Bd(await (await fetch(questionsJson)).json())
 
     let tagsProps = bd.tagsProps;
     let tagsStates = createTagsStatesFromProps(tagsProps)
 
-    let main = document.getElementById("main")
     let navBar = new TagNavBar({ tagsProps: tagsProps }, { tagsStates: tagsStates })
 
-    main.append(navBar.html)
+    questionsContainerHtmlElem.append(navBar.html)
     let filterCounterState = new FilterCounterState(0)
     let filterCounter = new FilterCounter(null, filterCounterState)
-    main.append(filterCounter.html)
+    questionsContainerHtmlElem.append(filterCounter.html)
 
     let questionsList = new QuestionsList(
         {
@@ -379,10 +379,10 @@ async function main(questionsJson) {
             tagsStates: tagsStates,
             filterCounterState: filterCounterState
         })
-    main.append(questionsList.html)
+    questionsContainerHtmlElem.append(questionsList.html)
 
     const onAnyTagStateChanged = () => {
-        main.removeChild(questionsList.html)
+        questionsContainerHtmlElem.removeChild(questionsList.html)
         questionsList = new QuestionsList(
             {
                 questionsProps: bd.questionProps
@@ -391,7 +391,7 @@ async function main(questionsJson) {
                 tagsStates: tagsStates,
                 filterCounterState: filterCounterState
             })
-        main.append(questionsList.html)
+        questionsContainerHtmlElem.append(questionsList.html)
     }
 
     for (const key in tagsStates) {
@@ -400,4 +400,13 @@ async function main(questionsJson) {
     }
 
 }
-main("/assets/data/csharp-questions/questions.json")
+async function processTags() {
+    let questionsContainers = document.getElementsByTagName('questions-container')
+    for (let i = 0; i < questionsContainers.length; i++) {
+        await processQuestionsContainers(
+            questionsContainers[i],
+            questionsContainers[i].getAttribute('dataSource')
+        )
+    }
+}
+processTags()
