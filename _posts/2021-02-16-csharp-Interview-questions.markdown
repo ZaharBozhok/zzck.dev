@@ -8,7 +8,8 @@ tags: [C++,Interviewing,Puzzles,Questions]
 ---
 <link href="/assets/css/questions.css" rel="stylesheet" />
 
-<questions-container dataSource="/assets/data/c++-questions/questions.json"></questions-container>
+
+<questions-container dataSource="/assets/data/csharp-questions/questions.json"></questions-container>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
