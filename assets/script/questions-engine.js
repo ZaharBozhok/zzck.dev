@@ -363,12 +363,15 @@ class CopyLinkButton {
         this.tagsState = state
         this.emoji = new Emoji("/assets/images/emojis/chain.png")
         this.emoji.html.classList.add('copy-link-button-img')
+        this.emoji2 = new Emoji("/assets/images/emojis/chain.png")
+        this.emoji2.html.classList.add('copy-link-button-img')
         this.text = new TagFilterText("Share selected")
 
         this.htmlElem = document.createElement('div');
         this.htmlElem.onclick = () => this.Click()
         this.htmlElem.append(this.emoji.html)
         this.htmlElem.append(this.text.html)
+        this.htmlElem.append(this.emoji2.html)
         this.htmlElem.classList.add('copy-link-button')
 
         this.toast = document.createElement('div');
