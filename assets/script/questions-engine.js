@@ -100,7 +100,7 @@ class TagFilterClearButton {
 
 class TagNavBar {
     constructor(props, state) {
-        this.clearButton = new TagFilterClearButton({ imgSrc: `/assets/images/emojis/cross-mark.png` }, state)
+        this.clearButton = new TagFilterClearButton({ imgSrc: "/assets/images/emojis/cross-mark.png" }, state)
         this.tagFilterButtons = []
         for (let i in props.tagsProps) {
             this.tagFilterButtons.push(new TagFilterButton(props.tagsProps[i], state.tagsStates[props.tagsProps[i].tagId]))
@@ -358,15 +358,64 @@ class FilterCounter {
     }
 }
 
-async function processQuestionsContainers(questionsContainerHtmlElem, questionsJson) {
+class CopyLinkButton {
+    constructor(props, state) {
+        this.tagsState = state
+        this.emoji = new Emoji("/assets/images/emojis/chain.png")
+        this.emoji.html.classList.add('copy-link-button-img')
+        this.text = new TagFilterText("Share selected")
+
+        this.htmlElem = document.createElement('div');
+        this.htmlElem.onclick = () => this.Click()
+        this.htmlElem.append(this.emoji.html)
+        this.htmlElem.append(this.text.html)
+        this.htmlElem.classList.add('copy-link-button')
+
+        this.toast = document.createElement('div');
+        this.toast.id = 'snackbar'
+        this.toast.innerText = "Copied to clipboard!"
+
+        this.htmlElem.append(this.toast)
+    }
+    get html() {
+        return this.htmlElem
+    }
+    async Click() {
+        const filter = { tags: [] }
+        for (let key in this.tagsState) {
+            if (this.tagsState[key].enabled) {
+                filter.tags.push(this.tagsState[key].tagId)
+            }
+        }
+        const url = document.URL.split('?')[0]
+        const urlWithParams = url + '?' + 'filter=' + encodeURIComponent(JSON.stringify(filter))
+        console.log(urlWithParams)
+        await navigator.clipboard.writeText(urlWithParams)
+
+        this.toast.classList.add('show')
+        setTimeout(() => {
+            this.toast.classList.remove('show')
+        }, 3000);
+    }
+}
+
+async function processQuestionsContainers(questionsContainerHtmlElem, questionsJson, URIfilter) {
     let bd = new Bd(await (await fetch(questionsJson)).json())
 
     let tagsProps = bd.tagsProps;
     let tagsStates = createTagsStatesFromProps(tagsProps)
+    if (URIfilter) {
+        URIfilter.tags.forEach(tag => {
+            tagsStates[tag].enabled = true
+        })
+    }
 
     let navBar = new TagNavBar({ tagsProps: tagsProps }, { tagsStates: tagsStates })
-
     questionsContainerHtmlElem.append(navBar.html)
+
+    let copyLinkButton = new CopyLinkButton(null, tagsStates);
+    questionsContainerHtmlElem.append(copyLinkButton.html)
+
     let filterCounterState = new FilterCounterState(0)
     let filterCounter = new FilterCounter(null, filterCounterState)
     questionsContainerHtmlElem.append(filterCounter.html)
@@ -398,14 +447,30 @@ async function processQuestionsContainers(questionsContainerHtmlElem, questionsJ
         let tagState = tagsStates[key]
         tagState.onEnabledChanged.push(onAnyTagStateChanged)
     }
-
 }
+
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    console.log('Query variable %s not found', variable);
+}
+
 async function processTags() {
+    await navigator.permissions.query({ name: "clipboard-write" })
+    let filter = getQueryVariable('filter')
+    if (filter) filter = JSON.parse(filter)
     let questionsContainers = document.getElementsByTagName('questions-container')
     for (let i = 0; i < questionsContainers.length; i++) {
         await processQuestionsContainers(
             questionsContainers[i],
-            questionsContainers[i].getAttribute('dataSource')
+            questionsContainers[i].getAttribute('dataSource'),
+            filter
         )
     }
 }
