@@ -358,32 +358,63 @@ class FilterCounter {
     }
 }
 
+function iosCopyToClipboard(el) {
+    var oldContentEditable = el.contentEditable,
+        oldReadOnly = el.readOnly,
+        range = document.createRange();
+
+    el.contentEditable = true;
+    el.readOnly = false;
+    range.selectNodeContents(el);
+
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(range);
+
+    el.setSelectionRange(0, 999999); // A big number, to cover anything that could be inside the element.
+
+    el.contentEditable = oldContentEditable;
+    el.readOnly = oldReadOnly;
+
+    document.execCommand('copy');
+}
+
+function CopyUrl(val) {
+}
+
 class CopyLinkButton {
     constructor(props, state) {
         this.tagsState = state
-        this.emoji = new Emoji("/assets/images/emojis/chain.png")
-        this.emoji.html.classList.add('copy-link-button-img')
-        this.emoji2 = new Emoji("/assets/images/emojis/chain.png")
-        this.emoji2.html.classList.add('copy-link-button-img')
-        this.text = new TagFilterText("Share selected")
+        this.textInput = document.createElement('input')
+        this.textInput.type = 'text'
+        this.textInput.classList.add('copy-link-input')
+        this.textInput.setAttribute('readonly', "")
+
+        const label = document.createElement('label')
+        label.classList.add('copy-link-label')
+        label.innerText = "Share selected tags:";
+        label.append(this.textInput)
 
         this.htmlElem = document.createElement('div');
         this.htmlElem.onclick = () => this.Click()
-        this.htmlElem.append(this.emoji.html)
-        this.htmlElem.append(this.text.html)
-        this.htmlElem.append(this.emoji2.html)
         this.htmlElem.classList.add('copy-link-button')
+        this.htmlElem.append(label)
 
         this.toast = document.createElement('div');
         this.toast.id = 'snackbar'
         this.toast.innerText = "Link copied to clipboard!"
 
         this.htmlElem.append(this.toast)
+
+        for (const key in this.tagsState) {
+            this.tagsState[key].onEnabledChanged.push(() => this.OnAnyTagChanged())
+        }
+        this.OnAnyTagChanged()
     }
     get html() {
         return this.htmlElem
     }
-    async Click() {
+    OnAnyTagChanged() {
         const filter = { tags: [] }
         for (let key in this.tagsState) {
             if (this.tagsState[key].enabled) {
@@ -391,14 +422,28 @@ class CopyLinkButton {
             }
         }
         const url = document.URL.split('?')[0]
-        const urlWithParams = url + '?' + 'filter=' + encodeURIComponent(JSON.stringify(filter))
-        console.log(urlWithParams)
-        await navigator.clipboard.writeText(urlWithParams)
-
-        this.toast.classList.add('show')
-        setTimeout(() => {
-            this.toast.classList.remove('show')
-        }, 3000);
+        let urlWithParams = url
+        if (filter.tags.length > 0) {
+            urlWithParams = url + '?' + 'filter=' + encodeURIComponent(JSON.stringify(filter))
+        }
+        this.textInput.value = urlWithParams;
+    }
+    async Click() {
+        const val = this.textInput.value
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(val).then(() => {
+                this.toast.classList.add('show')
+                setTimeout(() => {
+                    this.toast.classList.remove('show')
+                }, 3000);
+            }).catch(function () {
+                console.log("Failed to navigator.clipboard.writeText")
+            });
+        } else {
+            console.log("need fallback code")
+            iosCopyToClipboard(this.textInput);
+            // Here's where you put the fallback code for older browsers.
+        }
     }
 }
 
@@ -413,11 +458,11 @@ async function processQuestionsContainers(questionsContainerHtmlElem, questionsJ
         })
     }
 
-    let navBar = new TagNavBar({ tagsProps: tagsProps }, { tagsStates: tagsStates })
-    questionsContainerHtmlElem.append(navBar.html)
-
     let copyLinkButton = new CopyLinkButton(null, tagsStates);
     questionsContainerHtmlElem.append(copyLinkButton.html)
+
+    let navBar = new TagNavBar({ tagsProps: tagsProps }, { tagsStates: tagsStates })
+    questionsContainerHtmlElem.append(navBar.html)
 
     let filterCounterState = new FilterCounterState(0)
     let filterCounter = new FilterCounter(null, filterCounterState)
@@ -461,11 +506,13 @@ function getQueryVariable(variable) {
             return decodeURIComponent(pair[1]);
         }
     }
-    console.log('Query variable %s not found', variable);
 }
 
 async function processTags() {
-    await navigator.permissions.query({ name: "clipboard-write" })
+    if (navigator.permissions) {
+        navigator.permissions.query({ name: "clipboard-write" })
+            .then(() => console.log("Access to clipboard-write given"))
+    }
     let filter = getQueryVariable('filter')
     if (filter) filter = JSON.parse(filter)
     let questionsContainers = document.getElementsByTagName('questions-container')

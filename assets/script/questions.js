@@ -44,7 +44,7 @@ async function onFilterButtonClicked(event) {
         tag.enabled = !tag.enabled;
     }
     await loadQuestions()
-    hljs.highlightAll();
+    //hljs.highlightAll();
     await writeToLocalStore()
 }
 async function createNavBar(allTags) {
@@ -301,6 +301,6 @@ async function main() {
     if (isMobile()) {
         coffee.classList.add("mobile")
     }
-    hljs.highlightAll();
+    //hljs.highlightAll();
 }
 main()
