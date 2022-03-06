@@ -18,6 +18,23 @@
     display: flex;
     align-items: center;
 }
+.question-tag.unavailable {
+    border-color: #EEE;
+    color: #EEE;
+    /*display: none; */
+}
+.question-tag.unavailable img {
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(100%) opacity(30%); /* Microsoft Edge and Firefox 35+ */
+}
+.question-tag.unavailable .tag-filter-button-available-number p {
+    display: none;
+/*    background-color: transparent;
+    border-color: transparent;
+    color: transparent;*/
+}
+
 .question-tag-selected {
     color: white;
     background-color: black;

@@ -40,10 +40,12 @@ class TagFilterText {
 }
 
 class TagFilterButtonState {
-    constructor(tagId, enabled) {
+    constructor(tagId, enabled, visible) {
         this._enabled = enabled
         this.onEnabledChanged = []
         this.tagId = tagId
+        this._visible = visible
+        this.onVisibleChanged = []
     }
     get enabled() {
         return this._enabled
@@ -56,7 +58,18 @@ class TagFilterButtonState {
         for (let handler in this.onEnabledChanged) {
             this.onEnabledChanged[handler](old, this._enabled)
         }
+    }
+    get visible() {
+        return this._visible
+    }
+    set visible(val) {
+        if (val == this._visible) return
 
+        const old = this._visible
+        this._visible = val;
+        for (let handler in this.onVisibleChanged) {
+            this.onVisibleChanged[handler](old, this._visible)
+        }
     }
 }
 
@@ -123,6 +136,11 @@ class TagFilterButtonAvailableNumber {
                 clearInterval(this.interval)
             }
         }, 25);
+        if (newVal == 0) {
+            this.tagsState[this.tagId].visible = false
+        } else if (newVal > 0) {
+            this.tagsState[this.tagId].visible = true
+        }
     }
 }
 
@@ -143,9 +161,21 @@ class TagFilterButton {
         this.state = state.tagState
         this.state.onEnabledChanged.push((oldVal, newVal) => { this.OnEnabledChanged(oldVal, newVal) })
         this.OnEnabledChanged(null, this.state.enabled)
+
+
+        this.state.onVisibleChanged.push((oldVal, newVal) => { this.OnVisibilityChanged(oldVal, newVal)})
     }
     get html() {
         return this.htmlElem
+    }
+
+    OnVisibilityChanged(oldVal, newVal) {
+        if (newVal == true) {
+            this.htmlElem.classList.remove('unavailable')
+        }
+        else if (newVal == false) {
+            this.htmlElem.classList.add('unavailable')
+        }
     }
 
     OnEnabledChanged(oldVal, newVal) {
@@ -350,7 +380,7 @@ function createQuestionBlockFromPropsAndState(questionProps, tagsStates) {
 function createTagsStatesFromProps(tagsProps) {
     let tagsStates = {}
     for (let tagProp in tagsProps) {
-        tagsStates[tagProp] = new TagFilterButtonState(tagProp, false)
+        tagsStates[tagProp] = new TagFilterButtonState(tagProp, false, true)
     }
     return tagsStates
 }
