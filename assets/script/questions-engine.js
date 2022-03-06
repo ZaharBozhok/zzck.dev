@@ -1,3 +1,19 @@
+class BdManager {
+    constructor() {
+        this.bdHolder = {}
+    }
+    async getBd(path) {
+        if (path in this.bdHolder) {
+            return this.bdHolder[path];
+        } else {
+            this.bdHolder[path] = new Bd(await (await fetch(path)).json())
+            return this.bdHolder[path];
+        }
+    }
+}
+
+let bdManager = new BdManager()
+
 class Emoji {
     constructor(imgSrc) {
         this.imgSrc = imgSrc
@@ -44,10 +60,77 @@ class TagFilterButtonState {
     }
 }
 
+class TagFilterButtonAvailableNumber {
+    constructor(props, state) {
+        this.tagsState = state.tagsStates
+        this.dataSource = state.dataSource
+        this.tagId = props.tagId
+
+        this.htmlElem = document.createElement('div')
+        this.htmlElem.classList.add('tag-filter-button-available-number')
+
+        this.number = document.createElement('p')
+        this.number.innerText = '0'
+
+        this.htmlElem.append(this.number)
+
+        for (let key in this.tagsState) {
+            this.tagsState[key].onEnabledChanged.push(() => this.OnAnyFilterButtonChanged())//async not waited
+        }
+        this.OnAnyFilterButtonChanged() // async not waited
+    }
+    get html() {
+        return this.htmlElem
+    }
+    async OnAnyFilterButtonChanged() {
+        let bd = await bdManager.getBd(this.dataSource)
+        let questionsProps = bd.questionProps
+
+        // Enabled state
+        const enabledState = []
+        for (const key in this.tagsState) {
+            if (this.tagsState[key].enabled) {
+                enabledState.push(this.tagsState[key].tagId)
+            }
+        }
+        if(this.tagId in enabledState) {} else {
+            enabledState.push(this.tagId)
+        } 
+
+        let added = 0;
+        questionsProps.forEach(
+            (questionProp) => {
+                for (let i in enabledState) {
+                    const tagId = enabledState[i]
+                    const found = questionProp.questionTagsProps.find(tagProp => tagProp.tagId == tagId)
+                    if (!found) return;
+                }
+                added++;
+            }
+        )
+        this.updateState(parseInt(this.number.innerText), added);
+    }
+    updateState(oldVal, newVal) {
+        let i = 0;
+        let step = (newVal - oldVal) / 15
+        if (this.interval) clearInterval(this.interval)
+        this.interval = setInterval(() => {
+            if (i < 15) {
+                this.number.innerText = Math.round(oldVal + (step * (i + 1))).toString()
+                i++;
+            } else {
+                this.number.innerText = newVal.toString()
+                clearInterval(this.interval)
+            }
+        }, 25);
+    }
+}
+
 class TagFilterButton {
     constructor(props, state) {
         this.emoji = new Emoji(props.imgSrc)
         this.text = new TagFilterText(props.text)
+        this.number = new TagFilterButtonAvailableNumber({tagId: props.tagId}, {"tagsStates": state.tagsStates, "dataSource" : state.dataSource})
         this.tagId = props.tagId
 
         this.htmlElem = document.createElement('div');
@@ -55,8 +138,9 @@ class TagFilterButton {
         this.htmlElem.classList.add('question-tag', 'question-tag-nav');
         this.htmlElem.append(this.emoji.html)
         this.htmlElem.append(this.text.html)
+        this.htmlElem.append(this.number.html)
 
-        this.state = state
+        this.state = state.tagState
         this.state.onEnabledChanged.push((oldVal, newVal) => { this.OnEnabledChanged(oldVal, newVal) })
         this.OnEnabledChanged(null, this.state.enabled)
     }
@@ -103,7 +187,11 @@ class TagNavBar {
         this.clearButton = new TagFilterClearButton({ imgSrc: "/assets/images/emojis/cross-mark.png" }, state)
         this.tagFilterButtons = []
         for (let i in props.tagsProps) {
-            this.tagFilterButtons.push(new TagFilterButton(props.tagsProps[i], state.tagsStates[props.tagsProps[i].tagId]))
+            this.tagFilterButtons.push(new TagFilterButton(props.tagsProps[i], {
+                "tagState": state.tagsStates[props.tagsProps[i].tagId],
+                "tagsStates": state.tagsStates,
+                "dataSource": state.dataSource
+            }))
         }
 
         this.htmlElem = document.createElement('div')
@@ -192,6 +280,7 @@ class QuestionTag {
     }
 
 }
+
 
 class Bd {
     constructor(bd) {
@@ -447,8 +536,8 @@ class CopyLinkButton {
     }
 }
 
-async function processQuestionsContainers(questionsContainerHtmlElem, questionsJson, URIfilter) {
-    let bd = new Bd(await (await fetch(questionsJson)).json())
+async function processQuestionsContainers(questionsContainerHtmlElem, questionsJsonSource, URIfilter) {
+    let bd = await bdManager.getBd(questionsJsonSource)
 
     let tagsProps = bd.tagsProps;
     let tagsStates = createTagsStatesFromProps(tagsProps)
@@ -461,7 +550,7 @@ async function processQuestionsContainers(questionsContainerHtmlElem, questionsJ
     let copyLinkButton = new CopyLinkButton(null, tagsStates);
     questionsContainerHtmlElem.append(copyLinkButton.html)
 
-    let navBar = new TagNavBar({ tagsProps: tagsProps }, { tagsStates: tagsStates })
+    let navBar = new TagNavBar({ tagsProps: tagsProps }, { tagsStates: tagsStates, dataSource : questionsJsonSource })
     questionsContainerHtmlElem.append(navBar.html)
 
     let filterCounterState = new FilterCounterState(0)
@@ -511,7 +600,7 @@ function getQueryVariable(variable) {
 async function processTags() {
     if (navigator.permissions) {
         navigator.permissions.query({ name: "clipboard-write" })
-            .then(() => console.log("Access to clipboard-write given"))
+            .then(() => console.log("Access to clipboard-write approved"))
     }
     let filter = getQueryVariable('filter')
     if (filter) filter = JSON.parse(filter)

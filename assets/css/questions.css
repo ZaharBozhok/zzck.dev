@@ -159,6 +159,21 @@ img.copy-link-button-img {
     color: black
 }
 
+.tag-filter-button-available-number p {
+    background-color: black; /* Black background color */
+    color: white; /* White text color */
+    font-family: "Courier New", Courier, monospace;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 11pt;
+    padding-right: 3px;
+    padding-left: 3px;
+
+    vertical-align: middle;
+    text-align: center;
+    margin: 2px 2px;
+}
+
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
     visibility: hidden; /* Hidden by default. Visible on click */
