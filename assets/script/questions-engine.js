@@ -1,3 +1,9 @@
+
+function isMobile() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+        return true;
+    return false;
+}
 class BdManager {
     constructor() {
         this.bdHolder = {}
@@ -72,7 +78,6 @@ class TagFilterButtonState {
         }
     }
 }
-
 class TagFilterButtonAvailableNumber {
     constructor(props, state) {
         this.tagsState = state.tagsStates
@@ -106,9 +111,9 @@ class TagFilterButtonAvailableNumber {
                 enabledState.push(this.tagsState[key].tagId)
             }
         }
-        if(this.tagId in enabledState) {} else {
+        if (this.tagId in enabledState) { } else {
             enabledState.push(this.tagId)
-        } 
+        }
 
         let added = 0;
         questionsProps.forEach(
@@ -148,7 +153,7 @@ class TagFilterButton {
     constructor(props, state) {
         this.emoji = new Emoji(props.imgSrc)
         this.text = new TagFilterText(props.text)
-        this.number = new TagFilterButtonAvailableNumber({tagId: props.tagId}, {"tagsStates": state.tagsStates, "dataSource" : state.dataSource})
+        this.number = new TagFilterButtonAvailableNumber({ tagId: props.tagId }, { "tagsStates": state.tagsStates, "dataSource": state.dataSource })
         this.tagId = props.tagId
 
         this.htmlElem = document.createElement('div');
@@ -163,7 +168,7 @@ class TagFilterButton {
         this.OnEnabledChanged(null, this.state.enabled)
 
 
-        this.state.onVisibleChanged.push((oldVal, newVal) => { this.OnVisibilityChanged(oldVal, newVal)})
+        this.state.onVisibleChanged.push((oldVal, newVal) => { this.OnVisibilityChanged(oldVal, newVal) })
     }
     get html() {
         return this.htmlElem
@@ -311,7 +316,6 @@ class QuestionTag {
 
 }
 
-
 class Bd {
     constructor(bd) {
         this.bd = bd
@@ -335,7 +339,9 @@ class Bd {
                 questionTagsProps: [],
                 text: question['question'],
                 companies: question['companies'],
-                index: parseInt(index) + 1
+                index: parseInt(index) + 1,
+                urlEncodedCode: question['urlEncodedCode'],
+                godBoltcode: question['godBoltcode']
             }
             for (let index2 in question['tags']) {
                 const tag = question['tags'][index2]
@@ -351,6 +357,36 @@ class Bd {
 
 }
 
+class GodBoltCodeBlock {
+    constructor(props, state) {
+        this.htmlElem = document.createElement('div')
+        const encodedcode = props.godBoltcode
+        const count = (encodedcode.match(/%0A/g) || []).length;
+        const height = (21 * (count + 1)) + 200;
+        this.htmlElem.innerHTML = `<iframe loading="lazy" class="codeframe" height="${height}px"frameBorder="0" src="https://godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,source:'${encodedcode}'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:50,n:'0',o:'',s:0,t:'0'),(g:!((h:executor,i:(argsPanelShown:'1',compilationPanelShown:'0',compiler:g112,compilerOutShown:'0',execArgs:'',execStdin:'',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'',source:1,stdinPanelShown:'1',tree:'1',wrap:'1'),l:'5',n:'0',o:'Executor+x86-64+gcc+11.2+(C%2B%2B,+Editor+%231)',t:'0')),header:(),l:'4',m:50,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>`;
+    }
+    get html() {
+        return this.htmlElem
+    }
+}
+
+class HLJSCodeBlock {
+    constructor(props, state) {
+        this.htmlElem = document.createElement('div')
+        const encodedcode = props.urlEncodedCode
+        let elem = `<pre><code class="language-cpp">${decodeURIComponent(encodedcode)
+            .replace(/&/g, '&amp;')
+            .replace(/\</, '&lt;')
+            .replace(/\>/, '&gt;')
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;")
+            }</code></pre>`;
+        this.htmlElem.innerHTML = elem;
+    }
+    get html() {
+        return this.htmlElem
+    }
+}
 class QuestionBlock {
     constructor(props, state) {
         this.questionText = new QuestionText(props)
@@ -360,6 +396,19 @@ class QuestionBlock {
         this.htmlElem.classList.add('question-block');
         this.htmlElem.append(this.questionText.html)
         this.htmlElem.append(this.tagsBlock.html)
+
+        if (isMobile()) {
+            if (props["urlEncodedCode"]) {
+                const hljsCodeBlock = new HLJSCodeBlock(props)
+                this.htmlElem.append(hljsCodeBlock.html)
+            }
+        }
+        else {
+            if (props["godBoltcode"]) {
+                const godBolt = new GodBoltCodeBlock(props)
+                this.htmlElem.append(godBolt.html)
+            }
+        }
     }
     get html() {
         return this.htmlElem
@@ -580,7 +629,7 @@ async function processQuestionsContainers(questionsContainerHtmlElem, questionsJ
     let copyLinkButton = new CopyLinkButton(null, tagsStates);
     questionsContainerHtmlElem.append(copyLinkButton.html)
 
-    let navBar = new TagNavBar({ tagsProps: tagsProps }, { tagsStates: tagsStates, dataSource : questionsJsonSource })
+    let navBar = new TagNavBar({ tagsProps: tagsProps }, { tagsStates: tagsStates, dataSource: questionsJsonSource })
     questionsContainerHtmlElem.append(navBar.html)
 
     let filterCounterState = new FilterCounterState(0)
@@ -596,6 +645,7 @@ async function processQuestionsContainers(questionsContainerHtmlElem, questionsJ
             filterCounterState: filterCounterState
         })
     questionsContainerHtmlElem.append(questionsList.html)
+    if (hljs) hljs.highlightAll();
 
     const onAnyTagStateChanged = () => {
         questionsContainerHtmlElem.removeChild(questionsList.html)
@@ -608,6 +658,7 @@ async function processQuestionsContainers(questionsContainerHtmlElem, questionsJ
                 filterCounterState: filterCounterState
             })
         questionsContainerHtmlElem.append(questionsList.html)
+        if (hljs) hljs.highlightAll();
     }
 
     for (const key in tagsStates) {

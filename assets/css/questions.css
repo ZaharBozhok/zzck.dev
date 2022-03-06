@@ -29,10 +29,11 @@
     filter: grayscale(100%) opacity(30%); /* Microsoft Edge and Firefox 35+ */
 }
 .question-tag.unavailable .tag-filter-button-available-number p {
-    display: none;
-/*    background-color: transparent;
-    border-color: transparent;
-    color: transparent;*/
+    /*display: none;*/
+    /*visibility: hidden;*/
+    background-color: transparent;
+    border-color: #EEE;
+    color: #EEE;
 }
 
 .question-tag-selected {
@@ -189,6 +190,7 @@ img.copy-link-button-img {
     vertical-align: middle;
     text-align: center;
     margin: 2px 2px;
+    min-width: 30px;
 }
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
