@@ -3,8 +3,8 @@ layout: post
 title:  "C# Developer interview questions "
 date:   2022-01-21
 last_modified_at: 2022-03-04
-categories: [C++]
-tags: [C++,Interviewing,Puzzles,Questions]
+categories: [C#]
+tags: [C#,Interviewing,Puzzles,Questions, csharp]
 ---
 <link href="/assets/css/questions.css" rel="stylesheet" />
 <questions-container dataSource="/assets/data/csharp-questions/questions.json"></questions-container>
