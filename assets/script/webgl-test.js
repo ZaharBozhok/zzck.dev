@@ -8,12 +8,16 @@ let pageX = 0.0;
 let pageY = 0;
 
 function logMovement(event) {
-  pageX += event.movementX / 50.0 
+  pageX += event.movementX / 50.0
   pageY += event.movementY / 50.0
   console.log(pageX)
 }
 
 document.addEventListener('mousemove', logMovement);
+document.addEventListener("touchmove", e => {
+  pageX = e.touches[0].pageX / 50;
+  pageY = e.touches[0].pageY / 50;
+});
 
 //
 // Start here
@@ -125,13 +129,13 @@ function initBuffers(gl) {
       const radius = positions[it]
       const x = radius * Math.cos(degrees_to_radians(i));
       const y = radius * Math.sin(degrees_to_radians(i));
-      circles.push(positions[it+1], y, x)
+      circles.push(positions[it + 1], y, x)
     }
     for (let i = 0.0; i < 360.0; i += 360.0 / (2.0 * pointsPerHalfCirle)) {
       const radius = positions[it]
       const x = radius * Math.cos(degrees_to_radians(i));
       const y = radius * Math.sin(degrees_to_radians(i));
-      circles.push(-positions[it+1], y, x)
+      circles.push(-positions[it + 1], y, x)
     }
   }
   positions = positions.concat(circles)
