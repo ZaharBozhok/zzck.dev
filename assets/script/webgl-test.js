@@ -5,11 +5,11 @@ let pointsNumber = 0;
 main();
 
 let pageX = 0.0;
-let pageY = 0;
+let pageY = 0.0;
 
 function logMovement(event) {
-  pageX += event.movementX / 50.0
-  pageY += event.movementY / 50.0
+  pageY += event.movementX / 50.0
+  pageX += event.movementY / 50.0
 }
 
 document.addEventListener('mousemove', logMovement);
