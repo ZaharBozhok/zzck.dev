@@ -10,7 +10,6 @@ let pageY = 0;
 function logMovement(event) {
   pageX += event.movementX / 50.0
   pageY += event.movementY / 50.0
-  console.log(pageX)
 }
 
 document.addEventListener('mousemove', logMovement);
@@ -75,7 +74,19 @@ function main() {
 
   // Here's where we call the routine that builds all the
   // objects we'll be drawing.
-  const buffers = initBuffers(gl);
+  let halfPoints = 6;
+  let buffers = initBuffers(gl, halfPoints);
+  document.onkeydown =  e => {
+    gl.deleteBuffer(buffers.position)
+    if (e.key == 'ArrowDown') {
+      if (halfPoints > 1 ) halfPoints--;
+    }
+    else if (e.key == 'ArrowUp') {
+      halfPoints++;
+    }
+    const buf = initBuffers(gl, halfPoints)
+    buffers.position = buf.position
+  };
 
   // Draw the scene
   var then = 0;
@@ -97,7 +108,8 @@ function main() {
 // Initialize the buffers we'll need. For this demo, we just
 // have one object -- a simple two-dimensional square.
 //
-function initBuffers(gl) {
+
+function initBuffers(gl, pointsPerHalfCirle) {
 
   // Create a buffer for the square's positions.
 
@@ -115,7 +127,6 @@ function initBuffers(gl) {
     return degrees * (pi / 180);
   }
 
-  const pointsPerHalfCirle = 30.0
   let positions = []
   for (let i = 0.0; i < 180.0; i += 180.0 / pointsPerHalfCirle) {
     const radius = 2.0
@@ -139,6 +150,13 @@ function initBuffers(gl) {
     }
   }
   positions = positions.concat(circles)
+
+  for(let i = 0.0; i<10.0; i+=0.2)
+  {
+    positions.push(i, 0.0, 0.0)
+    positions.push(0.0, i, 0.0)
+    positions.push(0.0, 0.0, i)
+  }
 
   pointsNumber = positions.length / 3;
 
