@@ -27,10 +27,10 @@ class Circle {
 class HalfCircle {
   constructor(radius, pointsPerHalfCirle) {
     this.halfCircle = []
-    for (let i = 0.0; i < 180.0; i += 180.0 / pointsPerHalfCirle) {
+    for (let i = 0.0; i <= 180.0; i += 180.0 / pointsPerHalfCirle) {
       const x = radius * Math.cos(degrees_to_radians(i));
       const y = radius * Math.sin(degrees_to_radians(i));
-      this.halfCircle.push(new MyPoint(x, y, 0));
+      this.halfCircle.push(new MyPoint(y, x, 0));
     }
   }
   get points() {
@@ -112,7 +112,7 @@ function main() {
 
   const fsSource = `
     void main() {
-      gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+      gl_FragColor = vec4(0.1, 0.3, 0.9, 100);
     }
   `;
 
@@ -187,7 +187,7 @@ function initBuffers(gl, pointsPerHalfCirle) {
   const simpleArrayPoints = []
   pointsNumber = 0;
   let sphere = new Sphere(2.0, pointsPerHalfCirle * 2);
-  for (let circleI = 0; circleI < sphere.circles.length - 4; circleI++) {
+  for (let circleI = 0; circleI < sphere.circles.length - 1; circleI++) {
     const circle = sphere.circles[circleI];
     const nextCircle = sphere.circles[circleI + 1]
     for (let circlePointI = 0; circlePointI < circle.points.length - 1; circlePointI++) {
@@ -197,9 +197,7 @@ function initBuffers(gl, pointsPerHalfCirle) {
         const nextCirclePoint = nextCircle.points[circlePointI]
         const triangle = [thisCirclePoint, thisCircleNextPoint, nextCirclePoint]
         triangle.forEach(p => simpleArrayPoints.push(p.x, p.y, p.z))
-        pointsNumber++;
-        pointsNumber++;
-        pointsNumber++;
+        pointsNumber+=3;
       }
       {
         const thisCircleNextPoint = circle.points[circlePointI + 1]
@@ -207,10 +205,26 @@ function initBuffers(gl, pointsPerHalfCirle) {
         const nextCircleNextPoint = nextCircle.points[circlePointI + 1]
         const triangle = [thisCircleNextPoint, nextCirclePoint, nextCircleNextPoint]
         triangle.forEach(p => simpleArrayPoints.push(p.x, p.y, p.z))
-        pointsNumber++;
-        pointsNumber++;
-        pointsNumber++;
+        pointsNumber+=3;
       }
+    }
+    {
+      const last = circle.points.length - 1
+      const thisCirclePoint = circle.points[0]
+      const thisCircleNextPoint = circle.points[last]
+      const nextCirclePoint = nextCircle.points[0]
+      const triangle = [thisCirclePoint, thisCircleNextPoint, nextCirclePoint]
+      triangle.forEach(p => simpleArrayPoints.push(p.x, p.y, p.z))
+      pointsNumber+=3;
+    }
+    {
+      const last = circle.points.length - 1;
+      const thisCircleNextPoint = circle.points[last]
+      const nextCirclePoint = nextCircle.points[last]
+      const nextCircleNextPoint = nextCircle.points[0]
+      const triangle = [thisCircleNextPoint, nextCirclePoint, nextCircleNextPoint]
+      triangle.forEach(p => simpleArrayPoints.push(p.x, p.y, p.z))
+      pointsNumber+=3;
     }
   }
   //pointsNumber;
