@@ -1,3 +1,65 @@
+class MyPoint {
+  constructor(x, y, z) {
+    this.x = x;
+    this.y = y;
+    this.z = z;
+  }
+}
+
+function degrees_to_radians(degrees) {
+  var pi = Math.PI;
+  return degrees * (pi / 180);
+}
+
+class Circle {
+  constructor(radius, pointsPerCirle, move) {
+    this.circle = []
+    for (let i = 0.0; i < 360.0; i += 360.0 / pointsPerCirle) {
+      const x = radius * Math.cos(degrees_to_radians(i));
+      const y = radius * Math.sin(degrees_to_radians(i));
+      this.circle.push(new MyPoint(move, y, x))
+    }
+  }
+  get points() {
+    return this.circle;
+  }
+}
+class HalfCircle {
+  constructor(radius, pointsPerHalfCirle) {
+    this.halfCircle = []
+    for (let i = 0.0; i < 180.0; i += 180.0 / pointsPerHalfCirle) {
+      const x = radius * Math.cos(degrees_to_radians(i));
+      const y = radius * Math.sin(degrees_to_radians(i));
+      this.halfCircle.push(new MyPoint(x, y, 0));
+    }
+  }
+  get points() {
+    return this.halfCircle
+  }
+}
+
+class Sphere {
+  constructor(radius, pointsPerCirle) {
+    let halfCircle = new HalfCircle(radius, pointsPerCirle / 2);
+    this.circles = []
+    for (let i = 0; i < halfCircle.points.length; i++) {
+      this.circles.push(new Circle(halfCircle.points[i].x, pointsPerCirle, halfCircle.points[i].y))
+    }
+    //for (let i = 0; i < halfCircle.points.length; i++) {
+    //  this.circles.push(new Circle(halfCircle.points[i].x, pointsPerCirle, -halfCircle.points[i].y))
+    //}
+  }
+  get points() {
+    let pts = []
+    this.circles.forEach(
+      circle => pts = pts.concat(circle.points)
+    )
+    return pts;
+  }
+}
+
+
+
 let mat4 = glMatrix.mat4
 var rotation = 0.0;
 
@@ -76,10 +138,10 @@ function main() {
   // objects we'll be drawing.
   let halfPoints = 6;
   let buffers = initBuffers(gl, halfPoints);
-  document.onkeydown =  e => {
+  document.onkeydown = e => {
     gl.deleteBuffer(buffers.position)
     if (e.key == 'ArrowDown') {
-      if (halfPoints > 1 ) halfPoints--;
+      if (halfPoints > 1) halfPoints--;
     }
     else if (e.key == 'ArrowUp') {
       halfPoints++;
@@ -122,50 +184,44 @@ function initBuffers(gl, pointsPerHalfCirle) {
 
   // Now create an array of positions for the square.
 
-  function degrees_to_radians(degrees) {
-    var pi = Math.PI;
-    return degrees * (pi / 180);
-  }
-
-  let positions = []
-  for (let i = 0.0; i < 180.0; i += 180.0 / pointsPerHalfCirle) {
-    const radius = 2.0
-    const x = radius * Math.cos(degrees_to_radians(i));
-    const y = radius * Math.sin(degrees_to_radians(i));
-    positions.push(x, y, 0)
-  }
-  let circles = []
-  for (let it = 0; it < positions.length; it += 3) {
-    for (let i = 0.0; i < 360.0; i += 360.0 / (2.0 * pointsPerHalfCirle)) {
-      const radius = positions[it]
-      const x = radius * Math.cos(degrees_to_radians(i));
-      const y = radius * Math.sin(degrees_to_radians(i));
-      circles.push(positions[it + 1], y, x)
+  const simpleArrayPoints = []
+  pointsNumber = 0;
+  let sphere = new Sphere(2.0, pointsPerHalfCirle * 2);
+  for (let circleI = 0; circleI < sphere.circles.length - 4; circleI++) {
+    const circle = sphere.circles[circleI];
+    const nextCircle = sphere.circles[circleI + 1]
+    for (let circlePointI = 0; circlePointI < circle.points.length - 1; circlePointI++) {
+      {
+        const thisCirclePoint = circle.points[circlePointI]
+        const thisCircleNextPoint = circle.points[circlePointI + 1]
+        const nextCirclePoint = nextCircle.points[circlePointI]
+        const triangle = [thisCirclePoint, thisCircleNextPoint, nextCirclePoint]
+        triangle.forEach(p => simpleArrayPoints.push(p.x, p.y, p.z))
+        pointsNumber++;
+        pointsNumber++;
+        pointsNumber++;
+      }
+      {
+        const thisCircleNextPoint = circle.points[circlePointI + 1]
+        const nextCirclePoint = nextCircle.points[circlePointI]
+        const nextCircleNextPoint = nextCircle.points[circlePointI + 1]
+        const triangle = [thisCircleNextPoint, nextCirclePoint, nextCircleNextPoint]
+        triangle.forEach(p => simpleArrayPoints.push(p.x, p.y, p.z))
+        pointsNumber++;
+        pointsNumber++;
+        pointsNumber++;
+      }
     }
-    for (let i = 0.0; i < 360.0; i += 360.0 / (2.0 * pointsPerHalfCirle)) {
-      const radius = positions[it]
-      const x = radius * Math.cos(degrees_to_radians(i));
-      const y = radius * Math.sin(degrees_to_radians(i));
-      circles.push(-positions[it + 1], y, x)
-    }
   }
-  positions = positions.concat(circles)
+  //pointsNumber;
 
-  for(let i = 0.0; i<10.0; i+=0.2)
-  {
-    positions.push(i, 0.0, 0.0)
-    positions.push(0.0, i, 0.0)
-    positions.push(0.0, 0.0, i)
-  }
-
-  pointsNumber = positions.length / 3;
 
   // Now pass the list of positions into WebGL to build the
   // shape. We do this by creating a Float32Array from the
   // JavaScript array, then use it to fill the current buffer.
 
   gl.bufferData(gl.ARRAY_BUFFER,
-    new Float32Array(positions),
+    new Float32Array(simpleArrayPoints),
     gl.STATIC_DRAW);
 
   return {
@@ -264,7 +320,7 @@ function drawScene(gl, programInfo, buffers, deltaTime) {
 
   {
     const offset = 0;
-    gl.drawArrays(gl.POINTS, offset, pointsNumber);
+    gl.drawArrays(gl.TRIANGLES, offset, pointsNumber);
   }
   rotation += deltaTime;
 }
