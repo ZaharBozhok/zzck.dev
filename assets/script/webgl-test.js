@@ -112,7 +112,7 @@ function main() {
 
   const fsSource = `
     void main() {
-      gl_FragColor = vec4(0.1, 0.3, 0.9, 100);
+      gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }
   `;
 
@@ -334,7 +334,7 @@ function drawScene(gl, programInfo, buffers, deltaTime) {
 
   {
     const offset = 0;
-    gl.drawArrays(gl.TRIANGLES, offset, pointsNumber);
+    gl.drawArrays(gl.LINES, offset, pointsNumber);
   }
   rotation += deltaTime;
 }
