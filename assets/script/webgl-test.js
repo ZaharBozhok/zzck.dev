@@ -4,6 +4,9 @@ class MyPoint {
     this.y = y;
     this.z = z;
   }
+  get arr() {
+    return [this.x, this.y, this.z]
+  }
 }
 
 function degrees_to_radians(degrees) {
@@ -38,6 +41,16 @@ class HalfCircle {
   }
 }
 
+class MyTriangle {
+  constructor(a, b, c) {
+    this.a = a;
+    this.b = b;
+    this.c = c;
+  }
+  get points() {
+    return [this.a, this.b, this.c]
+  }
+}
 class Sphere {
   constructor(radius, pointsPerCirle) {
     let halfCircle = new HalfCircle(radius, pointsPerCirle / 2);
@@ -45,9 +58,6 @@ class Sphere {
     for (let i = 0; i < halfCircle.points.length; i++) {
       this.circles.push(new Circle(halfCircle.points[i].x, pointsPerCirle, halfCircle.points[i].y))
     }
-    //for (let i = 0; i < halfCircle.points.length; i++) {
-    //  this.circles.push(new Circle(halfCircle.points[i].x, pointsPerCirle, -halfCircle.points[i].y))
-    //}
   }
   get points() {
     let pts = []
@@ -55,6 +65,53 @@ class Sphere {
       circle => pts = pts.concat(circle.points)
     )
     return pts;
+  }
+  get polygons() {
+    let triangles = []
+    for (let circleI = 0; circleI < this.circles.length - 1; circleI++) {
+      const circle = this.circles[circleI];
+      const nextCircle = this.circles[circleI + 1]
+      for (let circlePointI = 0; circlePointI < circle.points.length - 1; circlePointI++) {
+        triangles.push(new MyTriangle(
+          circle.points[circlePointI],
+          circle.points[circlePointI + 1],
+          nextCircle.points[circlePointI])
+        )
+        triangles.push(new MyTriangle(
+          circle.points[circlePointI + 1],
+          nextCircle.points[circlePointI],
+          nextCircle.points[circlePointI + 1])
+        )
+      }
+      {
+        const last = circle.points.length - 1
+        triangles.push(new MyTriangle(
+          circle.points[0],
+          circle.points[last],
+          nextCircle.points[0]
+        )
+        )
+      }
+      {
+        const last = circle.points.length - 1;
+        triangles.push(new MyTriangle(
+          circle.points[last],
+          nextCircle.points[last],
+          nextCircle.points[0]
+        )
+        )
+      }
+    }
+    return triangles
+  }
+  get glArray() {
+    let simpleArrayPoints = []
+    this.polygons.forEach(triangle => {
+      triangle.points.forEach(point => {
+        simpleArrayPoints.push(...point.arr)
+      })
+    })
+    return simpleArrayPoints
   }
 }
 
@@ -97,22 +154,31 @@ function main() {
   // Vertex shader program
 
   const vsSource = `
+    precision mediump int;
+    precision mediump float;
     attribute vec4 aVertexPosition;
 
     uniform mat4 uModelViewMatrix;
     uniform mat4 uProjectionMatrix;
+    attribute vec3 a_Color;
+    varying vec4 v_vertex_color;
 
     void main() {
       gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
       gl_PointSize = 3.0;
+      v_vertex_color = vec4(a_Color, 1.0);
     }
   `;
 
   // Fragment shader program
 
   const fsSource = `
+  precision mediump int;
+  precision mediump float;
+  varying vec4 v_vertex_color;
+
     void main() {
-      gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+      gl_FragColor = v_vertex_color;
     }
   `;
 
@@ -127,6 +193,7 @@ function main() {
     program: shaderProgram,
     attribLocations: {
       vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
+      fragmentColor: gl.getAttribLocation(shaderProgram, 'a_Color'),
     },
     uniformLocations: {
       projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
@@ -148,6 +215,7 @@ function main() {
     }
     const buf = initBuffers(gl, halfPoints)
     buffers.position = buf.position
+    buffers.color = buf.color
   };
 
   // Draw the scene
@@ -184,51 +252,8 @@ function initBuffers(gl, pointsPerHalfCirle) {
 
   // Now create an array of positions for the square.
 
-  const simpleArrayPoints = []
-  pointsNumber = 0;
-  let sphere = new Sphere(2.0, pointsPerHalfCirle * 2);
-  for (let circleI = 0; circleI < sphere.circles.length - 1; circleI++) {
-    const circle = sphere.circles[circleI];
-    const nextCircle = sphere.circles[circleI + 1]
-    for (let circlePointI = 0; circlePointI < circle.points.length - 1; circlePointI++) {
-      {
-        const thisCirclePoint = circle.points[circlePointI]
-        const thisCircleNextPoint = circle.points[circlePointI + 1]
-        const nextCirclePoint = nextCircle.points[circlePointI]
-        const triangle = [thisCirclePoint, thisCircleNextPoint, nextCirclePoint]
-        triangle.forEach(p => simpleArrayPoints.push(p.x, p.y, p.z))
-        pointsNumber+=3;
-      }
-      {
-        const thisCircleNextPoint = circle.points[circlePointI + 1]
-        const nextCirclePoint = nextCircle.points[circlePointI]
-        const nextCircleNextPoint = nextCircle.points[circlePointI + 1]
-        const triangle = [thisCircleNextPoint, nextCirclePoint, nextCircleNextPoint]
-        triangle.forEach(p => simpleArrayPoints.push(p.x, p.y, p.z))
-        pointsNumber+=3;
-      }
-    }
-    {
-      const last = circle.points.length - 1
-      const thisCirclePoint = circle.points[0]
-      const thisCircleNextPoint = circle.points[last]
-      const nextCirclePoint = nextCircle.points[0]
-      const triangle = [thisCirclePoint, thisCircleNextPoint, nextCirclePoint]
-      triangle.forEach(p => simpleArrayPoints.push(p.x, p.y, p.z))
-      pointsNumber+=3;
-    }
-    {
-      const last = circle.points.length - 1;
-      const thisCircleNextPoint = circle.points[last]
-      const nextCirclePoint = nextCircle.points[last]
-      const nextCircleNextPoint = nextCircle.points[0]
-      const triangle = [thisCircleNextPoint, nextCirclePoint, nextCircleNextPoint]
-      triangle.forEach(p => simpleArrayPoints.push(p.x, p.y, p.z))
-      pointsNumber+=3;
-    }
-  }
-  //pointsNumber;
-
+  const simpleArrayPoints = new Sphere(2.0, pointsPerHalfCirle * 2).glArray
+  pointsNumber = simpleArrayPoints.length / 3;
 
   // Now pass the list of positions into WebGL to build the
   // shape. We do this by creating a Float32Array from the
@@ -238,8 +263,15 @@ function initBuffers(gl, pointsPerHalfCirle) {
     new Float32Array(simpleArrayPoints),
     gl.STATIC_DRAW);
 
+  const colorBuffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+  gl.bufferData(gl.ARRAY_BUFFER,
+    new Float32Array([255.0, 25.0, 1.0]),
+    gl.STATIC_DRAW);
+
   return {
     position: positionBuffer,
+    color: colorBuffer
   };
 }
 
@@ -316,6 +348,18 @@ function drawScene(gl, programInfo, buffers, deltaTime) {
     gl.enableVertexAttribArray(
       programInfo.attribLocations.vertexPosition);
   }
+  {
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffers.position);
+    gl.vertexAttribPointer(
+      programInfo.attribLocations.fragmentColor,
+      3,
+      gl.FLOAT,
+      false,
+      0,
+      0);
+    gl.enableVertexAttribArray(
+      programInfo.attribLocations.fragmentColor);
+  }
 
   // Tell WebGL to use our program when drawing
 
@@ -334,7 +378,7 @@ function drawScene(gl, programInfo, buffers, deltaTime) {
 
   {
     const offset = 0;
-    gl.drawArrays(gl.LINES, offset, pointsNumber);
+    gl.drawArrays(gl.TRIANGLES, offset, pointsNumber);
   }
   rotation += deltaTime;
 }
