@@ -57,9 +57,10 @@ class AddLineError(Exception):
         super().__init__(self.message)
 
     def handle(self, processedStreets, failedStreets):
-        print("Handling AddLineError:")
+        print("Handling  AddLineError:")
         self.adder.color = 'red'
-        pprint.pprint(f"Adder lines ({self.adder.color}):")
+        circled = " and circled" if e.adder.circled() else ""
+        pprint.pprint(f"Adder lines ({self.adder.color}){circled}:")
         pprint.pprint(self.adder.lines)
         failedStreets.append(self.adder)
         processedStreets.pop(self.adder.streetUuid)
@@ -70,6 +71,27 @@ class AddLineError(Exception):
         pprint.pprint(failedLineStreet.lines)
         failedStreets.append(failedLineStreet)
 
+class ForeverRotationError(Exception):
+    def __init__(self, rotator: 'Street', line: 'Line') -> None:
+        self.line = line
+        self.rotator = rotator
+        self.message = f'Street {rotator.streetUuid} is forever rotated'
+        super().__init__(self.message)
+
+    def handle(self, processedStreets, failedStreets):
+        print("Handling  ForeverRotationError:")
+        self.rotator.color = 'red'
+        circled = " and circled" if e.rotator.circled() else ""
+        pprint.pprint(f"Rotator lines ({self.rotator.color}){circled}:")
+        pprint.pprint(self.rotator.lines)
+        failedStreets.append(self.rotator)
+        processedStreets.pop(self.rotator.streetUuid)
+
+        failedLineStreet = Street(FAILED_LINE_STREET, [self.line])
+        failedLineStreet.color = 'black'
+        pprint.pprint(f"Troublesome line ({failedLineStreet.color}):")
+        pprint.pprint(failedLineStreet.lines)
+        failedStreets.append(failedLineStreet)
 
 def unit_vector(vector):
     """ Returns the unit vector of the vector.  """
@@ -186,15 +208,34 @@ class Street:
         self.lines = []
         for line in lines:
             self.addLine(line)
+    
+    def circled(self) -> bool:
+        if len(lines) < 3:
+            return False
+        if self.lines[0].start == self.lines[-1].end:
+            return True
+    
+    def rotateCircle(self):
+        first = self.lines[0]
+        self.lines.pop(0)
+        self.lines.append(first)
 
     def addLine(self, line) -> None:
+        if len(self.lines) == 0:
+            self.lines.append(line)
+            line.street = self
+            return
         """
             '_' - not important for the example.
             Adds line to the street. But in a smart way.
         """
-        if len(self.lines) == 0:
-            self.lines.append(line)
-        elif self.lines[0].start == line.end:
+        if self.lines[0].start == line.start or self.lines[-1].end == line.end:
+            """
+                Check two cases below before.
+                This step just flips the line if it's needed.
+            """
+            line.flip()
+        if self.lines[0].start == line.end:
             """
                 Case 1.
                 line = (a,b)----(c,d) 
@@ -212,30 +253,24 @@ class Street:
                 self = (_,_)--...--(a,b)----(c,d)
             """
             self.lines.append(line)
-        elif self.lines[0].start == line.start:
+        elif self.circled():
             """
                 Case 3.
-                line = (c,d)----(a,b) 
-                self = (c,d)--...--(_,_)
-                    -> flip line ->
-                line = (a,b)----(c,d) 
-                self = (c,d)--...--(_,_)
-                    -> Case 1.
+                a--b b--c
+                     |  |
+                     e--f 
+                self = f--e--b--c, f = start, c = end
+                line = a--b
+                'b' needs to be either start or end, so rotate the circle till 'b' becomes either start or end.
+                P.S. In order not to rotate forever, we check if the circle rotated less than len(self.lines) times.
             """
-            line.flip()
-            self.lines.insert(0, line)
-        elif self.lines[-1].end == line.end:
-            """
-                Case 4.
-                line = (c,d)----(a,b) 
-                self = (_,_)--...--(a,b)
-                    -> flip line ->
-                line = (a,b)----(c,d) 
-                self = (_,_)--...--(a,b)
-                    -> Case 2.
-            """
-            line.flip()
-            self.lines.append(line)
+            rotateCounter = 0
+            while not (self.lines[0].start == line.end or self.lines[0].start == line.start):
+                self.rotateCircle()
+                rotateCounter += 1
+                if rotateCounter > len(self.lines):
+                    raise ForeverRotationError(self, line)
+            self.addLine(line)
         else:
             raise AddLineError(self, line)
         """ Take ownership of the line. """
@@ -467,4 +502,6 @@ if __name__ == '__main__':
 
         e.eatee.color = 'red'
         print(f"Eatee ({e.eater.color}): {e.eatee.color}")
+    except ForeverRotationError as e:
+        e.handle(streets, failedStreets)
     drawingAndSavingImages(streets, failedStreets, pathToInitialImage, pathToImage)
