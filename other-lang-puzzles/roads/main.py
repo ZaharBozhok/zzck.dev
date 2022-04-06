@@ -5,6 +5,7 @@ import numpy as np
 from matplotlib import pyplot as p
 import math
 import random
+import sys
 
 
 class UuidGenerator:
@@ -19,6 +20,7 @@ class UuidGenerator:
     def getUuid(self):
         self.counter += 1
         return self.counter
+
 
 """
     For easy debugging created special FAILED_LINE_STREET where I place troublesome lines.
@@ -38,6 +40,7 @@ LINE_STYLES = [
     'dotted'
 ]
 
+
 class EatingError(Exception):
     def __init__(self, eater: 'Street', eatee: 'Street') -> None:
         self.message = f'{eater.streetUuid} cannot eat {eatee.streetUuid}'
@@ -52,6 +55,20 @@ class AddLineError(Exception):
         self.adder = adder
         self.line = line
         super().__init__(self.message)
+
+    def handle(self, processedStreets, failedStreets):
+        print("Handling AddLineError:")
+        self.adder.color = 'red'
+        pprint.pprint(f"Adder lines ({self.adder.color}):")
+        pprint.pprint(self.adder.lines)
+        failedStreets.append(self.adder)
+        processedStreets.pop(self.adder.streetUuid)
+
+        failedLineStreet = Street(FAILED_LINE_STREET, [self.line])
+        failedLineStreet.color = 'black'
+        pprint.pprint(f"Troublesome line ({failedLineStreet.color}):")
+        pprint.pprint(failedLineStreet.lines)
+        failedStreets.append(failedLineStreet)
 
 
 def unit_vector(vector):
@@ -113,7 +130,7 @@ class Line:
 class VectorFromLine:
     """
         Returns the vector from the basePoint to the point of the line.
-        
+
         |  _. ('point' aka (width,height) is local to vector)
         |  /|
         | /
@@ -151,6 +168,7 @@ class TwoVectors:
         self.vector1 = v1
         self.vector2 = v2
         self.angle = angle_between_vectors(v1.point, v2.point)
+
 
 @dataclass
 class Street:
@@ -224,6 +242,9 @@ class Street:
         line.street = self
 
     def eat(self, another) -> None:
+        """
+            Takes ownership of another street's lines.
+        """
         assert self != another
 
         selfStart = self.lines[0].start
@@ -234,6 +255,12 @@ class Street:
 
         try:
             if selfStart == anotherStartA or selfStart == anotherStartB or selfEnd == anotherStartA or selfEnd == anotherStartB:
+                """
+                    Here we check if the streets are connected.
+                    And how should we 'eat' other street, from the start or from the end.
+                    If another street connected with current street from the start, we should eat it from the start.
+                    Otherwise, we should eat it from the end.
+                """
                 for line in another.lines:
                     self.addLine(line)
             else:
@@ -245,6 +272,9 @@ class Street:
             raise EatingError(self, another)
 
     def getXY(self):
+        """
+            Returns the list of all points that are on the street, convenient for matplotlib.
+        """
         x = []
         y = []
         for line in self.lines:
@@ -255,14 +285,14 @@ class Street:
         return x, y
 
 
-def getPairWithReachestAngle(vectors):
+def getPairWithShallowestAngle(vectors):
     assert len(vectors) > 1
     maxPair = None
     for iv in range(len(vectors)):
         for jv in range(iv + 1, len(vectors)):
-            currPair = TwoVectors(vectors[iv], vectors[jv])
-            if maxPair is None or currPair.angle > maxPair.angle:
-                maxPair = currPair
+            currentPair = TwoVectors(vectors[iv], vectors[jv])
+            if maxPair is None or currentPair.angle > maxPair.angle:
+                maxPair = currentPair
     return maxPair
 
 
@@ -280,6 +310,14 @@ def getLinesFromShapeFile(shapeFilePath):
 
 
 def getCrossroadsFromLines(lines):
+    """
+        Crossroads are the points with at least one line connected.
+        1. Crossroad with one line     .___
+        2. Crossroad with two lines ___.___
+                                         |
+        3. Crossroad with three lines ___.___
+        etc.
+    """
     crossroads = dict()
     for line in lines:
         start = line.start
@@ -296,6 +334,12 @@ def getCrossroadsFromLines(lines):
 
 
 def getVectorsFromCrossroad(crossroadPoint, lines):
+    """
+        Converts connected lines to crossroad point to a list of vectors.
+                   ^
+                  /
+        Like <---.------->
+    """
     vectors = []
     for line in lines:
         lStart = line.start
@@ -306,111 +350,121 @@ def getVectorsFromCrossroad(crossroadPoint, lines):
         vectors.append(VectorFromLine(lStart, lEnd, line, crossroadPoint))
     return vectors
 
+def drawingAndSavingImages(streets, failedStreets, pathToInitialImage, pathToImage):
+    figure = p.gcf()
+    figure.set_size_inches(10, 10)
+
+    if pathToInitialImage:
+        for line in lines:
+            xs = [line.start[0], line.end[0]]
+            ys = [line.start[1], line.end[1]]
+            p.plot(xs, ys)
+        p.savefig(pathToInitialImage, dpi=300)
+        p.show(block=False)
+        p.clf()
+
+    for streetUuid, street in streets.items():
+        x, y = street.getXY()
+        p.plot(x, y, linestyle=random.choice(LINE_STYLES))
+
+    if len(failedStreets) > 0:
+        print(f"Failed streets: {len(failedStreets)}")
+        for failedStreet in failedStreets:
+            x, y = failedStreet.getXY()
+            p.plot(x, y, color=failedStreet.color)
+
+    if pathToImage:
+        p.savefig(pathToImage, dpi=300)
+
+    figure.set_size_inches(8, 8)
+    p.show()
+
+
+def processArgs():
+    pathToShapeFile = None
+    pathToImage = None
+    pathToInitialImage = None
+    if len(sys.argv) < 2:
+        print("Usage: python3 main.py <shapeFilePath> <?outputImageFilePath> <?initialImageFilePath>")
+        exit(0)
+    if len(sys.argv) >= 2:
+        pathToShapeFile = sys.argv[1]
+    if len(sys.argv) >= 3:
+        pathToImage = sys.argv[2]
+    if len(sys.argv) >= 4:
+        pathToInitialImage = sys.argv[3]
+    return pathToShapeFile, pathToImage, pathToInitialImage
 
 if __name__ == '__main__':
     streetUuidGenerator = UuidGenerator()
 
-    processedLinesPlot = p
+    pathToShapeFile, pathToImage, pathToInitialImage = processArgs()
 
+    lines = getLinesFromShapeFile(pathToShapeFile)
+    crossroads = getCrossroadsFromLines(lines)
+    streets = dict()
+    failedStreets = []
+
+    def UnassignedLine(l): return l.street == None
+
+    def BothLinesAreNotAssignedToStreets(
+        l1, l2): return l1.street == None and l2.street == None
+
+    def FirstNotAssignedSecondAssigned(
+        l1, l2): return l1.street == None and l2.street != None
+
+    def BothLinesAreAssignedAndDifferent(
+        l1, l2): return l1.street != None and l2.street != None and l1.street != l2.street
+
+    def OneAssignedAnotherUnassigned(l1, l2): return FirstNotAssignedSecondAssigned(
+        l1, l2) or FirstNotAssignedSecondAssigned(l2, l1)
+
+    """
+        Iterates all crossroads :
+            Then gets vectors from crossroad.
+            Get shallowest vector pair until there are < 1 vectors left :
+                a. If both are unassigned to streets, then creates a street.
+                b. If one is unassigned and another is assigned to a street, then adds the line to the already assigned streat.
+                c. If both are assigned to different streets, then tries to eat the other street. (Eat - append other's lines to the street)
+                Remove 2 processed vectors.
+            If one vector left and it is unassigned, then create a street for a lone line.
+    """
     try:
-        lines = getLinesFromShapeFile('shapes/roads.shp')
-        crossroads = getCrossroadsFromLines(lines)
-        streets = dict()
-
         for point, lineSet in crossroads.items():
             vectors = getVectorsFromCrossroad(point, lineSet)
             while len(vectors) > 1:
-                pair = getPairWithReachestAngle(vectors)
-                l1 = pair.vector1.line
-                l2 = pair.vector2.line
+                pair = getPairWithShallowestAngle(vectors)
+                l1, l2 = pair.vector1.line, pair.vector2.line
                 assert l1 is not l2
-                if l1.street is None and l2.street is None:
+                if BothLinesAreNotAssignedToStreets(l1, l2):
                     streetUuid = streetUuidGenerator.getUuid()
                     assert streets.get(streetUuid) is None
-                    streets[streetUuid] = Street(
-                        streetUuid, [l1, l2])
-                elif l1.street is None and l2.street is not None:
+                    streets[streetUuid] = Street(streetUuid, [l1, l2])
+                elif OneAssignedAnotherUnassigned(l1, l2):
+                    assignedLine = l1 if l1.street is not None else l2
+                    unassignedLine = l1 if l1.street is None else l2
                     try:
-                        l2.street.addLine(l1)
+                        assignedLine.street.addLine(unassignedLine)
                     except AddLineError as e:
-                        streetUuid = FAILED_LINE_STREET
-                        if streets.get(streetUuid) is None:
-                            streets[streetUuid] = Street(
-                                streetUuid, [e.line])
-                        else:
-                            streets[streetUuid].addLine(e.line)
-                        streets[streetUuid].color = 'black'
-                        print("Adding to black street, case 1")
-                        pass
-                elif l1.street is not None and l2.street is None:
-                    try:
-                        l1.street.addLine(l2)
-                    except AddLineError as e:
-                        streetUuid = FAILED_LINE_STREET
-                        if streets.get(streetUuid) is None:
-                            streets[streetUuid] = Street(
-                                streetUuid, [e.line])
-                        else:
-                            streets[streetUuid].addLine(e.line)
-                        streets[streetUuid].color = 'black'
-                        print("Adding to black street, case 2")
-                        pass
-                elif l1.street is not None and l2.street is not None:
-                    if l1.street == l2.street:
-                        print("possible circling, ingore for now")
-                        l1.street.color = 'black'
-                    else:
-                        uuidToRemove = l2.street.streetUuid
-                        l1.street.eat(l2.street)
-                        try:
-                            streets.pop(uuidToRemove)
-                            pass
-                        except Exception as e:
-                            print(e)
+                        e.handle(streets, failedStreets)
+                elif BothLinesAreAssignedAndDifferent(l1, l2):
+                    uuidToRemove = l2.street.streetUuid
+                    l1.street.eat(l2.street)
+                    assert streets.get(uuidToRemove) is not None
+                    streets.pop(uuidToRemove)
                 vectors.remove(pair.vector1)
                 vectors.remove(pair.vector2)
             if len(vectors) == 1:
                 aloneLine = vectors[0].line
-                if (aloneLine.street is not None):
-                    vectors.clear()
-                else:
+                if UnassignedLine(aloneLine):
                     streetUuid = streetUuidGenerator.getUuid()
-                    if streets.get(streetUuid) is None:
-                        streets[streetUuid] = Street(
-                            streetUuid, [vectors[0].line])
-                    else:
-                        raise Exception("shoyldm't be this way")
-                    vectors.clear()
+                    streets[streetUuid] = Street(streetUuid, [vectors[0].line]) 
     except AddLineError as e:
-        e.adder.color = 'red'
-        print("adder:")
-        pprint.pprint(e.adder.lines)
-
-        streetUuid = FAILED_LINE_STREET
-        if streets.get(streetUuid) is None:
-            streets[streetUuid] = Street(streetUuid, [e.line])
-        else:
-            streets[streetUuid].addLine(e.line)
-        streets[streetUuid].color = 'black'
-        print("line:")
-        pprint.pprint(e.line)
+        e.handle(streets, failedStreets)
     except EatingError as e:
         e.eater.color = 'black'
-        print("eater:")
-        pprint.pprint(e.eater.lines)
+        print(f"Eater ({e.eater.color}): {e.eater.lines}")
+
         e.eatee.color = 'red'
-        print("eatee:")
-        pprint.pprint(e.eatee.lines)
-    for streetUuid, street in streets.items():
-        if street.color is None:
-            x, y = street.getXY()
-            processedLinesPlot.plot(
-                x, y, label=f"Street #{streetUuid}", linestyle=random.choice(LINE_STYLES))
-        else:
-            x, y = street.getXY()
-            processedLinesPlot.plot(
-                x, y, label=f"Street #{streetUuid}", color=street.color, linewidth=2)
-    figure = p.gcf()
-    figure.set_size_inches(8, 8)
-    p.savefig('out/initial-lines-100dpi.png', dpi=100)
-    p.show()
+        print(f"Eatee ({e.eater.color}): {e.eatee.color}")
+    drawingAndSavingImages(streets, failedStreets, pathToInitialImage, pathToImage)
