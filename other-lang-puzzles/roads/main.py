@@ -1,0 +1,416 @@
+from dataclasses import dataclass
+import fiona
+import pprint
+import numpy as np
+from matplotlib import pyplot as p
+import math
+import random
+
+
+class UuidGenerator:
+    """
+    It can use default uuid generator which will give streets unique ids aka names,
+        but for debugging purposes it is better to use a counter
+    """
+
+    def __init__(self):
+        self.counter = 0
+
+    def getUuid(self):
+        self.counter += 1
+        return self.counter
+
+"""
+    For easy debugging created special FAILED_LINE_STREET where I place troublesome lines.
+    Then a I draw them with black color.
+"""
+FAILED_LINE_STREET = 'failed_line_street'
+
+"""
+    Sometimes during drawing streets are drawn the same color even if they colors are chosen randomly.
+    So I added LINE_STYLES to choose random style. 
+    Lines will differ visually even if colors are occasionally the same.
+"""
+LINE_STYLES = [
+    'solid',
+    'dashed',
+    'dashdot',
+    'dotted'
+]
+
+class EatingError(Exception):
+    def __init__(self, eater: 'Street', eatee: 'Street') -> None:
+        self.message = f'{eater.streetUuid} cannot eat {eatee.streetUuid}'
+        self.eater = eater
+        self.eatee = eatee
+        super().__init__(self.message)
+
+
+class AddLineError(Exception):
+    def __init__(self, adder: 'Street', line: 'Line') -> None:
+        self.message = f'error adding line {line} to {adder.streetUuid}'
+        self.adder = adder
+        self.line = line
+        super().__init__(self.message)
+
+
+def unit_vector(vector):
+    """ Returns the unit vector of the vector.  """
+    return vector / np.linalg.norm(vector)
+
+
+def angle_between_vectors(v1, v2):
+    """ 
+        Returns the angle in degrees between vectors 'v1' and 'v2'::
+        But it will not return broader than 180 degrees.
+    """
+    v1_u = unit_vector(v1)
+    v2_u = unit_vector(v2)
+    degrees = math.degrees(np.arccos(np.clip(np.dot(v1_u, v2_u), -1.0, 1.0)))
+    if degrees > 180:
+        degrees = 360 - degrees
+    return degrees
+
+
+@dataclass
+class Line:
+    """
+        start - start point of the line (x,y)
+        end - end point of the line (x,y)
+        street - reference to Street object, by default None
+    """
+    start: tuple
+    end: tuple
+    street = None
+
+    def __hash__(self) -> int:
+        """
+            For this implementation it's convenient to have the same hash of lines like ((x1,y1),(x2,y2)) or ((x2,y2),(x1,y1))
+            Because sometimes in my algo I 'flip' the line to add it to street more easily.
+        """
+        if (self.start > self.end):
+            return hash((self.start, self.end))
+        else:
+            return hash((self.end, self.start))
+
+    def __eq__(self, other) -> bool:
+        """
+            Reason same as is in __hash__.
+            I.e. lines ((x1,y1),(x2,y2)) and ((x2,y2),(x1,y1)) are equal.
+        """
+        if self.start == other.start and self.end == other.end or self.start == other.end and self.end == other.start:
+            return True
+
+    def flip(self):
+        """
+            Flips the line.
+            I.e. ((x1,y1),(x2,y2)) becomes ((x2,y2),(x1,y1))
+        """
+        self.start, self.end = self.end, self.start
+
+
+@dataclass
+class VectorFromLine:
+    """
+        Returns the vector from the basePoint to the point of the line.
+        
+        |  _. ('point' aka (width,height) is local to vector)
+        |  /|
+        | /
+        |/_______
+        ^
+        ('basePoint' is absolute coordinate)
+
+    """
+    point: tuple
+    line: Line
+    basePoint: tuple
+
+    def __init__(self, start, end, line, basePoint) -> None:
+        self.point = (end[0] - start[0], end[1] - start[1])
+        self.line = line
+        self.basePoint = basePoint
+
+
+@dataclass
+class TwoVectors:
+    """
+        Convenient method to store the angle between pair of vectors.
+        Between v1 and v2 vectors
+
+         (v2)._  |  _.(v1)
+             |\  |  /|
+               \ | /
+            ____\|/____
+    """
+    vector1: VectorFromLine
+    vector2: VectorFromLine
+    angle: float
+
+    def __init__(self, v1, v2) -> None:
+        self.vector1 = v1
+        self.vector2 = v2
+        self.angle = angle_between_vectors(v1.point, v2.point)
+
+@dataclass
+class Street:
+    """
+        Holds references to lines that are connected to this street. I.e. owns them.
+        streetUuid - unique id of the street, aka name
+        color - for convenient work with matplotlib
+    """
+    lines: list
+    streetUuid = None
+    color = None
+
+    def __init__(self, streetUuid, lines) -> None:
+        self.streetUuid = streetUuid
+        self.lines = []
+        for line in lines:
+            self.addLine(line)
+
+    def addLine(self, line) -> None:
+        """
+            '_' - not important for the example.
+            Adds line to the street. But in a smart way.
+        """
+        if len(self.lines) == 0:
+            self.lines.append(line)
+        elif self.lines[0].start == line.end:
+            """
+                Case 1.
+                line = (a,b)----(c,d) 
+                self = (c,d)--...--(_,_)
+                    -> prepending line to self.lines ->
+                self = (a,b)----(c,d)---...---(_,_)
+            """
+            self.lines.insert(0, line)
+        elif self.lines[-1].end == line.start:
+            """
+                Case 2.
+                line = (a,b)----(c,d) 
+                self = (_,_)--...--(a,b)
+                    -> appending line to self.lines ->
+                self = (_,_)--...--(a,b)----(c,d)
+            """
+            self.lines.append(line)
+        elif self.lines[0].start == line.start:
+            """
+                Case 3.
+                line = (c,d)----(a,b) 
+                self = (c,d)--...--(_,_)
+                    -> flip line ->
+                line = (a,b)----(c,d) 
+                self = (c,d)--...--(_,_)
+                    -> Case 1.
+            """
+            line.flip()
+            self.lines.insert(0, line)
+        elif self.lines[-1].end == line.end:
+            """
+                Case 4.
+                line = (c,d)----(a,b) 
+                self = (_,_)--...--(a,b)
+                    -> flip line ->
+                line = (a,b)----(c,d) 
+                self = (_,_)--...--(a,b)
+                    -> Case 2.
+            """
+            line.flip()
+            self.lines.append(line)
+        else:
+            raise AddLineError(self, line)
+        """ Take ownership of the line. """
+        line.street = self
+
+    def eat(self, another) -> None:
+        assert self != another
+
+        selfStart = self.lines[0].start
+        selfEnd = self.lines[-1].end
+
+        anotherStartA = another.lines[0].start
+        anotherStartB = another.lines[0].end
+
+        try:
+            if selfStart == anotherStartA or selfStart == anotherStartB or selfEnd == anotherStartA or selfEnd == anotherStartB:
+                for line in another.lines:
+                    self.addLine(line)
+            else:
+                for line in reversed(another.lines):
+                    self.addLine(line)
+        except AddLineError as e:
+            print("Trouble line:")
+            pprint.pprint(e.line)
+            raise EatingError(self, another)
+
+    def getXY(self):
+        x = []
+        y = []
+        for line in self.lines:
+            x.append(line.start[0])
+            x.append(line.end[0])
+            y.append(line.start[1])
+            y.append(line.end[1])
+        return x, y
+
+
+def getPairWithReachestAngle(vectors):
+    assert len(vectors) > 1
+    maxPair = None
+    for iv in range(len(vectors)):
+        for jv in range(iv + 1, len(vectors)):
+            currPair = TwoVectors(vectors[iv], vectors[jv])
+            if maxPair is None or currPair.angle > maxPair.angle:
+                maxPair = currPair
+    return maxPair
+
+
+def getLinesFromShapeFile(shapeFilePath):
+    with fiona.open(shapeFilePath, "r") as source:
+        lines = []
+        for f in source:
+            coords = f['geometry']['coordinates']
+            for i in range(len(coords) - 1):
+                start = (coords[i][0], coords[i][1])
+                end = (coords[i+1][0], coords[i+1][1])
+                l = Line(start, end)
+                lines.append(l)
+    return lines
+
+
+def getCrossroadsFromLines(lines):
+    crossroads = dict()
+    for line in lines:
+        start = line.start
+        if crossroads.get(start) == None:
+            crossroads[start] = set([line])
+        else:
+            crossroads[start].add(line)
+        end = line.end
+        if crossroads.get(end) == None:
+            crossroads[end] = set([line])
+        else:
+            crossroads[end].add(line)
+    return crossroads
+
+
+def getVectorsFromCrossroad(crossroadPoint, lines):
+    vectors = []
+    for line in lines:
+        lStart = line.start
+        lEnd = line.end
+        if line.end == point:
+            lStart = line.end
+            lEnd = line.start
+        vectors.append(VectorFromLine(lStart, lEnd, line, crossroadPoint))
+    return vectors
+
+
+if __name__ == '__main__':
+    streetUuidGenerator = UuidGenerator()
+
+    processedLinesPlot = p
+
+    try:
+        lines = getLinesFromShapeFile('shapes/roads.shp')
+        crossroads = getCrossroadsFromLines(lines)
+        streets = dict()
+
+        for point, lineSet in crossroads.items():
+            vectors = getVectorsFromCrossroad(point, lineSet)
+            while len(vectors) > 1:
+                pair = getPairWithReachestAngle(vectors)
+                l1 = pair.vector1.line
+                l2 = pair.vector2.line
+                assert l1 is not l2
+                if l1.street is None and l2.street is None:
+                    streetUuid = streetUuidGenerator.getUuid()
+                    assert streets.get(streetUuid) is None
+                    streets[streetUuid] = Street(
+                        streetUuid, [l1, l2])
+                elif l1.street is None and l2.street is not None:
+                    try:
+                        l2.street.addLine(l1)
+                    except AddLineError as e:
+                        streetUuid = FAILED_LINE_STREET
+                        if streets.get(streetUuid) is None:
+                            streets[streetUuid] = Street(
+                                streetUuid, [e.line])
+                        else:
+                            streets[streetUuid].addLine(e.line)
+                        streets[streetUuid].color = 'black'
+                        print("Adding to black street, case 1")
+                        pass
+                elif l1.street is not None and l2.street is None:
+                    try:
+                        l1.street.addLine(l2)
+                    except AddLineError as e:
+                        streetUuid = FAILED_LINE_STREET
+                        if streets.get(streetUuid) is None:
+                            streets[streetUuid] = Street(
+                                streetUuid, [e.line])
+                        else:
+                            streets[streetUuid].addLine(e.line)
+                        streets[streetUuid].color = 'black'
+                        print("Adding to black street, case 2")
+                        pass
+                elif l1.street is not None and l2.street is not None:
+                    if l1.street == l2.street:
+                        print("possible circling, ingore for now")
+                        l1.street.color = 'black'
+                    else:
+                        uuidToRemove = l2.street.streetUuid
+                        l1.street.eat(l2.street)
+                        try:
+                            streets.pop(uuidToRemove)
+                            pass
+                        except Exception as e:
+                            print(e)
+                vectors.remove(pair.vector1)
+                vectors.remove(pair.vector2)
+            if len(vectors) == 1:
+                aloneLine = vectors[0].line
+                if (aloneLine.street is not None):
+                    vectors.clear()
+                else:
+                    streetUuid = streetUuidGenerator.getUuid()
+                    if streets.get(streetUuid) is None:
+                        streets[streetUuid] = Street(
+                            streetUuid, [vectors[0].line])
+                    else:
+                        raise Exception("shoyldm't be this way")
+                    vectors.clear()
+    except AddLineError as e:
+        e.adder.color = 'red'
+        print("adder:")
+        pprint.pprint(e.adder.lines)
+
+        streetUuid = FAILED_LINE_STREET
+        if streets.get(streetUuid) is None:
+            streets[streetUuid] = Street(streetUuid, [e.line])
+        else:
+            streets[streetUuid].addLine(e.line)
+        streets[streetUuid].color = 'black'
+        print("line:")
+        pprint.pprint(e.line)
+    except EatingError as e:
+        e.eater.color = 'black'
+        print("eater:")
+        pprint.pprint(e.eater.lines)
+        e.eatee.color = 'red'
+        print("eatee:")
+        pprint.pprint(e.eatee.lines)
+    for streetUuid, street in streets.items():
+        if street.color is None:
+            x, y = street.getXY()
+            processedLinesPlot.plot(
+                x, y, label=f"Street #{streetUuid}", linestyle=random.choice(LINE_STYLES))
+        else:
+            x, y = street.getXY()
+            processedLinesPlot.plot(
+                x, y, label=f"Street #{streetUuid}", color=street.color, linewidth=2)
+    figure = p.gcf()
+    figure.set_size_inches(8, 8)
+    p.savefig('out/initial-lines-100dpi.png', dpi=100)
+    p.show()
