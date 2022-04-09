@@ -6,6 +6,7 @@ last_modified_at: 2021-08-20
 categories: [C++]
 tags: [C++,Inheritance,Virtual Table,Virtual Functions,gdb]
 ---
+look https://shaharmike.com/cpp/vtable-part1/
 
 <details>
   <summary>Environment</summary>
