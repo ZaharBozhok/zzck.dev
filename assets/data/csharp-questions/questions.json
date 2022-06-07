@@ -47,6 +47,9 @@
         },
         "entity framework": {
             "emoji": "eff"
+        },
+        "screening": {
+            "emoji": "writing"
         }
     },
     "questions": [
@@ -3083,6 +3086,144 @@
                     "salary_min": 3000,
                     "salary_max": 3500,
                     "got_offer": "no"
+                }
+            ]
+        },
+        {
+            "question": "Write%20a%20function%3A%20%0A%0A%20%20%20%20class%20Solution%20%7B%20public%20string%20solution%28string%20S%2C%20string%20T%29%3B%20%7D%0A%0Athat%20given%20two%20string%20S%20and%20T%20consisting%20of%20N%20and%20M%20characters%2C%20respectively%2C%20%0A%0Adetermines%20whether%20string%20T%20can%20be%20obtained%20from%20string%20S%20by%20at%20most%20one%20simple%20operation%0A%0Afrom%20the%20set%20specified%20below.%20%0A%0A%0AThe%20function%20should%20return%20a%20string%3A%20%0A%0A%22INSERT%20c%22%20if%20string%20T%20can%20be%20obtained%20from%20string%20S%20by%20inserting%20a%20single%20character%20%22c%22%3B%0A%0A%22REPLACE%20c%20d%22%20if%20sting%20T%20can%20be%20obtained%20from%20string%20S%20by%20replacing%20a%20single%20occurrence%20of%20character%20%22c%22%20with%20a%20single%20character%20%22d%22%20%28these%20characters%20should%20be%20distinct%29%3B%0A%0A%22SWAP%20c%20d%22%20if%20string%20T%20can%20be%20obtained%20from%20string%20S%20by%20swapping%20two%20adjacent%20%20characters%20%22c%22%20and%20%22d%22%20%28these%20characters%20should%20be%20distinct%20and%20in%20the%20order%20as%20is%20sting%20S%20exactly%20one%20swap%20is%20performed%29%3B%0A%0A%22EQUAL%22%20if%20no%20operation%20is%20needed%20%28strings%20T%20and%20S%20are%20equal%29%3B%0A%0A%22IMPOSSIBLE%22%20if%20none%20of%20the%20above%20works.%20%0A%0A%0ANote%20that%20by%20characters%20%22c%22%20and%20%22d%22%20from%20the%20operation%20above%2C%20we%20mean%20any%20English%20alphabet%0A%0Alowercase%20letters.%20%0A%0AFor%20example%3A%20%0A%0Agiven%20S%20%3D%20%22nice%22%20and%20T%20%3D%20%22niece%22%2C%20the%20function%20should%20return%20%22INSERT%20e%22%3B%0A%0Agiven%20S%20%3D%20%22test%22%20and%20T%20%3D%20%27tent%27%2C%20the%20function%20%20should%20return%20%22REPLACE%20s%20n%22%3B%0A%0Agiven%20S%20%3D%20%22form%22%20and%20T%20%3D%20%27from%27%2C%20the%20function%20should%20return%20%22SWAP%20o%20r%22%3B%0A%0Agiven%20S%20%3D%20%22o%22%20and%20T%20%3D%20%22odd%22%2C%20the%20function%20should%20return%20%22IMPOSSIBLE%22.%0A%0A%0AAssume%20that%3A%0A%0A%20%20%20%20N%20and%20M%20are%20integers%20within%20the%20range%20%5B1..100%5D%3B%0A%0A%20%20%20%20string%20S%20can%20contain%20any%20character%0A%0A%20%20%20%20sting%20T%20can%20contain%20any%20character%0A%0A%20%20%20In%20your%20solution%2C%20focus%20on%20correctness.%20The%20performance%20of%20your%20solution%20will%20not%20be%20the%20focus%20of%20the%20assessment.",
+            "tags": [
+                "screening"
+            ],
+            "companies": [
+                {
+                    "name": "BLISCORE",
+                    "salary_min": 2500
+                }
+            ]
+        },
+        {
+            "question": "Write a method with 2 params (int[], int) for example: ([1,2,3,4],5) expected result: 1,4 or 2,3. Method have to find any combination of numbers from array sum of which will be second param.",
+            "tags": [
+                "problem solving"
+            ],
+            "companies": [
+                {
+                    "name": "PROXET",
+                    "salary_min": 2500
+                }
+            ]
+        },
+        {
+            "question": "Write a method with 2 params (int[], int) for example: ([1,2,3,4],5) expected result: 1,4 or 2,3. Method have to find any combination of numbers from array sum of which will be second param.",
+            "tags": [
+                "problem solving"
+            ],
+            "companies": [
+                {
+                    "name": "PROXET",
+                    "salary_min": 2500
+                }
+            ]
+        },
+        {
+            "question":"In which cases you should throw exceptions?",
+            "tags": [
+                "general"
+            ],
+            "companies": [
+                {
+                    "name": "PROXET",
+                    "salary_min": 2500
+                },
+                {
+                    "name": "BLISCORE",
+                    "salary_min": 2500
+                }
+            ]
+        },
+        {
+            "question": "How to log all request with special header?",
+            "tags": [
+                "asp.net"
+            ],
+            "companies": [
+                {
+                    "name": "PROXET",
+                    "salary_min": 2500
+                }
+            ]
+        },
+        {
+            "question": "What will happen if we will not execute next in middleware?",
+            "tags": [
+                "asp.net"
+            ],
+            "companies": [
+                {
+                    "name": "PROXET",
+                    "salary_min": 2500
+                }
+            ]
+        },
+        {
+            "question" : "Which types can be used for PK? Which types should we use for it? Which problems can occur if we used GUID as PK?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "PROXET",
+                    "salary_min": 2500
+                }
+            ]
+        },
+        {
+            "question" : "What is cluster index?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "PROXET",
+                    "salary_min": 2500
+                }
+            ]
+        },
+        {
+            "question" : "What is filtered index?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "PROXET",
+                    "salary_min": 2500
+                }
+            ]
+        },
+        {
+            "question" : "How to make uniqueness check for multiple fields?",
+            "tags": [
+                "db"
+            ],
+            "companies": [
+                {
+                    "name": "PROXET",
+                    "salary_min": 2500
+                }
+            ]
+        },
+        {
+            "question" : "For many ot many relation how to get entity without related in SQL and EF? For example: Author without books ",
+            "tags": [
+                "db",
+                "problem solving",
+                "entity framework"
+            ],
+            "companies": [
+                {
+                    "name": "PROXET",
+                    "salary_min": 2500
                 }
             ]
         }
