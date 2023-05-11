@@ -86,6 +86,9 @@
         },
         "devops" : {
             "emoji": "file-cabinet"
+        },
+        "data-structures" : {
+            "emoji": "file-cabinet"
         }
     },
     "questions": [
@@ -213,7 +216,7 @@
             ]
         },
         {
-            "question": "What are unit tests, integration tests and autotests?",
+            "question": "What are unit tests, integration tests and autotests? What frameworks do you know?",
             "tags" : [
                 "general",
                 "testing",
@@ -603,7 +606,173 @@
             ]
         },
         {
-            "question" : ""
+            "question" : "What is UML diagrams? What is sequence diagram, class diagram, state diagram, activity diagram, etc.?",
+            "tags" : [
+                "general",
+                "senior",
+                "architecture",
+                "design"
+            ]
+        },
+        {
+            "question" : "What data structures do you know? What is array, linked list, stack, queue, hash table, tree, graph? Which to use in which case? What is complexity of operations?",
+            "tags" : [
+                "general",
+                "junior",
+                "middle",
+                "senior",
+                "data-structures"
+            ]
+        },
+        {
+            "question" : "What standard algorithms do you know? What is sorting, searching, etc.?",
+            "tags" : [
+                "general",
+                "junior",
+                "middle",
+                "senior",
+                "algorithms"
+            ]
+        },
+        {
+            "question" : "What is Big O notation? What is O(1), O(log n), O(n), O(n log n), O(n^2), O(2^n), O(n!), etc.?",
+            "tags" : [
+                "general",
+                "junior",
+                "middle",
+                "senior",
+                "algorithms"
+            ]
+        },
+        {
+            "question" : "What is core dump? What is segmentation fault? What is stack overflow? What is memory leak?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "debugging"
+            ]
+        },
+        {
+            "question" : "Compiling vs Interpreting vs JIT-compiling vs AOT-compiling vs Transpiling? What is LLVM? What is bytecode? What is assembly?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question" : "What is exception? What is try-catch? What is finally block?",
+            "tags" : [
+                "general",
+                "junior",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question" : "What is decorator, closure, lambda, generator, iterator, coroutine, object, class, metaclass, list comprehension, context manager, 'with' statement?",
+            "tags" : [
+                "general",
+                "junior",
+                "middle",
+                "senior",
+                "python"
+            ]
+        },
+        {
+            "question" : "What is json, xml, yaml, etc.? What is serialization? What is deserialization?",
+            "tags" : [
+                "general",
+                "junior",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question" : "What is OSI model? What is TCP/IP model? What is TCP, UDP, IP, HTTP, HTTPS, FTP, DNS, DHCP, gRPC, websockets, SSH?",
+            "tags": [
+                "general",
+                "junior",
+                "middle",
+                "senior",
+                "networking"
+            ]
+        },
+        {
+            "question" : "What is REST? What is REST API? What is HTTP methods? What is HTTP status codes? What is SOAP?",
+            "tags": [
+                "general",
+                "junior",
+                "middle",
+                "senior",
+                "networking",
+                "design"
+            ]
+        },
+        {
+            "question" : "What is API authentication? What is JWT, OAuth, OpenID, SAML, etc.?",
+            "tags": [
+                "general",
+                "junior",
+                "middle",
+                "senior",
+                "networking",
+                "security"
+            ]
+        },
+        {
+            "question" : "Packaging and distribution. How to create a package/library? How to distribute it? What is PyPI, npm, etc.?",
+            "tags": [
+                "general",
+                "junior",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question" : "Did you use Jupiter Notebook? What is it?",
+            "tags" : [
+                "general",
+                "junior",
+                "middle",
+                "senior",
+                "python"
+            ]
+        },
+        {
+            "question" : "Did you use Github Copilot, ChatGPT, Intellisense, etc.? What is it?",
+            "tags" : [
+                "general",
+                "junior",
+                "middle",
+                "senior",
+                "ai"
+            ]
+        },
+        {
+            "question" : "Common vulnerabilities and attacks. What is XSS, CSRF, SQL injection, etc.?",
+            "tags" : [
+                "middle",
+                "senior",
+                "security"
+            ]
+        },
+        {
+            "question" : "What is symmetric encryption? What is asymmetric encryption? What is hashing? What is salt? What is key derivation function? What is key stretching? What is key exchange? What is digital signature? What is certificate? What is certificate authority? What is TLS/SSL? What is HTTPS? What is PKI? What is SSH? What is PGP? What is AES, RSA, SHA, etc.?",
+            "tags" : [
+                "middle",
+                "senior",
+                "security"
+            ]
+        },
+        {
+            "question" : "How to store passwords in database? What is bcrypt, scrypt, PBKDF2, etc.?",
+            "tags" : [
+                "middle",
+                "senior",
+                "security"
+            ]
         }
     ]
 }
