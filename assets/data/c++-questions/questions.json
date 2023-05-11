@@ -2555,6 +2555,13 @@
                 "algorithmic",
                 "funny/trick"
             ]
+        },
+        {
+            "question": "Design a parking system. Parking system has 2 interfaces, on prem and web.",
+            "tags": [
+                "design/architecture",
+                "open question"
+            ]
         }
     ]
 }

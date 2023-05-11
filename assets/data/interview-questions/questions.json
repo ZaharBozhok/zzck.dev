@@ -1,0 +1,609 @@
+{
+    "tags": {
+        "general": {
+            "emoji": "open-hands"
+        },
+        "concurrency": {
+            "emoji": "bomb"
+        },
+        "data structures": {
+            "emoji": "microscope"
+        },
+        "management" : {
+            "emoji" : "ninja"
+        },
+        "algorithmic": {
+            "emoji": "ninja"
+        },
+        "open question": {
+            "emoji": "thinking-face"
+        },
+        "testing": {
+            "emoji": "thinking-face"
+        },
+        "OS": {
+            "emoji": "desktop-computer"
+        },
+        "design": {
+            "emoji": "building-construction"
+        },
+        "architecture" : {
+            "emoji": "building-construction"
+        },
+        "technologies": {
+            "emoji": "technologist"
+        },
+        "best practice": {
+            "emoji": "thumbs-up"
+        },
+        "hardware": {
+            "emoji": "gear"
+        },
+        "networking": {
+            "emoji": "satellite-antenna"
+        },
+        "interop": {
+            "emoji": "handshake"
+        },
+        "security": {
+            "emoji": "locked"
+        },
+        "web": {
+            "emoji": "globe-with-meridians"
+        },
+        "contains code": {
+            "emoji": "person-lifting-weights"
+        },
+        "tools": {
+            "emoji": "hammer-and-wrench"
+        },
+        "linux": {
+            "emoji": "penguin"
+        },
+        "debugging": {
+            "emoji": "cockroach"
+        },
+        "problem solving": {
+            "emoji": "thought-balloon"
+        },
+        "DB": {
+            "emoji": "file-cabinet"
+        },
+        "python" : {
+            "emoji": "file-cabinet"
+        },
+        "softskills": {
+            "emoji": "speak-no-evil-monkey"
+        },
+        "senior" : {
+            "emoji": "file-cabinet"
+        },
+        "middle" : {
+            "emoji": "file-cabinet"
+        },
+        "junior" : {
+            "emoji": "file-cabinet"
+        },
+        "devops" : {
+            "emoji": "file-cabinet"
+        }
+    },
+    "questions": [
+        {
+            "question": "Describe the situation where you had a disagreement with your manager or colleague. How did you handle it?",
+            "tags": [
+                "softskills"
+            ]
+        },
+        {
+            "question": "How to you handle tight deadline or pressure at work? For example, you have to deliver a project in 2 weeks, but you know it will take 3 weeks to complete, what do you do?",
+            "tags": [
+                "softskills"
+            ]
+        },
+        {
+            "question": "Can you give an example of when you had to communicate complex technical to a non-technical stakeholder?",
+            "tags": [
+                "softskills"
+            ]
+        },
+        {
+            "question": "Tell me about a time when you had to adapt to new technology or process?",
+            "tags": [
+                "softskills"
+            ]
+        },
+        {
+            "question": "How do you approach problem solving? Can you provide an example of a difficult problem you've solved?",
+            "tags": [
+                "softskills"
+            ]
+        },
+        {
+            "question": "How to you handle constructive criticism? Can you provide an example of how you've used feedback to improve your work?",
+            "tags": [
+                "softskills"
+            ]
+        },
+        {
+            "question": "What steps do you take to build relationships with team members during remote work?",
+            "tags": [
+                "softskills"
+            ]
+        },
+        {
+            "question": "Describe the situation where you took initiative or demonstrated leadership?",
+            "tags": [
+                "softskills"
+            ]
+        },
+        {
+            "question": "What is OOP? What is Polymorphism, Inheritance, Encapsulation? What other paradigms do you know?",
+            "tags": [
+                "general"
+            ]
+        },
+        {
+            "question": "What principles of software engineering do you know? What is SOLID, DRY, KISS, YAGNI, Dependency Injection, Inversion of Control?",
+            "tags": [
+                "general",
+                "best practice",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question": "What is SDLC? What stages do you know? What is SDL?",
+            "tags": [
+                "general",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question": "Do you have experience with Python frameworks? What frameworks do you know? What is Django, Flask?",
+            "tags": [
+                "general",
+                "technologies",
+                "python"
+            ]
+        },
+        {
+            "question": "Do you know what are GoF patterns? What patterns do you know? What is (take any for question or ask to explain some) Singleton, Factory, Builder, Adapter, Decorator, Proxy, Observer, Strategy, Template Method?",
+            "tags": [
+                "general",
+                "design",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question": "What architectural patterns do you know? What is MVC, MVP, MVVM, CQRS, Event Sourcing, Microservices, SOA, Monolith?",
+            "tags": [
+                "general",
+                "architecture",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question": "What is layered architecture and what layers do you know? What is Presentation, Business, Data Access, Infrastructure layers?",
+            "tags": [
+                "general",
+                "architecture",
+                "senior"
+            ]
+        },
+        {
+            "question" : "What is hexagonal architecture? What is Ports and Adapters? What is Onion architecture?",
+            "tags" : [
+                "general",
+                "architecture",
+                "senior"
+            ]
+        },
+        {
+            "question" : "What tools do you know for debugging? How would you classify them? What is debugger, profiler, tracer, linter, code formatter, code coverage, etc. ?",
+            "tags" : [
+                "general",
+                "debugging",
+                "tools",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question": "What are unit tests, integration tests and autotests?",
+            "tags" : [
+                "general",
+                "testing",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question": "What is functional, regression, smoke, performance, load, stress, security, usability, acceptance, A/B, black box, white box, grey box, manual, automated testing?",
+            "tags" : [
+                "general",
+                "testing",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question" : "What is TDD?",
+            "tags" : [
+                "general",
+                "testing",
+                "best practice",
+                "middle",
+                "senior"
+            ]
+            
+        },
+        {
+            "question" : "What is DDD?",
+            "tags" : [
+                "general",
+                "architecture",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question" : "What is Agile? What is Scrum, Kanban, XP, Lean, Waterfall?",
+            "tags" : [
+                "general",
+                "management",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question" : "What estimation techniques do you know? What is Planning Poker, T-Shirt Sizes, Affinity Estimation, etc.?",
+            "tags" : [
+                "general",
+                "management",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question": "What is Version Control System? What VCS do you know? Do you have experience with Git/SVN/Mercurial/Perforce/TFS? What is Pull Request?",
+            "tags" : [
+                "general",
+                "tools",
+                "junior",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question": "What is Gitflow? How to revert a commit? How to revert a merge commit? How to revert a merge commit with conflicts? What is cherry-pick? What is rebase? What is squash? What is bisect?",
+            "tags" : [
+                "general",
+                "tools",
+                "middle",
+                "senior"
+            ]
+        },
+        {
+            "question": "Did you work with bug tracking systems? What systems do you know? What is Jira/Trello/Clickup/Asana/Redmine/Bugzilla/etc.?",
+            "tags" : [
+                "general",
+                "tools",
+                "junior",
+                "middle",
+                "senior",
+                "management"
+            ]
+        },
+        {
+            "question" : "Do you have any experience with Linux? What distributions do you use?",
+            "tags" : [
+                "general",
+                "tools",
+                "junior",
+                "middle",
+                "senior",
+                "linux"
+            ]
+        },
+        {
+            "question" : "What commands in Linux do you know? What is ls, cd, pwd, cat, grep, find, chmod, chown, chgrp, ps, kill, top, free, df, du, mount, umount, tar, zip, unzip, ssh, scp, rsync, wget, curl, ping, traceroute, ifconfig, netstat, iptables, etc.?",
+            "tags" : [
+                "general",
+                "tools",
+                "middle",
+                "senior",
+                "linux"
+            ]
+        },
+        {
+            "question" : "How to run an executable in Linux? How to run a script in Linux? How to run a script in Linux in background? How to run a script in Linux in background and redirect output to a file? How to run a script in Linux in background and redirect output to a file and redirect errors to another file?",
+            "tags" : [
+                "general",
+                "tools",
+                "middle",
+                "senior",
+                "linux"
+            ]
+        },
+        {
+            "question" : "How to transfer files between 2 computers with command line?",
+            "tags" : [
+                "general",
+                "tools",
+                "junior",
+                "middle",
+                "senior",
+                "linux"
+            ]
+        },
+        {
+            "question" : "What is Bash, zsh, sh, csh, ksh, tcsh, fish, etc.?",
+            "tags" : [
+                "general",
+                "tools",
+                "middle",
+                "senior",
+                "linux"
+            ]
+        },
+        {
+            "question": "What is /proc, /dev, /sys, /etc, /var, /tmp, /home in Linux?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "linux"
+            ]
+        },
+        {
+            "question" : "What is containirization? What is Docker? What is Dockerfile? What is docker-compose?",
+            "tags":[
+                "general",
+                "middle",
+                "senior",
+                "devops"
+            ]
+        },
+        {
+            "question" : "What is container orchestration? What is Kubernetes? What is Helm?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "devops"
+            ]
+        },
+        {
+            "question" : "What is Virtualization? What is VirtualBox, VMWare, Hyper-V, KVM, Xen, etc.?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "devops"
+            ]
+        },
+        {
+            "question" : "Virtualization vs Containerization? What is better, when? What is the difference?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "devops"
+            ]
+        },
+        {
+            "question" : "What is multithreading? What is multiprocessing? What is the difference?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "concurrency"
+            ]
+        },
+        {
+            "question" : "What is concurrency? What is parallelism?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "concurrency"
+            ]
+        },
+        {
+            "question" : "What synchronization primitives do you know? What is mutex, semaphore, spinlock, condition variable, atomic variable, critical section?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "concurrency"
+            ]
+        },
+        {
+            "question" : "What is memory barrier, memory fence, memory model, cache coherence?",
+            "tags" : [
+                "general",
+                "senior",
+                "concurrency",
+                "hardware"
+            ]
+        },
+        {
+            "question" : "What is lock-free, wait-free, obstruction-free, lock-based, wait-based, obstruction-based algorithms?",
+            "tags" : [
+                "general",
+                "senior",
+                "concurrency"
+            ]
+        },
+        {
+            "question" : "What is asynchronous programming? What is synchronous programming?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "concurrency"
+            ]
+        },
+        {
+            "question" : "What is future, promise, task, async, await, coroutine, callback?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "concurrency"
+            ]
+        },
+        {
+            "question" : "What is stackful, stackless coroutines?",
+            "tags" : [
+                "general",
+                "senior",
+                "concurrency"
+            ]
+        },
+        {
+            "question" : "What is state-machine in context of coroutines? What is continuation?",
+            "tags" : [
+                "general",
+                "senior",
+                "concurrency"
+            ]
+        },
+        {
+            "question" : "What is process, what is thread? What is the difference? What is context switch?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "concurrency",
+                "linux"
+            ]
+        },
+        {
+            "question": "What is CI/CD? Did you configured one? What have you used? What is Jenkins/Gitlab CI/Circle CI/Travis CI/Github Actions etc.?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "devops"
+            ]
+        },
+        {
+            "question" : "Did you do refactoring of the code? What is refactoring? What is code smell? What is code duplication? What is cyclomatic complexity? What is code coverage?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "refactoring"
+            ]
+        },
+        {
+            "question" :  "How would you debug a program? What is gdb, lldb, strace, valgrind, perf, etc.?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "debugging",
+                "linux"
+            ]
+        },
+        {
+            "question" : "How would you debug memory leaks?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "debugging",
+                "linux"
+            ]
+        },
+        {
+            "question" : "What is profiling? What types of profiling do you know? What is CPU, memory, heap, call graph, flame graph? What tools do you know?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "debugging"
+            ]
+        },
+        {
+            "question" : "Did you write bash scripts?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "linux"
+            ]
+        },
+        {
+            "question" : "What kind of databases do you know? What is SQL, NoSQL? Time series, key-value, document, graph, relational, etc.?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "databases"
+            ]
+        },
+        {
+            "question" : "What is migration in context of databases?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "databases"
+            ]
+        },
+        {
+            "question" : "What is ORM? Did you use one? What is SQLAlchemy, Django ORM, Entity Framework, etc.?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "databases"
+            ]
+        },
+        {
+            "question" : "What is transaction? What is ACID? What is CAP theorem?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "databases"
+            ]
+        },
+        {
+            "question" : "What database fine-tunning do you know?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "databases"
+            ]
+        },
+        {
+            "question" : "What is indexing? What is sharding? What is replication? What is partitioning?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "databases"
+            ]
+        },
+        {
+            "question" : "How would you optimize a database query? What is explain plan?",
+            "tags" : [
+                "general",
+                "middle",
+                "senior",
+                "databases"
+            ]
+        },
+        {
+            "question" : ""
+        }
+    ]
+}
